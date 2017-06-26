@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/media/logos/Geonovum.ico">
-    <link rel="stylesheet" type="text/css" href="st-mdprofiel-iso19115/localstyle.css">
+    <link rel="stylesheet" type="text/css" href="style/localstyle.css">
     <title>Nederlands profiel op ISO 19115 voor geografie versie 2.0.0</title>
     <script class="remove" src="https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js"></script>
     <script class="remove" src="config.js"></script>
@@ -29,10 +29,2272 @@
       <p>​Het metadataprofiel voor services wordt gebruikt in combinatie met het
         profiel voor datasets. Beide profielen staan op de <a href="http://forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">Pas-toe-of-leg-uit-lijst</a>
         van het College Standaardisatie.</p>
-        Het Nederlandse metadata profiel voor geografie is niet statisch. Dit
-        document wordt daarom onder beheer gebracht om wijzigingen naar behoefte
-        en op basis van voorstellen gestructureerd door te voeren. Geonovum, als
-        beherende instantie, zal de wijzigingen registreren.</section>
-    <script class="remove" src="st-mdprofiel-iso19115/localscript.js"></script>
+      Het Nederlandse metadata profiel voor geografie is niet statisch. Dit
+      document wordt daarom onder beheer gebracht om wijzigingen naar behoefte
+      en op basis van voorstellen gestructureerd door te voeren. Geonovum, als
+      beherende instantie, zal de wijzigingen registreren.</section>
+    <section id="inleiding">
+      <h1>Inleiding</h1>
+      <p><br>
+      </p>
+      <h3><a></a> Afbakening</h3>
+      <p>Metadata komt voor bij meerdere informatie disciplines. Indien hier
+        over metadata wordt gesproken betreft het metadata die betrekking heeft
+        op geo-informatie. Dit metadata profiel richt zich op de beschrijving
+        van de metadata van geografische datasets en dataset series.</p>
+      <p>Het <u>Nederlandse profiel op ISO 19119 voor services versie 1.2</u>
+        richt zich op de beschrijving van metadata van geografische
+        dataservices. Als er services beschikbaar zijn dient zowel de service
+        als de dataset van metadata te worden voorzien. De relatie tussen
+        metadata van data, metadata van services en de data en services is
+        opgenomen in bijlage 8. In de metadata wiki <u><a href="http://wiki.geonovum.nl/index.php/2_Metadata">http://wiki.geonovum.nl/index.php/2_Metadata</a></u>
+        zijn alle aspecten van het aanmaken van metadata beschreven.</p>
+      <h3><a></a><a></a><a></a> Scope</h3>
+      <p>Dit metadata profiel bevat de semantische beschrijving van de
+        verplichte of door conditie verplichte metadata elementen, de kernset,
+        van een dataset of dataset serie. Dit metadata profiel beschrijft tevens
+        de encoding van de metadata van een dataset of dataset serie zodat de
+        uitwisseling tussen machines of mens en machine kan plaatsvinden. De
+        optionele set is een aanvulling op de kernset en voorziet in de behoefte
+        van het geo-werkveld aan een brede gemeenschappelijke basis van
+        metadata-elementen, in het bijzonder voor het beheer.</p>
+      <p><br>
+      </p>
+      <p>Bij het voldoen aan dit profiel wordt tevens aan de INSPIRE
+        verplichting voldaan<sup><a href="#sdfootnote1sym"><sup>1</sup></a></sup>.</p>
+      <h3><a></a><a></a><a></a> Context</h3>
+      <p>Figuur 1 plaatst het Nederlandse metadata profiel voor geografie in
+        zijn internationale en sectorale context. De ISO-kernset is de kleinste
+        eenheid, een selectie uit ISO 19115.</p>
+      <p><br>
+      </p>
+      <p lang=""><img src="images/intro_html_m7358db59.gif"></p>
+      <p>Figuur 1: Context profiel</p>
+      <p><br>
+      </p>
+      <p>De Nederlandse kernset bevat de Europese kernset (INSPIRE) plus een
+        selectie van metadata-elementen uit ISO 19115. In dit profiel zijn de
+        metadata elementen met hun oorsprong aangegeven in bijlage 4.</p>
+      <p><br>
+      </p>
+      <p>Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse
+        profiel ontwikkelen. Voorwaarde is dat de Nederlandse kernset metadata
+        onderdeel is van het sectorale metadata profiel. Deze sectorale
+        uitbreidingen dienen onderdeel te zijn van ISO 19115.</p>
+      <h3><a></a> Leeswijzer</h3>
+      <p>Hoofdstuk 2 toont de normatieve verwijzingen, hoofdstuk 3 bevat de XSD
+        schema’s waarna in hoofdstuk 4 de gehanteerde termen en definities
+        worden beschreven.</p>
+      <p>Het formele deel van het profiel waarin onder andere de verplichte
+        elementen, de kernset, worden beschreven die gelden voor metadata voor
+        geografie staan in hoofdstuk 5. In hoofdstuk 6 staan de optionele
+        elementen. De volgende hoofdstukken geven op specifieke onderdelen van
+        het profiel uitleg.</p>
+      <p>De bijlagen dienen ter ondersteuning van de hoofdstukken.</p>
+      <p><br>
+      </p>
+      <h1><a></a> Normatieve verwijzing</h1>
+      <p><br>
+      </p>
+      <p><a></a> De volgende normen, standaarden en specificaties zijn toegepast
+        in dit profiel:</p>
+      <p><a></a><br>
+      </p>
+      <p><a></a> <b>ISO 19115</b>:</p>
+      <ul>
+        <li>
+          <p>EN ISO 19115<i>:2005, Geographic information - Metadata</i><sup><i><a
+                  href="#sdfootnote2sym"><sup>2</sup></a></i></sup></p>
+        </li>
+        <li>
+          <p><a></a> EN ISO 19115:<i>2005/AC:2008</i> <i>, Geographic
+              information – Metadata, Technical Corrigendum 1</i><sup><i><a href="#sdfootnote3sym"><sup>3</sup></a></i></sup></p>
+        </li>
+      </ul>
+      <p><br>
+      </p>
+      <p><b>CEN ISO/TS 19139:2009</b><i>,</i> <i>Geographic information -
+          Metadata – XML Schema Implementation</i><sup><i><a href="#sdfootnote4sym"><sup>4</sup></a></i></sup></p>
+      <p><br>
+      </p>
+      <p><b>CSW 2.0.2</b>, <i>OpenGIS® Catalogue Services Specification 2.0.2,
+          OGC, 2006</i></p>
+      <p><br>
+      </p>
+      <p><b>CSW2 AP ISO</b>, <u><a href="http://portal.opengeospatial.org/files/?artifact_id=21460"
+            target="_blank"><i>OpenGIS Catalogue Services Specification 2.0.2 -
+              ISO Metadata Application Profile</i></a></u>, Version 1.0.0, OGC
+        07-045, 2007</p>
+      <p><br>
+      </p>
+      <p><a></a> <b>ISO 19108</b>:</p>
+      <ul>
+        <li>
+          <p>EN ISO 19108<i>:2005, Geographic information – Temporal Schema</i><sup><i><a
+                  href="#sdfootnote5sym"><sup>5</sup></a></i></sup></p>
+        </li>
+      </ul>
+      <p><br>
+      </p>
+      <p><a></a> <b>ISO 8601</b><b>:2004</b><i>, Data elements and interchange
+          formats - Information interchange - Representation of dates and times</i>
+      </p>
+      <p><br>
+      </p>
+      <p><b>ISO 10646-1</b><i>,</i> <i>Information technology ― Universal
+          Multiple-Octet Coded Character Set (UCS) ― Part 1: Architecture and
+          Basic Multilingual Plane</i></p>
+      <p><br>
+      </p>
+      <p><b>ISO 639-2</b><i>, Codes for the representation of names of languages
+          - Part 2: Alpha-3 code</i></p>
+      <p><br>
+      </p>
+      <p><b>ISO TC 46/SC 4</b>, <i>2009, Dublin Core Metadata Element Set</i>,
+        ook gepubliceerd als ISO 15836:2009</p>
+      <p><br>
+      </p>
+      <p><b>INSPIRE</b>, <i>2008,</i><i>Implementing Rules for Metadata</i></p>
+      <p><br>
+      </p>
+      <p><b>INSPIRE</b>, 2010, <i>INSPIRE Metadata Implementing Rules:
+          Technical Guidelines based on EN ISO 19115 and EN ISO 19119,</i><i>v1.2</i></p>
+      <p><br>
+      </p>
+      <h1><a></a> Relevante XSD schema’s</h1>
+      <p><br>
+      </p>
+      <p>Alle relevante schema’s zijn in de OGC schema repository beschikbaar.
+        Deze zijn vrij beschikbaar onder <u><a href="http://schemas.opengis.net/">http://schemas.opengis.net</a></u>.
+        De volgende tabel toont het relevante schema voor dit profiel.</p>
+      <p><br>
+      </p>
+      <p>Tabel 1: Locatie van het relevante XSD schema</p>
+      <table border="1" cellpadding="8" cellspacing="0" width="707">
+        <colgroup><col width="136"> <col width="87"> <col width="434"> </colgroup>
+        <tbody>
+          <tr valign="top">
+            <td bgcolor="#B3B3B3" width="136">
+              <p>Specificatie</p>
+            </td>
+            <td bgcolor="#B3B3B3" width="87">
+              <p>Versie</p>
+            </td>
+            <td bgcolor="#B3B3B3" width="434">
+              <p>Schema locatie</p>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td width="136">
+              <p>ISO/TS 19139:2007</p>
+            </td>
+            <td width="87">
+              <p>1.0</p>
+            </td>
+            <td width="434">
+              <p>http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><br>
+      </p>
+      <p><i>ISO 19139</i>: Dit zijn de XML encoding schema’s voor zowel ISO
+        19115:2003 en ISO 19119:2005/FDAM 1. De subdirectorie ‘/srv’ bevat de
+        encoding voor ISO 19119:2005/FDAM 1. In de metadata dienen ook de
+        codelijsten die op deze locatie te vinden zijn gehanteerd te worden.</p>
+      <h1><a></a> Termen en definities</h1>
+      <p><br>
+      </p>
+      <p>De volgende termen en definities zijn van toepassing op het onderwerp
+        en toepassingsgebied van</p>
+      <p>deze standaard.</p>
+      <p><br>
+      </p>
+      <p><b>Abstracte klasse</b></p>
+      <p>Een abstracte klasse is een klasse zonder objecten.</p>
+      <p><br>
+      </p>
+      <p><b>Applicatie</b></p>
+      <p>Manipulatie en verwerking van data om in gebruiksbehoefte te voorzien
+        [ISO 19101].</p>
+      <p><br>
+      </p>
+      <p><b>Codelijst</b></p>
+      <p>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk
+        toepasbaar attribuut [ISO 19136].</p>
+      <p><br>
+      </p>
+      <p><b>Conditioneel element</b></p>
+      <p>Metadata element moet gevuld worden met een waarde, indien de conditie
+        van toepassing is.</p>
+      <p><br>
+      </p>
+      <p><b>Dataset</b></p>
+      <p>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002].</p>
+      <p>Een dataset mag een kleinere groep van data zijn, gelimiteerd door
+        beperkingen zoals een</p>
+      <p>geografisch gebied of geo-objecttype ("feature type"), die aanwezig is
+        in een grotere dataset.</p>
+      <p>Theoretisch kan een dataset bestaan uit een enkel geo-object of een
+        attribuut van een geo-object dat</p>
+      <p>aanwezig is in een grotere dataset. Het Nederlandse metadata profiel
+        voor geografie gaat niet uit</p>
+      <p>van dit soort type datasets.</p>
+      <p><br>
+      </p>
+      <p><b>Dataset serie</b></p>
+      <p>Verzameling van datasets met dezelfde productspecificaties [ISO47 2003
+        / ISO 19115:2003].</p>
+      <p>Productspecificaties zijn thema, resolutie en methodologie.</p>
+      <p><br>
+      </p>
+      <p><b>Default element</b></p>
+      <p>Metadata element met een standaardwaarde.</p>
+      <p><br>
+      </p>
+      <p><b>Expliciete metadata</b></p>
+      <p>Metadata die niet direct of indirect in de dataset opgeslagen zit en
+        daarom handmatig moet worden opgevoerd.</p>
+      <p><br>
+      </p>
+      <p><b>feature</b></p>
+      <p>Abstractie van een verschijnsel in de werkelijke wereld. [ISO 19101]</p>
+      <p><br>
+      </p>
+      <p>Voorbeeld het verschijnsel ‘Eifel Toren’ kan met andere soortgelijke
+        verschijnselen geclassificeerd worden in een featuretype ‘toren’.</p>
+      <p><br>
+      </p>
+      <p><b>Gerelateerde datasets</b></p>
+      <p>Datasets die onderling gerelateerd zijn.</p>
+      <p><br>
+      </p>
+      <p><b>Impliciete metadata</b></p>
+      <p>Metadata die direct of indirect in de dataset opgeslagen zit en
+        automatisch gegenereerd zou kunnen worden.</p>
+      <p><br>
+      </p>
+      <p><b>Metadata</b></p>
+      <p>Informatie die ruimtelijke datasets en dataset series beschrijft welke
+        het mogelijk maakt om deze te zoeken, evalueren en te gebruiken.</p>
+      <p><br>
+      </p>
+      <p><b>Metadata dataset</b></p>
+      <p>Metadata die een beschrijving geeft van een specifieke dataset [ISO
+        19101].</p>
+      <p><br>
+      </p>
+      <p><b>Namespace</b></p>
+      <p>Verzameling van namen, geïdentificeerd door een URI-referentie, die
+        gebruikt worden in XML-documenten als elementnamen en attribuutnamen
+        [ISO 19136: Geography Markup Language].</p>
+      <p><br>
+      </p>
+      <p><b>Optioneel element</b></p>
+      <p>Element wat gevuld mag zijn met een waarde.</p>
+      <p><br>
+      </p>
+      <p><b>Profiel</b></p>
+      <p>Set van één of meerdere basisstandaarden en indien van toepassing de
+        identificatie van</p>
+      <p>hoofdstukken, paragrafen, opties en parameters van deze
+        basisstandaarden die noodzakelijk zijn voor</p>
+      <p>het volbrengen van een specifieke functie [ISOIEC21 1998, ISO34 2002].</p>
+      <p><br>
+      </p>
+      <p>Een basisstandaard is één van de standaarden uit de serie ISO 19100 of
+        andere ICT-standaard die</p>
+      <p>gebruikt kan worden als bron voor componenten voor een profiel of
+        productspecificatie.</p>
+      <p><br>
+      </p>
+      <p><b>Resource</b></p>
+      <p>Verzamelnaam voor datasets, dataset series, services en applicaties
+        [ISO 19115:2003].</p>
+      <p><br>
+      </p>
+      <p><b>Verplicht element</b></p>
+      <p>Element wat gevuld moet zijn met een waarde.</p>
+      <div id="sdfootnote1">
+        <p><a href="#sdfootnote1anc">1</a> Deze verplichting geldt alleen voor
+          metadata van de door INSPIRE benoemde geografische datasets.</p>
+      </div>
+      <div id="sdfootnote2">
+        <p><a href="#sdfootnote2anc">2</a> EN ISO 19115:2005 is de adoptie door
+          CEN van ISO 19115:2003</p>
+      </div>
+      <div id="sdfootnote3">
+        <p><a href="#sdfootnote3anc">3</a> <a href="javascript:__doPostBack('_ctl36','')">EN
+            ISO 19115:2005/AC:2008</a> is de adoptie door CEN van ISO
+          19115/Cor.1:2006</p>
+      </div>
+      <div id="sdfootnote4">
+        <p><a href="#sdfootnote4anc">4</a> <a href="javascript:__doPostBack('_ctl24','')">CEN
+            ISO/TS 19139:2009</a> is de adoptie door CEN van ISO/TS 19139:2007</p>
+      </div>
+      <div id="sdfootnote5">
+        <p><a href="#sdfootnote5anc">5</a> EN ISO 19108:2005 is de adoptie door
+          CEN van ISO 19108:2002</p>
+      </div>
+      <div>
+        <p><br>
+        </p>
+        <p><br>
+        </p>
+        <p><br>
+        </p>
+        <p>Nederlands metadata profiel op ISO 19115 voor geografie, versie 1.3 5</p>
+      </div>
+    </section>
+    <section id="metadata-elementen">
+      <h1>Metadata elementen</h1>
+      <p>Dit hoofdstuk geeft de verplichte of bij conditie verplichte elementen
+        weer inclusief uitleg in de vorm van voorbeelden of default waarden.</p>
+      <h2><a></a>Metadata elementen overzicht</h2>
+      <p>In Tabel 2 staan de verplichte of bij conditie verplichte metadata
+        elementen. Bij de door conditie verplichte elementen is de conditie
+        benoemd. De in de derde kolom genoemde paragraaf komt uit</p>
+      <p>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN
+        ISO 19115 and EN ISO 19119 versie 1.2. Hiermee is de relatie gelegd
+        tussen dit document en INSPIRE.</p>
+      <p>Tabel 2: Metadata elementen</p>
+      <table>
+        <colgroup><col> <col> <col> <col> </colgroup>
+        <thead>
+          <tr>
+            <td>
+              <p>Metadata element</p>
+            </td>
+            <td>
+              <p>V/C/O</p>
+            </td>
+            <td>
+              <p>Para-graaf</p>
+            </td>
+            <td>
+              <p>Conditie en/of opmerking</p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Resource title</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.2.1</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Resource abstract</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.2.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Resource type</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.2.3</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Resource locator</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p>2.2.4</p>
+            </td>
+            <td>
+              <p>Als er een link naar de service beschikbaar is, is het een
+                verplicht element</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Protocol</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td> <br>
+            </td>
+            <td>
+              <p>Het is verplicht als er een URL is opgegeven</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Connect Point Linkage</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>3.3.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Coupled resource</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p>2.2.6</p>
+            </td>
+            <td>
+              <p>Het is verplicht als er links naar de datasets waarop de
+                service opereert beschikbaar zijn</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Coupling Type</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>3.3.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Spatial data service type</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.3.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Operation Name</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>3.3.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>DCP</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>3.3.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Keyword value</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.4.1</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Originating controlled vocabulary title</p>
+            </td>
+            <td rowspan="3">
+              <p>C</p>
+            </td>
+            <td rowspan="3">
+              <p>2.4.2</p>
+            </td>
+            <td rowspan="3">
+              <p>Het is verplicht als een keyword uit een thesaurus afkomstig is</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Originating controlled vocabulary date</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Originating controlled vocabulary date type</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Geographic Location</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p>2.5.1</p>
+            </td>
+            <td>
+              <p>Verplicht indien data aan de service is gekoppeld</p>
+            </td>
+          </tr>
+          <tr>
+            <td height="51">
+              <p>Temporal extent</p>
+            </td>
+            <td rowspan="4">
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.6.1</p>
+            </td>
+            <td rowspan="4">
+              <p>Op zijn minst één temporele referentie is verplicht</p>
+            </td>
+          </tr>
+          <tr>
+            <td height="50">
+              <p>Date of publication</p>
+            </td>
+            <td>
+              <p>2.6.2</p>
+            </td>
+          </tr>
+          <tr>
+            <td height="50">
+              <p>Date of last revision</p>
+            </td>
+            <td>
+              <p>2.6.3</p>
+            </td>
+          </tr>
+          <tr>
+            <td height="50">
+              <p>Date of creation</p>
+            </td>
+            <td>
+              <p>2.6.4</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Scope</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Degree</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p>2.8.1</p>
+            </td>
+            <td>
+              <p>Verplicht als de service een INSPIRE bron is</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Explanation</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p>3.4.2</p>
+            </td>
+            <td>
+              <p>Verplicht als de service een INSPIRE bron is</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Specification title</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td rowspan="3">
+              <p>2.8.2</p>
+            </td>
+            <td>
+              <p>Verplicht als de service een INSPIRE bron is</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Specification date</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p>Verplicht als de service een INSPIRE bron is</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Specification date type</p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p>Verplicht als de service een INSPIRE bron is</p>
+            </td>
+          </tr>
+          <tr>
+            <td height="39">
+              <p>accessConstraints</p>
+            </td>
+            <td rowspan="3">
+              <p>V</p>
+            </td>
+            <td rowspan="3">
+              <p>2.9.1</p>
+            </td>
+            <td rowspan="3">
+              <p>Het is verplicht op zijn minst één van de drie elementen
+                accessConstraints, otherConstraints of classification op te
+                nemen. Zelfs als er geen beperkingen zijn op publieke toegang.</p>
+            </td>
+          </tr>
+          <tr>
+            <td height="29">
+              <p>otherConstraints</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>classification</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>useLimitations</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.9.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Responsible party</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td rowspan="2">
+              <p>2.10.1</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Responsible party e-mail</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Responsible party role</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.10.2</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata identifier</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata point of contact</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td rowspan="3">
+              <p>2.11.1</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata point of contact role</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata point of contact e-mail</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata language</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p>2.11.3</p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata date</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td>
+              <p><span>2.11.2</span></p>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata standard name</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Metadata standard version</p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="metadata-elementen-uitwerking">
+      <h2><a></a> Metadata elementen uitwerking</h2>
+      <h3><a></a> <span>Resource title</span></h3>
+      <p><i>identificationInfo[1]/*/citation/*/title</i> [ISO 19139]</p>
+      <p>Dit element dient om de naam van de service in vast te leggen.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>Nieuwe kaart van Nederland</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Resource abstract</h3>
+      <p><i>identificationInfo[1]/*/abstract</i> [ISO 19139]</p>
+      <p>Dit element bevat een korte beschrijving van de inhoud van de service
+        en zijn doel. Voor INSPIRE dient in dit element ook een eventuele
+        restrictie op de resolutie van servicesopgenomen te worden.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>Grenzen van de waterschappen per 1-1-2005 inclusief
+                adresgegevens voor testdoeleinden</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Resource type</h3>
+      <p><i>hierarchyLevel</i> [ISO 19139]</p>
+      <p>Het element geeft aan waarop de metadata betrekking heeft, de dataset,
+        dataset serie of service. Voor de waarden geldt de codelijst B.5.25
+        MD_ScopeCode uit ISO19115.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Default waarde</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B.5.25</p>
+            </td>
+            <td>
+              <p><span>service</span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Resource locator</h3>
+      <p><span><i>distributionInfo/*/transferOptions/*/onLine/*/linkage</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Dit element is conditioneel. Als er een link naar de service
+        beschikbaar is, is het een verplicht element. Voor bijvoorbeeld services
+        waar een restrictieve toegang voor geldt kan dit element de URL naar de
+        betaalservice, of de URL naar een applicatie die direct toegang heeft
+        tot de service bevatten. Het bevat de valide URL voor on-line toegang
+        tot de service.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>URL</p>
+            </td>
+            <td>
+              <p>http://wms.nitg.tno.nl/OneGeology?</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Protocol</h3>
+      <p><span><i>distributionInfo/*/transferOptions/*/onLine/*/protocol</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Dit element is conditioneel. Het is verplicht als er een URL is
+        opgegeven. Bijvoorbeeld naar een WMS of WFS.</p>
+      <p>Het bevat het protocol voor het afhandelen van de URL. Door het
+        hanteren van INSPIRE servicetypes bij het element service type is de
+        relatie met de OGC types verloren, tenzij dit element wordt aangegeven.
+        De namen uit codelijst SV_ServiceType (bijlage 1) wordt hier gehanteerd.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>SV_ServiceType</p>
+            </td>
+            <td>
+              <p>OGC:WMS</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Connect Point Linkage</h3>
+      <p><span><i>identificationInfo[1]/*/containsOperations/*/connectPoint/*/linkage</i></span>
+        <span><i>[</i></span><span><i>CSW ISO Metadata AP]</i></span></p>
+      <p>Dit element beschrijft het netwerkadres van de service instance via het
+        verplichte element linkage, uit de klasse <i></i>CI_OnlineResource.</p>
+      <p>Dit element heeft hetzelfde doel als Resource Locator uit 5.2.4.
+        Doordat ISO 19115 en ISO 19119 niet op dit punt met elkaar zijn
+        afgestemd zijn hier twee verschillende metadata elementen (met dezelfde
+        doelstelling) en verschillende encoding (ISO 19139 en CSW ISO Metadata
+        AP) ontstaan.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>URL</p>
+            </td>
+            <td>
+              <p><a href="http://somehost/wms">http://somehost/wms</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Coupled resource</h3>
+      <p><span><i>identificationInfo[1]/*/operatesOn</i></span> <span>[</span><span>CSW
+          ISO Metadata AP]</span></p>
+      <p>Dit element is conditioneel. Het is verplicht als er links naar de
+        datasets waarop de service opereert beschikbaar zijn. Voor dataservices
+        is het dus verplicht. Dit element geeft informatie (metadata) over de
+        data die in de service beschikbaar wordt gesteld. Het attribuut uuidref
+        verwijst naar de identifier van de dataset en de parameter id in het
+        GetRecordById request in de xlink verwijst naar de file identifier van
+        het metadata voor data document</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>implemented by reference</p>
+            </td>
+            <td>
+              <p>"b4c63e7c-b73c-451a-8071-dbc9f28f0148"</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>implemented by reference</p>
+            </td>
+            <td>
+              <p><a href="http://somehost/wms">“</a> <a href="http://somehost/wms"><span>c7d8d77b-8c47-4309-8c589b12b086407f</span>”</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>In XML;</p>
+      <p><span>&lt;srv:operatesOn uuidref="b4c63e7c-b73c-451a-8071-dbc9f28f0148"
+          xlink:href= "</span><span lang="zxx"><u><a href="http://nationaalgeoregister.nl/geonetwork/srv/en/csw?Service=CSW"><span>http://nationaalgeoregister.nl/geonetwork/srv/en/csw?Service=CSW</span></a></u></span><span>&amp;amp;</span></p>
+      <p><span>Request=GetRecordById&amp;amp;Version=2.0.2&amp;amp;</span></p>
+      <p><span>id=c7d8d77b-8c47-4309-8c589b12b086407f&amp;amp;</span></p>
+      <p>outputSchema=http://www.isotc211.org/2005/gmd&amp;amp;elementSetName=full"/&gt;</p>
+      <h3><a></a> Coupling Type</h3>
+      <p><span><i>identificationI</i></span><span><i>nfo[1]/*/couplingType</i></span>
+        <span>[</span><span>CSW ISO Metadata AP]</span></p>
+      <p>Dit element is verplicht volgens het amendement op ISO 19119.
+        CouplingType definieert het type “koppeling” tussen een service instance
+        en een dataset. De mogelijke waarden zijn vastgelegd in de codelist
+        SV_CouplingType (bijlage 1).</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Default waarde</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>SV_CouplingType</p>
+            </td>
+            <td>
+              <p>Loose</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Spatial data service type</h3>
+      <p><span><i>identificationInfo[1]/*/serviceType</i></span> <span>[</span><span>CSW
+          ISO Metadata AP]</span></p>
+      <p>Dit element bevat het type van de service.</p>
+      <p>De implementing rules van INSPIRE verplichten het gebruik van de
+        waardes uit Annex B.3.</p>
+      <p>Binnen Nederland geldt voor dit metadata element een restrictiever
+        domein dan in ISO 19119:2005, namelijk een codelijst. Doel hiervan is
+        een uniforme naamgeving voor het serviceType, zodat alle serviceTypes
+        gevonden kunnen worden. In deze codelijst SV_ServiceTypeCode (zie
+        bijlage 1) staan alle mogelijke services types met een gepubliceerde
+        standaard specificatie weergegeven. De language neutral name waarden uit
+        deze codelijst dienen gehanteerd te worden.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>SV_ServiceTypeCode</p>
+            </td>
+            <td>
+              <p>view</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Operation Name</h3>
+      <p><span><i>identificationInfo[1]/*/containsOperations/*/operationName</i></span>
+        <span>[</span><span>CSW ISO Metadata AP]</span></p>
+      <p>Dit element bevat de operaties die met deze service mogelijk zijn. Door
+        het opnemen van protocol, kunnen de bijbehorende verplichte operaties
+        (OperationName) en parameters (SV_Parameter) worden afgeleid. Deze
+        attribuutwaarden kunnen als default door de applicatie worden
+        toegevoegd. Daarnaast kunnen optionele operaties handmatig worden
+        toegevoegd.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>getMap</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> DCP</h3>
+      <p><span><i>identificationInfo[1]/*/containsOperations/*/DCP</i></span> <span>[</span><span>CSW
+          ISO Metadata AP]</span></p>
+      <p>Dit element bevat het Distributed Computing Platforms waarop de
+        operatie is geïmplementeerd. INSPIRE gaat van de default waarde
+        WebServices uit. Deze waarde is opgenomen in de codelijst DCPlist . De
+        huidige attribuutwaarden worden verwijderd en ongeldig verklaard zie
+        bijlage 1.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>DCPlist</p>
+            </td>
+            <td>
+              <p>WebServices</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Keyword value</h3>
+      <p><i>identificationInfo[1]/*/descriptiveKeywords/*/keyword</i> [ISO
+        19139]</p>
+      <p>Het element bevat in het algemeen gebruikte woorden of</p>
+      <p>geformaliseerde zinnen om een service te beschrijven.</p>
+      <p>Voor INSPIRE services dient er op z’n minst één keyword de categorie of
+        subcategorie te bevatten uit deel D.4 van de commissie regulation
+        1205/2008, zie bijlage 1. Daarnaast kunnen er andere keywords met
+        bijvoorbeeld het thema worden opgenomen. In <span lang="zxx"><u><a href="http://www.eionet.europa.eu/gemet/inspire_themes">http://www.eionet.europa.eu/gemet/inspire_themes</a></u></span>zijn
+        de thema’s van INSPIRE opgenomen.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><span>S</span><span>tring</span></p>
+            </td>
+            <td>
+              <p>infoMapAccessService</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Originating controlled vocabulary</h3>
+      <p><span><i>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/title</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><span><i>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/date</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><span><i>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/dateType</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Dit is een conditioneel element. Het is verplicht als een keyword uit
+        een thesaurus afkomstig is. Het bevat de naam en publicatie datum van de
+        thesaurus waar het keyword uit afkomstig is. Ook het type gebeurtenis
+        waar de datum betrekking op heeft wordt vastgelegd. Type gebeurtenis
+        wordt gekozen uit codelijst B.5.2 uit ISO 19115. Mogelijke
+        gebeurtenissen zijn: Datum voltooiing, Datum publicatie en Datum laatste
+        wijziging. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>string</p>
+            </td>
+            <td>
+              <p>“GEMET - INSPIRE themes, version 1.0”</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B.5.2</p>
+            </td>
+            <td>
+              <p>Publication</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>date</p>
+            </td>
+            <td>
+              <p>2008-06-01</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Geographic location</h3>
+      <p><span><i>identificationInfo[1]/*/extent/*/geographicElement/*/</i></span><span><i>westBoundLongitude</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><span><i>identificationInfo[1]/*/extent/*/geographicElement/*/</i></span><span><i>eastBoundLongitude</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><span><i>identificationInfo[1]/*/extent/*/geographicElement/*/</i></span><span><i>southBoundLongitude</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><span><i>identificationInfo[1]/*/extent/*/geographicElement/*/</i></span><span><i>northBoundLongitude</i></span>
+        <span></span><span>[ISO 19139]</span></p>
+      <p>Dit element is conditioneel. Het is verplicht als er data aan de
+        service is gekoppeld. (service is dan tight of mixed coupled service).</p>
+      <p>De bounding box is de kleinste extent die mogelijk is waarmee de map
+        goed weergegeven wordt. De coördinaten dienen te worden weergegeven in
+        longitude en lattitude decimale graden (noord en oost als positieve
+        waarden), volgens referentiesysteem WGS 84.</p>
+      <p>De klasse EX_GeographicBoundingBox bestaat uit vier elementen die de
+        hoeken van de bounding box in decimale graden beschrijft.</p>
+      <p><b>westBoundLongitude</b></p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Decimal</p>
+            </td>
+            <td>
+              <p>2.50</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b>eastBoundLongitude</b></p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Decimal</p>
+            </td>
+            <td>
+              <p>5.80</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b>southBoundLongitude</b></p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Decimal</p>
+            </td>
+            <td>
+              <p>51.80</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b>northBoundLongitude</b></p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Decimal</p>
+            </td>
+            <td>
+              <p>54.60</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> <span>Temporal reference</span></h3>
+      <p>Op zijn minst één temporele referentie is verplicht. Om op ISO 19115
+        aan te sluiten moet ’in ieder geval één van de volgende elementen worden
+        vastgelegd; Creatie-, publicatie-, of revisiedatum van de service.
+        Aanbevolen wordt om de publicatie datum op te nemen.</p>
+      <h4><b>Temporal extent</b></h4>
+      <p><span><i>identificationInfo[1]/*/extent/*/temporalElement/*/extent</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Periode waarop de data betrekking heeft. Dit kan een tijdsinterval zijn
+        maar ook een datum. De overall tijdsperiode gedekt door de inhoud van de
+        service kan een samenstelling zijn van een of meer waarden. Het formaat
+        van de datum is +/-JJJJ-MM-DDTUU:MM:SS (met streepjes T van time en
+        dubbele punt). Het jaar 1 BC wordt als -0000, 2 BC -0001, etc.
+        weergegeven. Maand dag en tijd zijn optioneel. De XML notatie is in
+        bijlage 4 vastgelegd.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>date</p>
+            </td>
+            <td>
+              <p><span>1977-03-19T11:45:30</span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4><b>Date of publication</b></h4>
+      <p><span><i>identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Datum waarop de service gepubliceerd is. Het formaat van de datum is
+        JJJJ-MM-DD (met streepjes) of JJJJ-MM-DDTUU:MM:SS (met streepjes T van
+        time en dubbele punt).</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>date</p>
+            </td>
+            <td>
+              <p>2007-09-15</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4><b>Date of last revision</b></h4>
+      <p><span><i>identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='revision']/*/date</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Datum waarop de service gewijzigd is. In ISO19115 kan men meerdere
+        wijzigingsdata opnemen. De INSPIRE datum is de recentste. Het formaat
+        van de datum is JJJJ-MM-DD (met streepjes) of JJJJ-MM-DDTUU:MM:SS (met
+        streepjes T van time en dubbele punt).</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>date</p>
+            </td>
+            <td>
+              <p>2007-11-15T11:15:00</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4><b>Date of creation</b></h4>
+      <p><span><i>identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='creation']/*/date</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Datum waarop de service voltooid is. Het formaat van de datum is
+        JJJJ-MM-DD (met streepjes) of JJJJ-MM-DDTUU:MM:SS (met streepjes T van
+        time en dubbele punt).</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>date</p>
+            </td>
+            <td>
+              <p>2007-09-15</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Scope</h3>
+      <p><i>dataQualityInfo/*/scope/*/level</i> [ISO 19139]</p>
+      <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie
+        betrekking heeft. Dit niveau wordt gekozen uit codelijst B.5.25.
+        Mogelijke niveau’s zijn: service, dataset, series en featureType.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B.5.25</p>
+            </td>
+            <td>
+              <p>service</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Degree</h3>
+      <p><span><i>dataQualityInfo/*/report/*/result/*/pass</i></span> <span>[ISO
+          19139]</span></p>
+      <p><span><i>dataQualityInfo/*/report/*/result/*/explanation</i></span> <span>[ISO
+          19139]</span></p>
+      <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als
+        de service een INSPIRE bron is.</p>
+      <p>In dit element kan dan worden weergegeven of de service conform de
+        specificatie is. In explanation dient de uitleg van de conformiteit
+        opgenomen te worden.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Boolean</p>
+            </td>
+            <td>
+              <p>True</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>De hier gehanteerde servicetype wijkt af van de domeinen uit de
+                specificatie van INSPIRE</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Specification</h3>
+      <p><span><i>dataQualityInfo/*/report/*/result/*/specification/*/title</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><span><i>dataQualityInfo/*/report/*/result/*/specification/*/date/*/date</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><span><i>dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als
+        de service een INSPIRE bron is.</p>
+      <p>Dit element bevat de titel en publicatie datum van de specificatie of
+        richtlijnen waar de service conform aan dient te zijn. Ook het type
+        gebeurtenis waar de datum betrekking op heeft wordt vastgelegd. Type
+        gebeurtenis wordt gekozen uit codelijst B.5.2. Mogelijke gebeurtenissen
+        zijn: Datum voltooiing, Datum publicatie en Datum laatste wijziging. Het
+        formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>string</p>
+            </td>
+            <td>
+              <p>“ <span lang="zxx"><a href="javascript:void(0);"><span lang="en"><span>Technical
+                        Guidance for the implementation of INSPIRE View Services</span></span></a></span><span>,
+                  version3.0”.</span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B.5.2</p>
+            </td>
+            <td>
+              <p><span>Publication</span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>date</p>
+            </td>
+            <td>
+              <p><span>2011-03-30</span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> <span><span>L</span></span><span><span>imitations on public
+            access</span></span></h3>
+      <p>Het is verplicht op zijn minst één van de drie elementen
+        accessConstraints, otherConstraints of classification op te nemen, zelfs
+        als er geen beperkingen zijn op publieke toegang. Als er geen
+        beperkingen zijn dient men dat bij otherConstraints aan te geven. Als er
+        otherConstraints worden opgenomen, dient bij accessConstraints de waarde
+        “anders” gekozen te worden. In bijlage 5 is uitgewerkt hoe
+        gebruiksvoorwaarden en public domein mark toe te passen.</p>
+      <p>Het element dient om toegangsrestricties die van toepassing zijn op de
+        service, op te voeren. Voor services kan er een conflict zijn met
+        restrictions uit SV_ServiceIdentification in ISO19119. Dit element is
+        ook van het type MD_Constraints. De constraints voor een service worden
+        gedefinieerd volgens INSPIRE.</p>
+      <p><b>accessConstraints</b></p>
+      <p><span><i>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Dit element bevat toegangseisen die er zorg voor dragen dat privacy of
+        intellectueel eigendom gewaarborgd zijn en elke andere speciale
+        beperkingen voor het verkrijgen van de service. Als er geen beperkingen
+        zijn dient men “geen beperkingen” bij otherConstraints aan te geven. Als
+        er otherConstraints worden opgenomen, dient hier de waarde “anders”
+        gekozen te worden. De waardes komen uit codelijst B5.24 van ISO19115.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B5.24</p>
+            </td>
+            <td>
+              <p>intellectualPropertyRights</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b>otherConstraints</b></p>
+      <p><i>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</i>
+        [ISO 19139]</p>
+      <p>Dit element bevat andere restricties en vereisten voor toegang en
+        gebruik van de service. Als er een waarde in dit element wordt ingevuld,
+        dient bij het element accessConstraints de waarde “anders” gekozen te
+        worden</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>geen beperkingen</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b>classification</b></p>
+      <p><span><i>identificationInfo[1]/*/resourceConstraints/*/classification</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Dit element bevat de soort veiligheidsrestrictie op de service. De
+        waardes worden gekozen uit codelijst B5.11</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B.5.11</p>
+            </td>
+            <td>
+              <p>Restricted</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Conditions applying to access and use</h3>
+      <p><i>identificationInfo[1]/*/resourceConstraints/*/useLimitation</i> [ISO
+        19139]</p>
+      <p>Dit element bevat de toepassingen waarvoor de service niet geschikt is.
+        Voor INSPIRE, bevat het indien van toepassing ook prijsinformatie voor
+        het gebruik van de service .</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>Niet gebruiken voor navigatie</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Responsible party</h3>
+      <p><a></a><a></a> <i>identificationInfo[1]/*/pointOfContact/*/organisationName</i>
+        <i></i>[ISO 19139]</p>
+      <p><span><i>identificationInfo[1]/*/pointOfContact/*/contactInfo/*/address/*/electronicMailAddress</i></span>
+        <span>[ISO 19139]</span></p>
+      <p>Dit element bevat de identificatie van en de verantwoordelijke
+        organisatie. Van de organisatie worden de organisatie naam en het e-mail
+        adres vastgelegd. Voor de naam wordt de volledig uitgeschreven naam
+        gehanteerd, afkortingen kunnen daar aan worden toegevoegd.</p>
+      <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
+        organisatie. De afkorting kan toegevoegd worden aan de organisatienaam.
+        Voor de correcte overheidsnamen zie: http://almanak.overheid.nl/.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>Waterschap Noorderzijlvest</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p><span lang="zxx"><u><a href="mailto:geoloket@wnz.nl">geoloket@wnz.nl</a></u></span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Responsible party role</h3>
+      <p><span><i>identificationInfo[1]/*/pointOfContact/*/role</i></span> <span>[ISO
+          19139]</span></p>
+      <p>Dit element bevat de rol van de verantwoordelijke organisatie. Voor de
+        rol van de organisatie wordt codelijst B5.5 gehanteerd.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B.5.5</p>
+            </td>
+            <td>
+              <p>pointOfContact</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Metadata identifier</h3>
+      <p><i>fileIdentifier</i> [ISO 19139]</p>
+      <p>Dit element bevat de unieke identifier voor de metadata file.</p>
+      <p>Geadviseerd wordt om gebruik te maken van een betekenisloze identifier
+        die wereldwijd uniek is zoals de Universal Unique Identifier<sup><a href="#sdfootnote1sym"><sup>1</sup></a></sup>.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>string</p>
+            </td>
+            <td>
+              <p><span lang="en">550e8400-e29b-41d4-a716-446655440000</span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Metadata point of contact</h3>
+      <p><span><i>contact/*/organisationName</i></span> <span>[ISO 19139]</span></p>
+      <p><span><i>contact/*/contactInfo/*/address/*/electronicMailAddress</i></span>
+        <span>[ISO 19139]</span></p>
+      <p><i>contact/*/role</i> [ISO 19139]</p>
+      <p>Dit element bevat de organisatie verantwoordelijk voor de metadata. Van
+        de organisatie worden de organisatie naam, de rol en het e-mailadres
+        vastgelegd. Voor de naam wordt de volledig uitgeschreven naam
+        gehanteerd, afkortingen kunnen daar aan worden toegevoegd. Voor de rol
+        van de organisatie wordt codelijst B.5.5 gehanteerd, maar pointOfContact
+        is voor INSPIRE verplicht.</p>
+      <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
+        organisatie. De afkorting kan toegevoegd worden aan de organisatienaam.
+        Voor de correcte overheidsnamen zie: http://almanak.overheid.nl.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>string</p>
+            </td>
+            <td>
+              <p>Ministerie van Economische Zaken, Landbouw en Innovatie
+                (EL&amp;I)</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>string</p>
+            </td>
+            <td>
+              <p><span lang="zxx"><u><a href="mailto:geoloket@min-eleni.nl">geoloket@min-eleni.nl</a></u></span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>B.5.5</p>
+            </td>
+            <td>
+              <p>pointOfContact</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Metadata language</h3>
+      <p><i>Language</i> <span>[ISO 19139]</span></p>
+      <p>In dit element wordt vastgelegd in welke taal de metadata is
+        beschreven. Gebruik hiervoor alleen de drie-letter codes van 639-2/B
+        (bibliographic codes), zoals gedefinieerd op <span lang="zxx"><u><a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a></u></span>.</p>
+      <p>Over het algemeen is dut de default waarde.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld (meestal default waarde)</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>ISO 639-2</p>
+            </td>
+            <td>
+              <p>dut</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> Metadata date</h3>
+      <p><span><i>dateStamp</i></span> <span>[ISO 19139]</span></p>
+      <p>Dit element bevat de datum waarop de metadata gecreëerd is. Het formaat
+        van de datum is JJJJ-MM-DD (met streepjes).</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Datum</p>
+            </td>
+            <td>
+              <p>2008-02-25</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> <span>Metadata standard name</span></h3>
+      <p><i>metadataStandardName</i> [ISO 19139]</p>
+      <p>Dit element is nodig om uitbreidingen op profielen te duiden. Dit
+        element bevat de naam van de standaard.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>string</p>
+            </td>
+            <td>
+              <p>ISO 19119</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a></a> <span>Metadata standard version</span></h3>
+      <p><i>metadataStandardVersion</i> [ISO 19139]</p>
+      <p>Dit element is nodig om uitbreidingen op standaarden aan te geven. Dit
+        element bevat de versie (profiel) van de metadatastandaard die wordt
+        gebruikt.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>string</p>
+            </td>
+            <td>
+              <p>Nederlands metadata profiel op ISO 19119 voor services 1.2</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="optionele-elementen">
+      <h1><a></a>Optionele elementen</h1>
+      <p>Naast de verplichte kernset heeft Het Nederlands profiel op ISO19119
+        een optionele set. Deze set bestaat uit een selectie van
+        metadata-elementen uit ISO 19119, die nuttig zijn voor de relatie tussen
+        dataset en de services. Het is niet de volledige ISO19119 set. Als men
+        meer metadata wil vastleggen als mogelijk met de verplichte kernset dan
+        dient men bij voorkeur, om de interoperabiliteit te bevorderen, de
+        benodigde elementen uit deze optionele set te kiezen.</p>
+      <table>
+        <colgroup><col> <col> <col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Metadata element</b></p>
+            </td>
+            <td>
+              <p><b>V/C/O</b></p>
+            </td>
+            <td>
+              <p><b>Para-graaf</b></p>
+            </td>
+            <td>
+              <p><b>Conditie en/of opmerking</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Identifier</p>
+            </td>
+            <td>
+              <p>O</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Operation Name</p>
+            </td>
+            <td>
+              <p>O</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Scoped Name</p>
+            </td>
+            <td>
+              <p>O</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="coupled-resource">
+      <h3><a></a> SV_Coupled Resource</h3>
+      <p><span><i>identificationInfo[1]/*/coupledResource/*/identifier</i></span>
+        <span></span><span>[</span><span>CSW ISO Metadata AP]</span></p>
+      <p><span><i>identificationInfo[1]/*/coupledResource/*/operationName</i></span>
+        <span></span><span>[</span><span>CSW ISO Metadata AP]</span></p>
+      <p><span><i>identificationInfo[1]/*/coupledResource/*/ScopedName</i></span>
+        <span></span><span>[</span><span>CSW ISO Metadata AP]</span></p>
+      <p>In ISO AP 1.0 is de klasse SV_CoupledResource uitgebreid met een sub
+        element (zie sectie 7.2.2.2 in de CSW ISO AP profiel document).</p>
+      <p><img src="images/iso19119_html_m602a0f10.gif" align="bottom" border="0" height="113"></p>
+      <p>Deze uitbreiding is ook in ISO 19119 gerelateerde XML schemas
+        opgenomen. Daarmee, is het mogelijk de precieze link tussen een operatie
+        (geïdentificeerd door zijn naam), een dataset instance (geïdentificeerd
+        door zijn resource identifier) en optioneel, ScopedName (layer name
+        (WMS) of featureTypeName (WFS)) te beschrijven. Voor Nederland is de
+        SV_Coupledresource optioneel. Het heeft meerwaarde als er veel datasets
+        in één service in verschillende layers zijn ontsloten. Bijvoorbeeld als
+        voor elk zoogdier een aparte dataset ontsloten is in de service
+        zoogdieren. De service bevat per dataset een layer. Als de zoogdieren in
+        één dataset zijn opgenomen die in de service zoogdieren in één layer per
+        soort wordt ontsloten hebben deze elementen geen meerwaarde.</p>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>00-22342758-58459</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>GetMap</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <colgroup><col> <col> </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <p><b>Data type of Domein</b></p>
+            </td>
+            <td>
+              <p><b>Voorbeeld</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>String</p>
+            </td>
+            <td>
+              <p>Gemeentegrenzen</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="encoding-metadata">
+      <h1>Encoding van de metadata elementen</h1>
+      <p>De metadata van services wordt uitgewisseld in de encoding (XML)
+        conform:</p>
+      <p><span lang="zxx"><u><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/"><span
+                lang="pt-BR">http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</span></a></u></span>
+        <span lang="pt-BR">(ISO 19119 metadata elementen)</span></p>
+      <p lang="pt-BR"><br>
+      </p>
+      <p>Deze encoding die tevens gebruik maakt van:</p>
+      <p><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd"><span
+            ><u>http://schemas.opengis.net/iso/19139/</u></span>20060504<span
+            ><u>/gmd/gmd.xsd</u></span></a> (ISO 19115 metadata
+        elementen)</p>
+      <p>is geschikt om tussen OGC catalogues (CSW) te kunnen uitwisselen. In
+        hoofdstuk 5 staat onder elke paragraaf het path met daarachter tussen [
+        ] uit welke standaard het komt.</p>
+      <p>Een andere manier is om het capabilities document dat verplicht bij
+        elke OGC service aanwezig moet zijn gebruikt wordt om een deel van de
+        metadata elementen uit hoofdstuk 5 te beschrijven. In bijlage 6,7 en 8
+        is een mapping gemaakt van de capabilities documenten voor WMS naar <span
+          ><u><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</a></u></span>.
+        Hierdoor kan de capabilities ook gebruikt worden als encoding. De meeste
+        catalogues (gaan) kunnen capabilities harvesten.</p>
+      <div>
+        <p><a href="#sdfootnote1anc">1</a> http://en.wikipedia.org/wiki/UUID</p>
+      </div>
+    </section>
+    <script class="remove" src="script/localscript.js"></script>
+    
   </body>
 </html>
