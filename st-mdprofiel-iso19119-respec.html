@@ -192,7 +192,7 @@
         Schema Implementation<br>
         <div class="note">CEN ISO/TS 19139:2009
           is de adoptie door CEN van ISO/TS 19139:2007</div></p>
-      <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
+      <p><b>CSW2 AP ISO</b>, <a href="http://portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
           Catalogue Services Specification 2.0.2 - ISO Metadata Application
           Profile</a>, Version 1.0.0, OGC 07-045, 2007</p>
       <p><b>ISO 19108</b>, EN ISO 19108:2005, Geographic information – Temporal
@@ -327,96 +327,104 @@ http://schemas.opengis.net/wfs/2.0/</a></td>
       <h1>Termen en definities</h1>
       
       <p>De volgende termen en definities zijn van toepassing op het onderwerp
-        en toepassingsgebied van</p>
-      <p>deze standaard.</p>
+        en toepassingsgebied van deze standaard.</p>
       
-      <p><b>Abstracte klasse</b></p>
-      <p>Een abstracte klasse is een klasse zonder objecten.</p>
-      
-      <p><b>Applicatie</b></p>
-      <p>Manipulatie en verwerking van data om in gebruiksbehoefte te voorzien
-        [ISO 19101].</p>
-      
-      <p><b>Codelijst</b></p>
-      <p>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk
-        toepasbaar attribuut [ISO 19136].</p>
-      
-      <p><b>Conditioneel element</b></p>
-      <p>Metadata element moet gevuld worden met een waarde, indien de conditie
-        van toepassing is.</p>
-      
-      <p><b>Dataset</b></p>
-      <p>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002].</p>
-      <p>Een dataset mag een kleinere groep van data zijn, gelimiteerd door
-        beperkingen zoals een</p>
-      <p>geografisch gebied of geo-objecttype ("feature type"), die aanwezig is
-        in een grotere dataset.</p>
-      <p>Theoretisch kan een dataset bestaan uit een enkel geo-object of een
-        attribuut van een geo-object dat</p>
-      <p>aanwezig is in een grotere dataset. Het Nederlandse metadata profiel
-        voor geografie gaat niet uit</p>
-      <p>van dit soort type datasets.</p>
-      
-      <p><b>Dataset serie</b></p>
-      <p>Verzameling van datasets met dezelfde productspecificaties [ISO47 2003
-        / ISO 19115:2003].</p>
-      <p>Productspecificaties zijn thema, resolutie en methodologie.</p>
-      
-      <p><b>Default element</b></p>
-      <p>Metadata element met een standaardwaarde.</p>
-      
-      <p><b>Expliciete metadata</b></p>
-      <p>Metadata die niet direct of indirect in de dataset opgeslagen zit en
-        daarom handmatig moet worden opgevoerd.</p>
-      
-      <p><b>feature</b></p>
-      <p>Abstractie van een verschijnsel in de werkelijke wereld. [ISO 19101]</p>
-      
-      <p>Voorbeeld het verschijnsel ‘Eifel Toren’ kan met andere soortgelijke
-        verschijnselen geclassificeerd worden in een featuretype ‘toren’.</p>
-      
-      <p><b>Gerelateerde datasets</b></p>
-      <p>Datasets die onderling gerelateerd zijn.</p>
-      
-      <p><b>Impliciete metadata</b></p>
-      <p>Metadata die direct of indirect in de dataset opgeslagen zit en
-        automatisch gegenereerd zou kunnen worden.</p>
-      
-      <p><b>Metadata</b></p>
-      <p>Informatie die ruimtelijke datasets en dataset series beschrijft welke
-        het mogelijk maakt om deze te zoeken, evalueren en te gebruiken.</p>
-      
-      <p><b>Metadata dataset</b></p>
-      <p>Metadata die een beschrijving geeft van een specifieke dataset [ISO
-        19101].</p>
-      
-      <p><b>Namespace</b></p>
-      <p>Verzameling van namen, geïdentificeerd door een URI-referentie, die
-        gebruikt worden in XML-documenten als elementnamen en attribuutnamen
-        [ISO 19136: Geography Markup Language].</p>
-      
-      <p><b>Optioneel element</b></p>
-      <p>Element wat gevuld mag zijn met een waarde.</p>
-      
-      <p><b>Profiel</b></p>
-      <p>Set van één of meerdere basisstandaarden en indien van toepassing de
-        identificatie van</p>
-      <p>hoofdstukken, paragrafen, opties en parameters van deze
-        basisstandaarden die noodzakelijk zijn voor</p>
-      <p>het volbrengen van een specifieke functie [ISOIEC21 1998, ISO34 2002].</p>
-      
-      <p>Een basisstandaard is één van de standaarden uit de serie ISO 19100 of
-        andere ICT-standaard die</p>
-      <p>gebruikt kan worden als bron voor componenten voor een profiel of
-        productspecificatie.</p>
-      
-      <p><b>Resource</b></p>
-      <p>Verzamelnaam voor datasets, dataset series, services en applicaties
-        [ISO 19115:2003].</p>
-      
-      <p><b>Verplicht element</b></p>
-      <p>Element wat gevuld moet zijn met een waarde.</p>
-  
+     <dl>
+        <dt>Abstracte klasse</dt>
+        <dt> <br>
+        </dt>
+        <dd>Een abstracte klasse is een klasse zonder objecten.</dd>
+        <dt>Applicatie</dt>
+        <dd>Manipulatie en verwerking van data om in gebruiksbehoefte te
+          voorzien [<a data-cite="ISO19101">ISO 19101:2002</a>].</dd>
+        <dt>Catalogues service</dt>
+        <dd>Een systeem wat het “vinden” en “publiceren” van metadata toegang beheerd. Daarnaast heeft de
+        service de mogelijkheid om metadata te “oogsten” (harvest) uit andere catalogues services
+        [ISO 19115/19119 Application Profile, 2005].</dd>
+        <dt>Cliënt</dt>
+        <dd>Software onderdeel, wat een operatie kan laten uitvoeren op een andere server [ISO 19128].</dd>
+        <dt>Codelijst</dt>
+        <dd>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk
+          toepasbaar attribuut [<a data-cite="ISO19136">ISO 19136:2007</a>].</dd>
+        <dt>Conditioneel element</dt>
+        <dd>Metadata element moet gevuld worden met een waarde, indien de
+          conditie van toepassing is.</dd>
+        <dt>Dataset</dt>
+        <dd>Identificeerbare collectie van data [ISO34 2002 / <a data-cite="ISO19101">ISO
+            19101:2002</a>]. Een dataset mag een kleinere groep van data zijn,
+          gelimiteerd door beperkingen zoals een geografisch gebied of
+          geo-objecttype ("feature type"), die aanwezig is in een grotere
+          dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object
+          of een een attribuut van een geo-object dat aanwezig is in een grotere
+          dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit
+          van dit soort type datasets.</dd>
+        <dt>Dataset serie</dt>
+        <dd>Verzameling van datasets met dezelfde productspecificaties [ISO47
+          2003 / <a data-cite="ISO19115">ISO 19115:2003</a>].
+          Productspecificaties zijn thema, resolutie en methodologie.</dd>
+        <dt>Default element</dt>
+        <dd>Metadata element met een standaardwaarde.</dd>
+        <dt>Interface</dt>
+        <dd>Benoemde set van operaties die het gedrag van een entiteit karakteriseren [ISO 19119].</dd>
+        <dt>Expliciete metadata</dt>
+        <dd>Metadata die niet direct of indirect in de dataset opgeslagen zit en
+          daarom handmatig moet worden opgevoerd.</dd>
+        <dt>Feature</dt>
+        <dd>
+          <p>Abstractie van een verschijnsel in de werkelijke wereld [<a data-cite="ISO19101">ISO
+              19101:2002</a>].</p>
+          <p>Voorbeeld het verschijnsel ‘Eifel Toren’ kan met andere
+            soortgelijke verschijnselen geclassificeerd worden in een
+            featuretype ‘toren’.</p>
+        </dd>
+        <dt>Gerelateerde datasets</dt>
+        <dd>Datasets die onderling gerelateerd zijn.</dd>
+        <dt>Impliciete metadata</dt>
+        <dd>Metadata die direct of indirect in de dataset opgeslagen zit en
+          automatisch gegenereerd zou kunnen worden.</dd>
+        <dt>Metadata</dt>
+        <dd>Informatie die ruimtelijke datasets en dataset series beschrijft
+          welke het mogelijk maakt om deze te zoeken, evalueren en te gebruiken.</dd>
+        <dt>Metadata dataset</dt>
+        <dd>Metadata die een beschrijving geeft van een specifieke dataset [<a data-cite="ISO19101">ISO
+            19101:2002</a>].</dd>
+        <dt>Multipliciteit</dt>
+        <dd>Eigenschap die aangeeft of een element niet, 1 of meerdere keren
+          voor kan of dient te komen.</dd>
+        <dt>Namespace</dt>
+        <dd>Verzameling van namen, geïdentificeerd door een URI-referentie, die
+          gebruikt worden in XML-documenten als elementnamen en atribuutnamen [<a
+data-cite="ISO19136">ISO 19136:2007</a>].</dd>
+        <dt>Operation</dt>
+        <dd>Specificatie van een transformatie of bevraging die uitgevoerd kan worden op een object [ISO 19119].</dd>
+        <dt>Optioneel element</dt>
+        <dd>Element wat gevuld mag zijn met een waarde.</dd>
+        <dt>Parameter</dt>
+        <dd>Variabele bestaande uit een naam en waarde die voorkomt in een operatie request of response.</dd>
+        <dt>Profiel</dt>
+        <dd>
+          <p>Set van één of meerdere basisstandaarden en indien van toepassing
+            de identificatie van hoofdstukken, paragrafen, opties en parameters
+            van deze basisstandaarden die noodzakelijk zijn voor het volbrengen
+            van een specifieke functie [ISOIEC21 1998, ISO34 2002].</p>
+          <p>Een basisstandaard is één van de standaarden uit de serie ISO 19100
+            of andere ICT-standaard die gebruikt kan worden als bron voor
+            componenten voor een profiel of productspecificatie.</p>
+        </dd>
+        <dt>Resource</dt>
+        <dd>Verzamelnaam voor datasets, dataset series, services en applicaties
+          [<a data-cite="ISO19115">ISO 19115:2003</a>].</dd>
+        <dt>Service</dt>
+        <dd>Apart te onderscheiden onderdeel van de functionaliteit die via interfaces door een entiteit wordt
+        aangeboden [ISO/IEC TR 14252].</dd>
+        <dt>Service instance</dt>
+        <dd>Een specifiek instance (=verbindingspunt) van een service [amendment ISO 19119]
+        toelichting: De service instance duidt op de software applicatie die op de server draait.</dd>
+        <dt>Service metadata</dt>
+        <dd>Metadata die de operaties en geografische data beschrijft aanwezig bij de service [ISO 19128].</dd>
+        <dt>Verplicht element</dt>
+        <dd>Element wat gevuld moet zijn met een waarde.</dd>
+      </dl>
     </section>
     <section id="metadata-elementen">
       <h1>Metadata elementen</h1>
@@ -1158,7 +1166,7 @@ http://schemas.opengis.net/wfs/2.0/</a></td>
       </table>
       <p>In XML;</p>
       <p><span>&lt;srv:operatesOn uuidref="b4c63e7c-b73c-451a-8071-dbc9f28f0148"
-          xlink:href= "</span><span lang="zxx"><u><a href="http://nationaalgeoregister.nl/geonetwork/srv/en/csw?Service=CSW"><span>http://nationaalgeoregister.nl/geonetwork/srv/en/csw?Service=CSW</span></a></u></span><span>&amp;amp;</span></p>
+          xlink:href= "</span><span lang="zxx"><a href="http://nationaalgeoregister.nl/geonetwork/srv/en/csw?Service=CSW"><span>http://nationaalgeoregister.nl/geonetwork/srv/en/csw?Service=CSW</span></a></span><span>&amp;amp;</span></p>
       <p><span>Request=GetRecordById&amp;amp;Version=2.0.2&amp;amp;</span></p>
       <p><span>id=c7d8d77b-8c47-4309-8c589b12b086407f&amp;amp;</span></p>
       <p>outputSchema=http://www.isotc211.org/2005/gmd&amp;amp;elementSetName=full"/&gt;</p>
@@ -1291,7 +1299,7 @@ http://schemas.opengis.net/wfs/2.0/</a></td>
       <p>Voor INSPIRE services dient er op z’n minst één keyword de categorie of
         subcategorie te bevatten uit deel D.4 van de commissie regulation
         1205/2008, zie bijlage 1. Daarnaast kunnen er andere keywords met
-        bijvoorbeeld het thema worden opgenomen. In <span lang="zxx"><u><a href="http://www.eionet.europa.eu/gemet/inspire_themes">http://www.eionet.europa.eu/gemet/inspire_themes</a></u></span>zijn
+        bijvoorbeeld het thema worden opgenomen. In <span lang="zxx"><a href="http://www.eionet.europa.eu/gemet/inspire_themes">http://www.eionet.europa.eu/gemet/inspire_themes</a></span>zijn
         de thema’s van INSPIRE opgenomen.</p>
       <table>
         <colgroup><col> <col> </colgroup>
@@ -1947,7 +1955,7 @@ http://schemas.opengis.net/wfs/2.0/</a></td>
               <p>String</p>
             </td>
             <td>
-              <p><span lang="zxx"><u><a href="mailto:geoloket@wnz.nl">geoloket@wnz.nl</a></u></span></p>
+              <p><span lang="zxx"><a href="mailto:geoloket@wnz.nl">geoloket@wnz.nl</a></span></p>
             </td>
           </tr>
         </tbody>
@@ -2056,7 +2064,7 @@ http://schemas.opengis.net/wfs/2.0/</a></td>
               <p>string</p>
             </td>
             <td>
-              <p><span lang="zxx"><u><a href="mailto:geoloket@min-eleni.nl">geoloket@min-eleni.nl</a></u></span></p>
+              <p><span lang="zxx"><a href="mailto:geoloket@min-eleni.nl">geoloket@min-eleni.nl</a></span></p>
             </td>
           </tr>
         </tbody>
@@ -2086,7 +2094,7 @@ http://schemas.opengis.net/wfs/2.0/</a></td>
       <p><i>Language</i> <span>[ISO 19139]</span></p>
       <p>In dit element wordt vastgelegd in welke taal de metadata is
         beschreven. Gebruik hiervoor alleen de drie-letter codes van 639-2/B
-        (bibliographic codes), zoals gedefinieerd op <span lang="zxx"><u><a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a></u></span>.</p>
+        (bibliographic codes), zoals gedefinieerd op <span lang="zxx"><a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a></span>.</p>
       <p>Over het algemeen is dut de default waarde.</p>
       <table>
         <colgroup><col> <col> </colgroup>
@@ -2341,29 +2349,22 @@ http://schemas.opengis.net/wfs/2.0/</a></td>
       <h1>Encoding van de metadata elementen</h1>
       <p>De metadata van services wordt uitgewisseld in de encoding (XML)
         conform:</p>
-      <p><span lang="zxx"><u><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/"><span
-                lang="pt-BR">http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</span></a></u></span>
-        <span lang="pt-BR">(ISO 19119 metadata elementen)</span></p>
-      <p lang="pt-BR"><br>
-      </p>
-      <p>Deze encoding die tevens gebruik maakt van:</p>
-      <p><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd"><span
-            ><u>http://schemas.opengis.net/iso/19139/</u></span>20060504<span
-            ><u>/gmd/gmd.xsd</u></span></a> (ISO 19115 metadata
-        elementen)</p>
-      <p>is geschikt om tussen OGC catalogues (CSW) te kunnen uitwisselen. In
+      <p><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">
+        http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</a>
+        (ISO 19119 metadata elementen)</p>
+      <p>Deze encoding die tevens gebruik maakt van: <a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
+      http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a> (ISO 19115 metadata
+        elementen) is geschikt om tussen catalogi via CSW te kunnen uitwisselen. In
         hoofdstuk 5 staat onder elke paragraaf het path met daarachter tussen [
         ] uit welke standaard het komt.</p>
       <p>Een andere manier is om het capabilities document dat verplicht bij
         elke OGC service aanwezig moet zijn gebruikt wordt om een deel van de
         metadata elementen uit hoofdstuk 5 te beschrijven. In bijlage 6,7 en 8
         is een mapping gemaakt van de capabilities documenten voor WMS naar <span
-          ><u><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</a></u></span>.
+          ><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">
+          http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</a></span>.
         Hierdoor kan de capabilities ook gebruikt worden als encoding. De meeste
-        catalogues (gaan) kunnen capabilities harvesten.</p>
-      <div>
-        <p>http://en.wikipedia.org/wiki/UUID</p>
-      </div>
+        catalogi kunnen capabilities harvesten.</p>
     </section>
     <script class="remove" src="script/localscript.js"></script>
     
