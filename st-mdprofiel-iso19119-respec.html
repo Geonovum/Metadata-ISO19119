@@ -532,6 +532,20 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
           </tr>
           <tr>
             <td>
+              <p><a href="#description">Omschrijving</a></p>
+            </td>
+            <td>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+            <td>
+              <p><br></p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
               <p>Connect Point Linkage</p>
             </td>
             <td>
@@ -647,6 +661,21 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
               <p>Originating controlled vocabulary date type</p>
             </td>
           </tr>
+          <tr>
+            <td>
+              <p><a href="#codereferentiesysteem">Ruimtelijk referentiesysteem</a></p>
+            </td>
+            <td>
+              <p>C</p>
+            </td>
+            <td>
+              <p><br></p>
+            </td>
+            <td>
+              <p>Verplicht voor INSPIRE interoperabel en geharmoniseerde services</p>
+            </td>
+          </tr>
+         
           <tr>
             <td>
               <p>Geographic Location</p>
@@ -1483,6 +1512,53 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           </tr>
         </tbody>
       </table>
+             <section id="codereferentiesysteem">
+                                <h3>Ruimtelijk referentiesysteem</h3>
+                                <p style="text-align:left"><em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel, het is voor INSPIRE interoperabele en geharmoniseerde services verplicht om de coördinaat referentie systemen die de service ondersteunt op te nemen. Informatie over deze INSPIRE services is te vinden op de <a
+href="http://wiki.geonovum.nl/index.php?title=Bepalen_categorie_Spatial_Data_Service">wiki "aan de slag met INSPIRE"</a>.&nbsp;
+                                  Het element bevat de Alfanumerieke waarde die
+                                  het gebruikte referentiesysteem van de dataset
+                                  aangeeft. EPSG geeft deze code’s uit. Voor het
+                                  RD wordt de code 28992 gehanteerd. Het
+                                  referentiesysteem wordt met een URI die ook de
+                                  code bevat opgenomen.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Anchor</td>
+                                      <td>
+                                        <pre><code>&lt;gmx:Anchor
+  xlink:href="http://www.opengis.net/def/crs/EPSG/0/28992"&gt;RD
+&lt;/gmx:Anchor&gt;</code></pre>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>http://www.opengis.net/def/crs/EPSG/0/28992</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <i><br>
+                                    Toelichting</i>
+                                  <p>Naast het horizontaal ruimtelijk
+                                    referentiesysteem kan ook het verticaal
+                                    ruimtelijk referentiesysteem in de metadata
+                                    worden opgeslagen, bijvoorbeeld NAP. Deze
+                                    gegevens kan men in het optionele element
+                                    Code verticaal referentiesysteem plaatsen.</p>
+                                  <p>De EPSG codes kunnen gevonden worden op de
+                                    website <a href="http://http://www.opengis.net/def/crs/0">http://www.opengis.net/def/crs/0</a>.</p>
+                              
+                              </section>
+      
       <h3> Geographic location</h3>
       <p><span><i>identificationInfo[1]/*/extent/*/geographicElement/*/</i></span><span><i>westBoundLongitude</i></span>
         <span>[ISO 19139]</span></p>
