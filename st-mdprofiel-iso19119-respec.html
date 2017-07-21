@@ -11,7 +11,7 @@
   </head>
   <body>
     <section id="abstract">
-      <p>de Geonovum ontwikkelt en <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
+      <p>Geonovum ontwikkelt en <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
         de Nederlandse metadataprofielen. Deze profielen zijn een
         verbijzondering van de internationale metadatastandaarden van ISO en
         zijn bedoeld om de interoperabiliteit binnen Nederland te bevorderen. De
@@ -1027,97 +1027,198 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
           </tr>
         </tbody>
       </table>
-      <h3> Resource locator</h3>
-      <p><span><i>distributionInfo/*/transferOptions/*/onLine/*/linkage</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Dit element is conditioneel. Als er een link naar de service
-        beschikbaar is, is het een verplicht element. Voor bijvoorbeeld services
-        waar een restrictieve toegang voor geldt kan dit element de URL naar de
+   <section id="url">
+                                <h3>URL</h3>
+                                <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/linkage</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+          
+      <p>Dit element is conditioneel. Het is verplicht
+                                  indien de ontsluiting publiek toegankelijk is
+                                  en onder de verantwoordelijkheid van de
+                                  beherende organisatie valt. </p>
+         <p>Voor een service bevat het element in ieder
+                                  geval een accessPoint URL. </p>
+      <p>Voor bijvoorbeeld services
+        waar een restrictieve toegang voor geldt kan dit element ook de URL naar de
         betaalservice, of de URL naar een applicatie die direct toegang heeft
-        tot de service bevatten. Het bevat de valide URL voor on-line toegang
-        tot de service.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>URL</p>
-            </td>
-            <td>
-              <p>http://wms.nitg.tno.nl/OneGeology?</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h3> Protocol</h3>
-      <p><span><i>distributionInfo/*/transferOptions/*/onLine/*/protocol</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Dit element is conditioneel. Het is verplicht als er een URL is
-        opgegeven. Bijvoorbeeld naar een WMS of WFS.</p>
-      <p>Het bevat het protocol voor het afhandelen van de URL. Door het
-        hanteren van INSPIRE servicetypes bij het element service type is de
-        relatie met de OGC types verloren, tenzij dit element wordt aangegeven.
-        De namen uit codelijst SV_ServiceType (bijlage 1) wordt hier gehanteerd.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>SV_ServiceType</p>
-            </td>
-            <td>
-              <p>OGC:WMS</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        tot de service bevatten.</p>
+                                <p>Het bevat een valide URL voor online toegang
+                                  tot de service. </p>
+                             
+                               
+                                <p>De URL wordt zodanig aangeboden, dat deze
+                                  altijd direct een resultaat geeft, zonder dat
+                                  deze bevraagd wordt. Hij mag geen HTTP 0, 400
+                                  of 5XX melding opleveren.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld accessPoint</th>
+                                    </tr>
+                                    <tr>
+                                      <td>URL </td>
+                                      <td>http://services.rce.geovoorziening.nl/rce/wms?&amp;request=GetCapabilities&amp;service=WMS</td>
+                                    </tr>
+                                    <tr>
+                                      <td>URL </td>
+                                      <td>http://services.rce.geovoorziening.nl/www/download/data/Rijksmonumenten_nl.xml</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld endPoint</th>
+                                    </tr>
+                                    <tr>
+                                      <td>URL </td>
+                                      <td>http://services.rce.geovoorziening.nl/rce/ows?SERVICE=WMS&amp;&amp;SERVICE=WMS&amp;VERSION=1.3.0
+                                        &amp;REQUEST=GetMap&amp;FORMAT=image%2Fpng&amp;TRANSPARENT=true&amp;LAYERS=rce%3AArcheologicalMonuments
+                                        &amp;STYLES=Archeologie_in_Nederland&amp;CRS=EPSG%3A28992&amp;WIDTH=1650&amp;HEIGHT=830
+                                        &amp;BBOX=-16020.479999999981%2C396426.24%2C161387.52000000002%2C485667.83999999997</td>
+                                    </tr>
+                                    <tr>
+                                      <td>URL</td>
+                                      <td>http://services.rce.geovoorziening.nl/rce/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=NationalListedMonuments&amp;outputFormat=json&amp;Count=50</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <i><br>
+                                    Toelichting</i>
+                                  <p>Een accessPoint URL levert informatie over
+                                    de service inclusief zijn endPoints. Dat kan
+                                    bijvoorbeeld een capabilities of WSDL
+                                    document zijn of een webpagina waar data te
+                                    downloden is.</p>
+                                  <p>Een endPoint URL levert rechtstreeks een
+                                    dataset in een specifiek mediatype. </p>
+      
+     
+                            <section id="protocol">
+                                <h3>Protocol</h3>
+                                <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/protocol</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+     
+       <p>Dit element is conditioneel. Het is verplicht
+                                  als er een URL is opgegeven. Bijvoorbeeld naar
+                                  een WMS of WFS. </p>
+                                <p>Indien de URL een 'endPoint' betreft dan
+                                  dient een waarde geselecteerd te worden uit de
+                                  <a href="#codelijst-media-types">codelijst
+                                    media-types</a>. </p>
+                                <p>Indien de URL een 'accessPoint' betreft,
+                                  dient een waarde geselecteerd te worden uit de
+                                  <a href="#codelijst-sv-servicetype">codelijst
+                                    SV_ServiceType</a>. </p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>media-types</td>
+                                      <td><code>&lt;gmx:Anchor <br>
+                                          xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
+                                          GML <br>
+                                          &lt;/gmx:Anchor&gt;</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td>SV_ServiceType</td>
+                                      <td><code>&lt;gmx:Anchor <br>
+                                          xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
+                                          OGC:WMS <br>
+                                          &lt;/gmx:Anchor&gt;</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td>media-types</td>
+                                      <td>GML</td>
+                                    </tr>
+                                    <tr>
+                                      <td>SV_ServiceType</td>
+                                      <td>OGC:WMS</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                               <i><br>
+                                    Toelichting</i>
+                                  <p>Het element Protocol, is van belang voor
+                                    het automatisch kunnen downloaden van de
+                                    dataset en/of het benaderen van de service
+                                    die deze dataset ontsluit. Het maakt gebruik
+                                    van algemene codelijsten van servicetypes en
+                                    media-types. Door data aan te bieden op
+                                    basis van waardes uit deze codelijsten is de
+                                    ontsluiting software onafhankelijk en
+                                    daardoor breder toegankelijk. </p>
+        <section id="description">
+                                   <h3>Omschrijving</h3>
+                                <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/description</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is voor services verplicht</p>
+                                
+                                <p>Het bevat een verwijzing naar een waarde uit
+                                  de <a href="codelijst-INSPIRE-OnLineDescriptionCode">codelijst
+                                    OnLineDescriptionCode</a> die het type URL
+                                  beschrijft. </p>
+                                <p>Indien verwezen wordt naar een URL die
+                                  rechtstreeks een dataset in een specifiek
+                                  mediatype oplevert dient de waarde endPoint
+                                  gebruikt te worden. In andere gevallen de
+                                  waarde accessPoint. De accessPoint URL levert
+                                  informatie over de service inclusief zijn
+                                  endPoints. Dat kan bijvoorbeeld een
+                                  capabilities of WSDL document zijn of een
+                                  webpagina waar data te downloden is.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>OnLineDescriptionCode</td>
+                                      <td><code>&lt;gmx:Anchor <br>
+xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint"&gt;endPoint<br>
+                                          &lt;/gmx:Anchor&gt;</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td>OnLineDescriptionCode</td>
+                                      <td>endPoint</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+      
       <h3> Connect Point Linkage</h3>
       <p><span><i>identificationInfo[1]/*/containsOperations/*/connectPoint/*/linkage</i></span>
         <span><i>[</i></span><span><i>CSW ISO Metadata AP]</i></span></p>
       <p>Dit element beschrijft het netwerkadres van de service instance via het
         verplichte element linkage, uit de klasse <i></i>CI_OnlineResource.</p>
-      <p>Dit element heeft hetzelfde doel als Resource Locator uit 5.2.4.
-        Doordat ISO 19115 en ISO 19119 niet op dit punt met elkaar zijn
+                              <p>Dit element heeft hetzelfde doel als <a href="#url">URL</a>. Doordat ISO 19115 en ISO 19119 niet op dit punt met elkaar zijn
         afgestemd zijn hier twee verschillende metadata elementen (met dezelfde
         doelstelling) en verschillende encoding (ISO 19139 en CSW ISO Metadata
-        AP) ontstaan.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>URL</p>
-            </td>
-            <td>
-              <p><a href="http://somehost/wms">http://somehost/wms</a></p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        AP) ontstaan. Neem hier het accessPoint van de service op.</p>
+                    <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld accessPoint</th>
+                                    </tr>
+                                    <tr>
+                                      <td>URL </td>
+                                      <td>http://services.rce.geovoorziening.nl/rce/wms?&amp;request=GetCapabilities&amp;service=WMS</td>
+                                    </tr>
+                                    <tr>
+                                      <td>URL </td>
+                                      <td>http://services.rce.geovoorziening.nl/www/download/data/Rijksmonumenten_nl.xml</td>
+                                    </tr>
+                                      </tbody></table>
       <h3> Coupled resource</h3>
       <p><span><i>identificationInfo[1]/*/operatesOn</i></span> <span>[</span><span>CSW
           ISO Metadata AP]</span></p>
@@ -2374,7 +2475,4 @@ href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">
         catalogi kunnen capabilities harvesten.</p>
     </section>
     <script class="remove" src="script/localscript.js"></script>
-    
-  
-
-</body></html>
+</section></section></body></html>
