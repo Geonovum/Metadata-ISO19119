@@ -1783,165 +1783,167 @@ href="http://wiki.geonovum.nl/index.php?title=Bepalen_categorie_Spatial_Data_Ser
           </tr>
         </tbody>
       </table>
-      <h3> Scope</h3>
-      <p><i>dataQualityInfo/*/scope/*/level</i> [ISO 19139]</p>
-      <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie
-        betrekking heeft. Dit niveau wordt gekozen uit codelijst B.5.25.
-        Mogelijke niveau’s zijn: service, dataset, series en featureType.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>B.5.25</p>
-            </td>
-            <td>
-              <p>service</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h3> Degree</h3>
-      <p><span><i>dataQualityInfo/*/report/*/result/*/pass</i></span> <span>[ISO
-          19139]</span></p>
-      <p><span><i>dataQualityInfo/*/report/*/result/*/explanation</i></span> <span>[ISO
-          19139]</span></p>
-      <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als
-        de service een INSPIRE bron is.</p>
-      <p>In dit element kan dan worden weergegeven of de service conform de
-        specificatie is. In explanation dient de uitleg van de conformiteit
-        opgenomen te worden.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Boolean</p>
-            </td>
-            <td>
-              <p>True</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>String</p>
-            </td>
-            <td>
-              <p>De hier gehanteerde servicetype wijkt af van de domeinen uit de
-                specificatie van INSPIRE</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h3> Specification</h3>
-      <p><span><i>dataQualityInfo/*/report/*/result/*/specification/*/title</i></span>
-        <span>[ISO 19139]</span></p>
-      <p><span><i>dataQualityInfo/*/report/*/result/*/specification/*/date/*/date</i></span>
-        <span>[ISO 19139]</span></p>
-      <p><span><i>dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als
-        de service een INSPIRE bron is.</p>
-      <p>Dit element bevat de titel en publicatie datum van de specificatie of
-        richtlijnen waar de service conform aan dient te zijn. Ook het type
-        gebeurtenis waar de datum betrekking op heeft wordt vastgelegd. Type
-        gebeurtenis wordt gekozen uit codelijst B.5.2. Mogelijke gebeurtenissen
-        zijn: Datum voltooiing, Datum publicatie en Datum laatste wijziging. Het
-        formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>string</p>
-            </td>
-            <td>
-              <p>“ <span lang="zxx"><a href="javascript:void(0);"><span lang="en"><span>Technical
-                        Guidance for the implementation of INSPIRE View Services</span></span></a></span><span>,
-                  version3.0”.</span></p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>B.5.2</p>
-            </td>
-            <td>
-              <p><span>Publication</span></p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>date</p>
-            </td>
-            <td>
-              <p><span>2011-03-30</span></p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                             <section id="niveau-kwaliteitsbeschrijving">
+                                <h3>Niveau kwaliteitsbeschrijving</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/scope/*/level</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element beschrijft het niveau waarop de
+                                  kwaliteitsinformatie betrekking heeft. Dit
+                                  niveau wordt gekozen uit <a href="#codelijst-b525">codelijst
+                                    B.5.25</a>. Mogelijke niveau is: service </p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>B.5.25</td>
+                                      <td>service</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                            
+                              <section id="specificatie">
+                                <h3>Specificatie</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/title</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  bron is. Het
+                                  bevat de titel van de specificatie of
+                                  richtlijnen waar de
+                                  service conform aan dient te zijn.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Anchor</td>
+                                      <td>
+                                        <pre><code>&lt;gmx:Anchor
+ xlink:href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1"&gt;
+   Technical Guidance for the implementation of INSPIRE View Services
+&lt;/gmx:Anchor&gt;</code></pre>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>“ Technical Guidance for the implementation of INSPIRE View Services”.</td>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="specificatiedatum">
+                                <h3>Specificatiedatum</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/date</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  bron is. Het
+                                  bevat de datum van de specificatie of
+                                  richtlijnen of informatie model waar de
+                                  dataset conform aan dient te zijn. Het formaat
+                                  van de datum is JJJJ-MM-DD (met streepjes).</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Date</td>
+                                      <td>2013-04-04</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="specificatiedatum-type">
+                                <h3>Specificatiedatum type</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  bron is. Type gebeurtenis wordt
+                                  gekozen uit <a href="#codelijst-b52">codelijst
+                                    B.5.2</a>. Mogelijke gebeurtenissen zijn:
+                                  creatie-, publicatie-, of revisiedatum.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>B.5.2</td>
+                                      <td>publication</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="verklaring">
+                                <h3>Verklaring</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/explanation</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  bron is. Het
+                                  bevat de verklaring van de betekenis van de
+                                  conformiteit.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>De performance van deze service is minder dan de vereiste
+                                        van INSPIRE</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="conformiteit-indicatie-met-de-specificatie">
+                                <h3>Conformiteit indicatie met de specificatie</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/pass</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  bron is. In dit
+                                  element kan dan worden weergegeven of het wel
+                                  of niet conform de INSPIRE specificatie is.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Boolean</td>
+                                      <td>TRUE</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
       <h3> <span><span>L</span></span><span><span>imitations on public
             access</span></span></h3>
       <p>Het is verplicht op zijn minst één van de drie elementen
