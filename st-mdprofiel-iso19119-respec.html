@@ -1817,7 +1817,17 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                   bron is. Het
                                   bevat de titel van de specificatie of
                                   richtlijnen waar de
-                                  service conform aan dient te zijn.</p>
+                                  service conform aan dient te zijn. Voor INSPIRE worden deze elementen meerdere keren opgenomen om conformiteit met de technische specificaties, 
+                                  de verordening en ook de categorie van de service aan te geven. 
+                                  Voor alle INSPIRE services wordt zowel de conformiteit met een verordening aangegeven als met een technische specificatie.</p>
+                                <p><i>INSPIRE netwerk services</i></p>
+                                <ul><li>De verordening van netwerkservices, gebruik eventueel een anchor met de volgende URI http://data.europa.eu/eli/reg/2009/976</li><li>De technische specificatie, zoals Technical Guidance for the implementation of INSPIRE View Services </li></ul>
+                                
+                                <p><i>INSPIRE spatial data service</i></p>
+                                <ul><li>De verordening van interoperabiliteit van data en services, gebruik eventueel een anchor met de volgende URI http://data.europa.eu/eli/reg/2010/1089</li><li>De conformiteit met de categorie van de service</li><li>De technische specificatie</li></ul><p>Gebruik voor de conformiteit van de categorie de waardes uit codelijst XXX, 
+                                  hiervoor dient gebruik gemaakt te worden van een anchor. </p><p>Daarnaast wordt hier voor INSPIRE spatial data services, aangegeven aan welke technische specificatie deze service voldoet, anders dan de INSPIRE view en download specificaties.
+                                  
+                                </p>
                                 <table>
                                   <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
                                   <tbody>
@@ -1831,6 +1841,15 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                         <pre><code>&lt;gmx:Anchor
  xlink:href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1"&gt;
    Technical Guidance for the implementation of INSPIRE View Services
+&lt;/gmx:Anchor&gt;</code></pre>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Anchor</td>
+                                      <td>
+                                        <pre><code>&lt;gmx:Anchor
+ xlink:href="http://inspire.ec.europa.eu/id/ats/metadata/2.0/sds-invocable"&gt;
+   invocable
 &lt;/gmx:Anchor&gt;</code></pre>
                                       </td>
                                     </tr>
@@ -1922,7 +1941,7 @@ style="float:right">[<a data-cite="ISO19139">ISO
                               </section>
                               <section id="conformiteit-indicatie-met-de-specificatie">
                                 <h3>Conformiteit indicatie met de specificatie</h3>
-                                <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/pass</em><span
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_DomainConsistency/result/DQ_ConformanceResult/pass</em><span
 style="float:right">[<a data-cite="ISO19139">ISO
                                       19139:2007</a>]</span></p>
                                 <p>Dit element is conditioneel in dit profiel.
@@ -1944,6 +1963,128 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                   </tbody>
                                 </table>
                               </section>
+      
+      
+      
+                                 <section id="criteria">
+                                <h3>Criteria</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_ConceptualConsistency/nameOfMeasure</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  interoperabele service is. Het bevat de minimale kwaliteit van de service die word bepaald door de verantwoordelijke partij voor die service met een verwachtte geldigheid gedurende een langere periode. De kwaliteit van de service moet voor drie criteria worden opgenomen; </p><ul><li>Beschikbaarheid, waarin de ondergrens van het geraamde percentage van de tijd die de dienst beschikbaar is op jaarbasis. </li><li>Performance, waarin de maximale respons tijd waarbinnen een typisch verzoek aan de service kan worden uitgevoerd in een normale situatie. </li><li>Capaciteit, waarin de ondergrens van het maximum aantal gelijktijdige verzoeken dat kan worden voltooid binnen de grenzen van de gedeclareerde performance. 
+
+                                 </li></ul><p>Het element criteria, wordt opgenomen met een anchor, zie codelijst XXX </p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Anchor</td>
+                                      <td>
+                                        <pre><code>&lt;gmx:Anchor <br>  xlink:href="http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/availability"&gt;
+    beschikbaarheid
+&lt;/gmx:Anchor&gt;</code></pre>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                   
+                                    
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="beschrijving-meetcriteria">
+                                <h3>Beschrijving meetcriteria</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_ConceptualConsistency/measureDescription</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  interoperabele service is. Het bevat de beschrijving van de meetcriteria.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>Ondergrens van het percentage in tijd, dat de dienst naar verwachting jaarlijks beschikbaar</td>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>De maximale responstijd binnen welke een typisch verzoek naar de Ruimtelijke Gegevensdienst in een normale situatie kan worden uitgevoerd, door tenminste het eerste deel van de reactie terug te keren. 
+                                        De normale situatie vertegenwoordigt perioden buiten de piekbelasting. Het is ingesteld op 90% van de tijd.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>Ondergrens van het maximale aantal gelijktijdige verzoeken die binnen de grenzen van de aangegeven prestatie kunnen worden afgerond.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="criteria-type-waarde">
+                                <h3>Criteria type waarde</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_ConceptualConsistency/result/DQ_QuantitativeResult/valueUnit</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  interoperabele service is. Het bevat de meeteenheid waarmee de criteria is vastgelegd.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>xsi:double</td>
+                                      <td>urn:ogc:def:uom:OGC::percent</td>
+                                    </tr>
+                                    <tr>
+                                      <td>xsi:double</td>
+                                      <td>http://www.opengis.net/def/uom/SI/second</td>
+                                    </tr>
+                                    <tr>
+                                      <td>xsi:integer</td>
+                                      <td>http://www.opengis.net/def/uom/OGC/1.0/unity</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="criteria-waarde">
+                                <h3>Criteria waarde</h3>
+                                <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_ConceptualConsistency/result/DQ_QuantitativeResult/value</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel in dit profiel.
+                                  Het is verplicht als de service een INSPIRE
+                                  interoperabele service is. Het bevat de meetwaarde van het criteria.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>xsi:double</td>
+                                      <td>82</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                             
+      
+      
+      
       <h3> <span><span>L</span></span><span><span>imitations on public
             access</span></span></h3>
       <p>Het is verplicht op zijn minst één van de drie elementen
