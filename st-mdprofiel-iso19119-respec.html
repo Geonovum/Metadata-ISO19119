@@ -883,11 +883,9 @@ href="#thesaurusdatum-type">Datum type</a></td>
               <p><a href="#criteria">Criteria</a></p>
             </td>
             <td>
-              <p>C</p>
+              <p>O</p>
             </td>
-            <td>
-              
-            <br></td>
+            <td>C</td>
             <td>
               <p>Verplicht als de service een interoperabele INSPIRE service is</p>
             </td>
@@ -897,11 +895,9 @@ href="#thesaurusdatum-type">Datum type</a></td>
               <p><a href="#criteria-beschrijving">Criteria beschrijving</a></p>
             </td>
             <td>
-              <p>C</p>
+              <p>O</p>
             </td>
-            <td>
-              
-            <br></td>
+            <td>C</td>
             <td>
               <p>Verplicht als de service een interoperabele INSPIRE service is</p>
             </td>
@@ -911,11 +907,11 @@ href="#thesaurusdatum-type">Datum type</a></td>
               <p><a href="#criteria-type-waarde">Criteria type waarde</a></p>
             </td>
             <td>
-              <p>C</p>
+              <p>O</p>
             </td>
             <td>
               
-            <br></td>
+            C</td>
             <td>
               <p>Verplicht als de service een interoperabele INSPIRE service is</p>
             </td>
@@ -925,54 +921,42 @@ href="#thesaurusdatum-type">Datum type</a></td>
               <p><a href="#criteria-waarde">Criteria waarde</a></p>
             </td>
             <td>
-              <p>C</p>
+              <p>O</p>
             </td>
             <td>
               
-            <br></td>
+            C</td>
             <td>
               <p>Verplicht als de service een interoperabele INSPIRE service is</p>
             </td>
           </tr>
-          <tr>
-            <td height="39">
-              <p>accessConstraints</p>
-            </td>
-            <td rowspan="3">
-              <p>V</p>
-            </td>
-            <td rowspan="3">
-              <p>2.9.1</p>
-            </td>
-            <td rowspan="3">
-              <p>Het is verplicht op zijn minst één van de drie elementen
-                accessConstraints, otherConstraints of classification op te
-                nemen. Zelfs als er geen beperkingen zijn op publieke toegang.</p>
-            </td>
-          </tr>
-          <tr>
-            <td height="29">
-              <p>otherConstraints</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>classification</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>useLimitations</p>
-            </td>
-            <td>
-              <p>V</p>
-            </td>
-            <td>
-              <p>2.9.2</p>
-            </td>
-            <td> <br>
-            </td>
-          </tr>
+                                  <tr>
+                                    <td colspan="4" rowspan="1"><b>Beperkingen</b></td>
+                                  </tr>
+                              
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#juridische-toegangsrestricties">Juridische
+                                        toegangsrestricties</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td><br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#overige-beperkingen">Overige
+                                        beperkingen</a></td>
+                                    <td>C</td>
+                                    <td>C</td>
+                                    <td>Het is verplicht als juridische
+                                      toegangsrestricties de waarde
+                                      "otherRestrictions" heeft.</td>
+                                  </tr>
+                                      <tr>
+                                    <td>&nbsp;<a href="#gebruiksbeperkingen">Gebruiksbeperkingen</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
           <tr>
             <td>
               <p>Responsible party</p>
@@ -1791,114 +1775,7 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                   </tbody>
                                 </table>
                               </section>     
-      <h3> Keyword value</h3>
-      <p><i>identificationInfo[1]/*/descriptiveKeywords/*/keyword</i> [ISO
-        19139]</p>
-      <p>Het element bevat in het algemeen gebruikte woorden of</p>
-      <p>geformaliseerde zinnen om een service te beschrijven.</p>
-      <p>Voor INSPIRE services dient er op z’n minst één keyword de categorie of
-        subcategorie te bevatten uit deel D.4 van de commissie regulation
-        1205/2008, zie bijlage 1. Daarnaast kunnen er andere keywords met
-        bijvoorbeeld het thema worden opgenomen. In <span lang="zxx"><a href="http://www.eionet.europa.eu/gemet/inspire_themes">http://www.eionet.europa.eu/gemet/inspire_themes</a></span>zijn
-        de thema’s van INSPIRE opgenomen.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p><span>S</span><span>tring</span></p>
-            </td>
-            <td>
-              <p>infoMapAccessService</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h3> Originating controlled vocabulary</h3>
-      <p><span><i>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/title</i></span>
-        <span>[ISO 19139]</span></p>
-      <p><span><i>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/date</i></span>
-        <span>[ISO 19139]</span></p>
-      <p><span><i>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/dateType</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Dit is een conditioneel element. Het is verplicht als een keyword uit
-        een thesaurus afkomstig is. Het bevat de naam en publicatie datum van de
-        thesaurus waar het keyword uit afkomstig is. Ook het type gebeurtenis
-        waar de datum betrekking op heeft wordt vastgelegd. Type gebeurtenis
-        wordt gekozen uit codelijst B.5.2 uit ISO 19115. Mogelijke
-        gebeurtenissen zijn: Datum voltooiing, Datum publicatie en Datum laatste
-        wijziging. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>string</p>
-            </td>
-            <td>
-              <p>“GEMET - INSPIRE themes, version 1.0”</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>B.5.2</p>
-            </td>
-            <td>
-              <p>Publication</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>date</p>
-            </td>
-            <td>
-              <p>2008-06-01</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+   
              <section id="codereferentiesysteem">
                                 <h3>Ruimtelijk referentiesysteem</h3>
                                 <p style="text-align:left"><em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em><span
@@ -2432,135 +2309,265 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                   </tbody>
                                 </table>
                               </section>
-                             
-      
-      
-      
-      <h3> <span><span>L</span></span><span><span>imitations on public
-            access</span></span></h3>
-      <p>Het is verplicht op zijn minst één van de drie elementen
-        accessConstraints, otherConstraints of classification op te nemen, zelfs
-        als er geen beperkingen zijn op publieke toegang. Als er geen
-        beperkingen zijn dient men dat bij otherConstraints aan te geven. Als er
-        otherConstraints worden opgenomen, dient bij accessConstraints de waarde
-        “anders” gekozen te worden. In bijlage 5 is uitgewerkt hoe
-        gebruiksvoorwaarden en public domein mark toe te passen.</p>
-      <p>Het element dient om toegangsrestricties die van toepassing zijn op de
-        service, op te voeren. Voor services kan er een conflict zijn met
-        restrictions uit SV_ServiceIdentification in ISO19119. Dit element is
-        ook van het type MD_Constraints. De constraints voor een service worden
-        gedefinieerd volgens INSPIRE.</p>
-      <p><b>accessConstraints</b></p>
-      <p><span><i>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Dit element bevat toegangseisen die er zorg voor dragen dat privacy of
-        intellectueel eigendom gewaarborgd zijn en elke andere speciale
-        beperkingen voor het verkrijgen van de service. Als er geen beperkingen
-        zijn dient men “geen beperkingen” bij otherConstraints aan te geven. Als
-        er otherConstraints worden opgenomen, dient hier de waarde “anders”
-        gekozen te worden. De waardes komen uit codelijst B5.24 van ISO19115.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>B5.24</p>
-            </td>
-            <td>
-              <p>intellectualPropertyRights</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p><b>otherConstraints</b></p>
-      <p><i>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</i>
-        [ISO 19139]</p>
-      <p>Dit element bevat andere restricties en vereisten voor toegang en
-        gebruik van de service. Als er een waarde in dit element wordt ingevuld,
-        dient bij het element accessConstraints de waarde “anders” gekozen te
-        worden</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>String</p>
-            </td>
-            <td>
-              <p>geen beperkingen</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p><b>classification</b></p>
-      <p><span><i>identificationInfo[1]/*/resourceConstraints/*/classification</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Dit element bevat de soort veiligheidsrestrictie op de service. De
-        waardes worden gekozen uit codelijst B5.11</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>B.5.11</p>
-            </td>
-            <td>
-              <p>Restricted</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h3> Conditions applying to access and use</h3>
-      <p><i>identificationInfo[1]/*/resourceConstraints/*/useLimitation</i> [ISO
-        19139]</p>
-      <p>Dit element bevat de toepassingen waarvoor de service niet geschikt is.
-        Voor INSPIRE, bevat het indien van toepassing ook prijsinformatie voor
-        het gebruik van de service .</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>String</p>
-            </td>
-            <td>
-              <p>Niet gebruiken voor navigatie</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                               <section id="juridische-toegangsrestricties">
+                                <h3>Juridische toegangsrestricties</h3>
+                                <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Het is verplicht juridische
+                                  toegangsrestricties op te nemen. Het is
+                                  verplicht een waarde op te nemen voor
+                                  beperkingen op publieke toegang in één
+                                  gmd:resourceConstraints/gmd:MD_LegalConstraints
+                                  element. </p>
+                                <p>Daarnaast is het verplicht voorwaarden voor
+                                  toegang en gebruik op te nemen in één ander
+                                  gmd:resourceConstraints/gmd:MD_LegalConstraints
+                                  element. </p>
+                                <p>Voor INSPIRE services, bevat dit element de
+                                  waarde "otherRestrictions". Voor organisaties
+                                  die zich conformeren aan afspraken in het
+                                  GI-beraad, bevat dit element ook de waarde
+                                  "otherRestrictions". </p>
+                                <p>Dit element bevat toegangseisen die er zorg
+                                  voor dragen dat privacy of intellectueel
+                                  eigendom gewaarborgd zijn en elke andere
+                                  speciale beperkingen voor het verkrijgen van
+                                  de metadata of data. De waardes komen uit <a href="#codelijst-b524">codelijst B.5.24</a>
+                                  uit ISO 19115.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>B.5.24</td>
+                                      <td>otherRestrictions</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <i><br>
+                                    Toelichting</i>
+                                  <p> De Nederlandse overheid wil
+                                    overheidsinformatie zoveel mogelijk gratis
+                                    en zonder gebruiksvoorwaarden beschikbaar
+                                    stellen. Dat geldt ook voor geo-informatie.
+                                    Het ministerie van Infrastructuur en Milieu
+                                    hanteert <a href="http://creativecommons.nl/publiek-domein/#commons">Creative
+                                      Commons ZERO</a> als de voorkeurslicentie
+                                    (om aan te geven dat een werk zonder
+                                    restricties gebruikt kan worden) voor data
+                                    van haar ministerie. </p>
+                                  <p>In Nederland is afgesproken om voor
+                                    geo-informatie gebruik te maken van de
+                                    gebruiksvoorwaarden van <a href="http://creativecommons.nl/">Creative
+                                      Commons</a> , tenzij dat niet mogelijk is.
+                                    Dit “Creative Commons, tenzij” beleid is in
+                                    2014 vastgesteld door het GI-beraad. </p>
+                                  <p>In sommige gevallen is het toch
+                                    noodzakelijk om gebruiksvoorwaarden te
+                                    handhaven die niet in Creative Commons zijn
+                                    opgenomen, bijvoorbeeld door wetgeving. In
+                                    die gevallen biedt Geo Gedeeld uitkomst. Geo
+                                    Gedeeld is een hulpmiddel om
+                                    gebruiksvoorwaarden voor geo-informatie op
+                                    een eenvoudige, heldere en
+                                    gestandaardiseerde manier kenbaar te maken.
+                                    Het is ontstaan uit de behoefte van de
+                                    overheid om de bestaande gebruiksvoorwaarden
+                                    voor geo-informatie te stroomlijnen. Zie ook
+                                    <a href="http://www.geonovum.nl/onderwerpen/gebruiksvoorwaarden/algemeen-gebruiksvoorwaarden">
+                                      algemeen gebruiksvoorwaarden</a></p>
+                               
+                              </section>
+                              <section id="overige-beperkingen">
+                                <h3>Overige beperkingen</h3>
+                                <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element is conditioneel, als het element
+                                  juridische toegangsrestricties de waarde
+                                  otherRestrictions bevat dient het te worden
+                                  opgenomen.&nbsp; </p>
+                                <p>Hierin wordt&nbsp;in één&nbsp;
+                                  gmd:resourceConstraints/gmd:MD_LegalConstraints
+                                  element&nbsp; voor de voorwaarden voor toegang
+                                  en gebruik&nbsp; een link naar de licentie en
+                                  de bijbehorende beschrijving opgenomen.&nbsp;
+                                  Daarnaast wordt er, als het een INSPIRE
+                                  service is en er geen beperkingen zijn of deze
+                                  niet bekend zijn, een waarde uit <a href="#Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
+                                    ConditionsApplyingToAccessAndUse</a>
+                                  opgenomen in een tweede otherConstraints
+                                  element binnen hetzelfde&nbsp;
+                                  md:resourceConstraints/gmd:MD_LegalConstraints
+                                  element. Voor INSPIRE is het gebruik van een
+                                  Anchor verplicht. Het bevat, indien van
+                                  toepassing ook prijsinformatie voor het
+                                  gebruik van de dataset.&nbsp; </p>
+                                <p>Daarnaast wordt voor beperkingen op publieke
+                                  toegang in één ander
+                                  gmd:resourceConstraints/gmd:MD_LegalConstraints
+                                  een waarde opgenomen uit <a href="Codelijst-INSPIRE-LimitationsOnPublicAccess/">codelijst
+                                    LimitationsOnPublicAccess</a> . Als er geen
+                                  beperkingen zijn dient men dat ook aan te
+                                  geven, met de waarde "noLimitations". Voor
+                                  INSPIRE is het gebruik van een Anchor
+                                  verplicht.<br>
+                                </p>
+                                <p><br>
+                                </p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Anchor</td>
+                                      <td>
+                                        <pre><code>&lt;otherConstraints&gt;
+  &lt;gmx:anchor
+    xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;
+      Geen beperkingen
+  &lt;/gmx:anchor&gt;
+&lt;/otherConstraints&gt;</code></pre>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>
+                                        <pre><code>&lt;otherConstraints&gt;
+  https://creativecommons.org/publicdomain/mark/*/deed.nl
+&lt;/otherConstraints&gt;
+&lt;otherConstraints&gt;
+  Geen beperkingen
+&lt;/otherConstraints&gt;</code></pre>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                &nbsp;
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>ConditionsApplyingToAccessAndUse</td>
+                                      <td>
+                                        <pre><code>&lt;gmx:anchor
+  xlink:href="http://inspire.ec.europa.eu/metadata-codelist
+    /ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
+    Geen beperkingen
+&lt;/gmx:anchor&gt;</code></pre>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                               <i><br>
+                                    Toelichting<br>
+                                    <br>
+                                  </i>Naast de link naar de licentie, wordt ook
+                                  een voor mensen leesbare tekst opgenomen. In
+                                  onderstande tabel zijn daarvoor de
+                                  beschrijvingen en de bijbehorende link naar de
+                                  licentie opgenomen. <br>
+                                  <br>
+                                  <table>
+                                    <colgroup><col style="width: 25%"><col style="width: 35%"><col
+style="width: 40%"></colgroup>
+                                    <tbody>
+                                      <tr>
+                                        <th>Beperking</th>
+                                        <th>Beschrijving overige beperkingen</th>
+                                        <th>URL</th>
+                                      </tr>
+                                      <tr>
+                                        <td>Open data (publiek)</td>
+                                        <td>Geen beperkingen</td>
+                                        <td>http://creativecommons.org/publicdomain/mark/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Open data (CCO)</td>
+                                        <td>Geen beperkingen</td>
+                                        <td>http://creativecommons.org/publicdomain/zero/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Open data (CC-BY)</td>
+                                        <td>Naamsvermelding verplicht,
+                                          organisatienaam</td>
+                                        <td>http://creativecommons.org/licenses/by/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Gebruiksvoorwaarden (CC-by-sa)</td>
+                                        <td>Gelijk Delen, Naamsvermelding
+                                          verplicht, organisatienaam</td>
+                                        <td>http://creativecommons.org/licenses/by-sa/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Gebruiksvoorwaarden (CC-by-nc)</td>
+                                        <td>Niet Commercieel, Naamsvermelding
+                                          verplicht, organisatienaam</td>
+                                        <td>http://creativecommons.org/licenses/by-nc/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Gebruiksvoorwaarden (CC-by-nc-sa)</td>
+                                        <td>Niet Commercieel, Gelijk Delen,
+                                          Naamsvermelding verplicht,
+                                          organisatienaam</td>
+                                        <td>http://creativecommons.org/licenses/by-nc-sa/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Gebruiksvoorwaarden (CC-by-nd) </td>
+                                        <td>Geen Afgeleide Werken,
+                                          Naamsvermelding verplicht,
+                                          organisatienaam</td>
+                                        <td>http://creativecommons.org/licenses/by-nd/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Gebruiksvoorwaarden (CC-by-nc-nd)</td>
+                                        <td>Niet Commercieel, Geen Afgeleide
+                                          Werken, Naamsvermelding verplicht,
+                                          organisatienaam</td>
+                                        <td>http://creativecommons.org/licenses/by-nc-nd/*/deed.nl</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Gebruiksvoorwaarden Geogedeeld</td>
+                                        <td>Geo Gedeeld licentie</td>
+                                        <td>Verwijzing naar een geldige URL van
+                                          de licentie (http://)</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              
+                              </section>
+                              <section id="gebruiksbeperkingen">
+                                <h3>Gebruiksbeperkingen</h3>
+                                <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/useLimitation</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element bevat toepassingen waarvoor de
+                                  dataset niet geschikt is. </p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>Niet gebruiken voor navigatie</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
       <h3> Responsible party</h3>
       <p> <i>identificationInfo[1]/*/pointOfContact/*/organisationName</i>
         <i></i>[ISO 19139]</p>
