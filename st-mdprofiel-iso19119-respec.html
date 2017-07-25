@@ -762,44 +762,31 @@ href="wiki.geonovum.nl/index.php/2_Metadata">metadata
               <p>Verplicht indien data aan de service is gekoppeld</p>
             </td>
           </tr>
-          <tr>
-            <td height="51">
-              <p>Temporal extent</p>
+<tr>
+            <td>
+              <p><a href="#datum-type-van-de-bron"> Datum van de bron</a></p>
             </td>
-            <td rowspan="4">
+            <td>
               <p>V</p>
             </td>
-            <td>
-              <p>2.6.1</p>
+            <td> <br>
             </td>
-            <td rowspan="4">
-              <p>Op zijn minst één temporele referentie is verplicht</p>
+            <td> <br>
             </td>
           </tr>
           <tr>
-            <td height="50">
-              <p>Date of publication</p>
+            <td>
+              <p><a href="#datum-type-van-de-bron">Datumtype van de bron</a></p>
             </td>
             <td>
-              <p>2.6.2</p>
+              <p>V</p>
+            </td>
+            <td> <br>
+            </td>
+            <td> <br>
             </td>
           </tr>
-          <tr>
-            <td height="50">
-              <p>Date of last revision</p>
-            </td>
-            <td>
-              <p>2.6.3</p>
-            </td>
-          </tr>
-          <tr>
-            <td height="50">
-              <p>Date of creation</p>
-            </td>
-            <td>
-              <p>2.6.4</p>
-            </td>
-          </tr>
+         
           <tr>
             <td>
               <p><a href="#niveau-kwaliteitsbeschrijving">Niveau kwaliteitsbeschrijving</a></p>
@@ -1919,124 +1906,57 @@ href="http://wiki.geonovum.nl/index.php?title=Bepalen_categorie_Spatial_Data_Ser
           </tr>
         </tbody>
       </table>
-      <h3> <span>Temporal reference</span></h3>
-      <p>Op zijn minst één temporele referentie is verplicht. Om op ISO 19115
-        aan te sluiten moet ’in ieder geval één van de volgende elementen worden
-        vastgelegd; Creatie-, publicatie-, of revisiedatum van de service.
-        Aanbevolen wordt om de publicatie datum op te nemen.</p>
-      <h4><b>Temporal extent</b></h4>
-      <p><span><i>identificationInfo[1]/*/extent/*/temporalElement/*/extent</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Periode waarop de data betrekking heeft. Dit kan een tijdsinterval zijn
-        maar ook een datum. De overall tijdsperiode gedekt door de inhoud van de
-        service kan een samenstelling zijn van een of meer waarden. Het formaat
-        van de datum is +/-JJJJ-MM-DDTUU:MM:SS (met streepjes T van time en
-        dubbele punt). Het jaar 1 BC wordt als -0000, 2 BC -0001, etc.
-        weergegeven. Maand dag en tijd zijn optioneel. De XML notatie is in
-        bijlage 4 vastgelegd.</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>date</p>
-            </td>
-            <td>
-              <p><span>1977-03-19T11:45:30</span></p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h4><b>Date of publication</b></h4>
-      <p><span><i>identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Datum waarop de service gepubliceerd is. Het formaat van de datum is
-        JJJJ-MM-DD (met streepjes) of JJJJ-MM-DDTUU:MM:SS (met streepjes T van
-        time en dubbele punt).</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>date</p>
-            </td>
-            <td>
-              <p>2007-09-15</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h4><b>Date of last revision</b></h4>
-      <p><span><i>identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='revision']/*/date</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Datum waarop de service gewijzigd is. In ISO19115 kan men meerdere
-        wijzigingsdata opnemen. De INSPIRE datum is de recentste. Het formaat
-        van de datum is JJJJ-MM-DD (met streepjes) of JJJJ-MM-DDTUU:MM:SS (met
-        streepjes T van time en dubbele punt).</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>date</p>
-            </td>
-            <td>
-              <p>2007-11-15T11:15:00</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h4><b>Date of creation</b></h4>
-      <p><span><i>identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='creation']/*/date</i></span>
-        <span>[ISO 19139]</span></p>
-      <p>Datum waarop de service voltooid is. Het formaat van de datum is
-        JJJJ-MM-DD (met streepjes) of JJJJ-MM-DDTUU:MM:SS (met streepjes T van
-        time en dubbele punt).</p>
-      <table>
-        <colgroup><col> <col> </colgroup>
-        <tbody>
-          <tr>
-            <td>
-              <p><b>Data type of Domein</b></p>
-            </td>
-            <td>
-              <p><b>Voorbeeld</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>date</p>
-            </td>
-            <td>
-              <p>2007-09-15</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+ <section id="datum-van-de-bron">
+                                <h4>Datum van de bron</h4>
+                                <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/date/*/date</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Op z’n minst één van de elementen Datum
+                                  creatie, Datum publicatie of Datum revisie is
+                                  verplicht. Er kan maximaal één creatie datum
+                                  worden opgenomen. Voor INSPIRE geldt ook een
+                                  maximum van één revisie datum. Het formaat van
+                                  de datum is JJJJ-MM-DD(met streepjes).</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Date</td>
+                                      <td>2007-09-15</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
+                              <section id="datum-type-van-de-bron">
+                                <h4>Datum type van de bron</h4>
+                                <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/date/*/dateType</em><span
+style="float:right">[<a data-cite="ISO19139">ISO
+                                      19139:2007</a>]</span></p>
+                                <p>Dit element bevat het type gebeurtenis waar
+                                  de datum betrekking op heeft. Type gebeurtenis
+                                  wordt gekozen uit <a href="#codelijst-b52">codelijst
+                                    B.5.2</a>. Mogelijke gebeurtenissen zijn:
+                                  creatie-, publicatie-, of revisiedatum.
+                                  INSPIRE vereist bovendien dat het datum type
+                                  uniek is per set aan datums van de bron.</p>
+                                <table>
+                                  <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>Data type of Domein</th>
+                                      <th>Voorbeeld</th>
+                                    </tr>
+                                    <tr>
+                                      <td>B.5.2</td>
+                                      <td>creation</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </section>
                              <section id="niveau-kwaliteitsbeschrijving">
                                 <h3>Niveau kwaliteitsbeschrijving</h3>
                                 <p style="text-align:left"><em>dataQualityInfo/*/scope/*/level</em><span
