@@ -668,7 +668,7 @@ href="wiki.geonovum.nl/index.php/2_Metadata">metadata
           </tr>
           <tr>
             <td>
-              <p>Spatial data service type</p>
+              <a href="#service-type">Service type</a>
             </td>
             <td>
               <p>V</p>
@@ -1285,7 +1285,7 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                     </tr>
                                    
                                     <tr>
-                                      <td>SV_ServiceType</td>
+                                      <td>Protocol</td>
                                       <td><code>&lt;gmx:Anchor <br>
                                           xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
                                           OGC:WMS <br>
@@ -1293,7 +1293,7 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                     </tr>
                                    
                                     <tr>
-                                      <td>SV_ServiceType</td>
+                                      <td>Protocol</td>
                                       <td>OGC:WMS</td>
                                     </tr>
                                   </tbody>
@@ -1613,19 +1613,13 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           </tr>
         </tbody>
       </table>
-      <h3> Spatial data service type</h3>
+      <section id="service-type">
+        <h3>Service type</h3>
       <p><span><i>identificationInfo[1]/*/serviceType</i></span> <span>[</span><span>CSW
           ISO Metadata AP]</span></p>
       <p>Dit element bevat het type van de service.</p>
       <p>De implementing rules van INSPIRE verplichten het gebruik van de
-        waardes uit Annex B.3.</p>
-      <p>Binnen Nederland geldt voor dit metadata element een restrictiever
-        domein dan in ISO 19119:2005, namelijk een codelijst. Doel hiervan is
-        een uniforme naamgeving voor het serviceType, zodat alle serviceTypes
-        gevonden kunnen worden. In deze codelijst SV_ServiceTypeCode (zie
-        bijlage 1) staan alle mogelijke services types met een gepubliceerde
-        standaard specificatie weergegeven. De language neutral name waarden uit
-        deze codelijst dienen gehanteerd te worden.</p>
+        waardes uit Annex B.3. Deze zijn in <a href="#codelijst-sv-servicetype">codelijst SV_ServiceType</a> opgenomen</p><p></p>
       <table>
         <colgroup><col> <col> </colgroup>
         <tbody>
@@ -1639,7 +1633,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           </tr>
           <tr>
             <td>
-              <p>SV_ServiceTypeCode</p>
+              <p>SV_ServiceType</p>
             </td>
             <td>
               <p>view</p>
@@ -1647,7 +1641,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           </tr>
         </tbody>
       </table>
-      
+       </section>
       <h3> Keyword value</h3>
       <p><i>identificationInfo[1]/*/descriptiveKeywords/*/keyword</i> [ISO
         19139]</p>
@@ -3065,23 +3059,23 @@ betrekking heeft, zoals de habitat van zeldzame soorten</td>
                   <th>Beschrijving</th>
                 </tr>
                 <tr>
-                  <td>Discovery Service</td>
+                  <td>Discovery </td>
                   <td>OGC:CSW,Web Catalog service</td>
                 </tr>
                 <tr>
-                  <td>View Service</td>
+                  <td>View </td>
                   <td>OGC:WMS,Web Map service of OGC:WMTS,Web Mapping Tiling Service</td>
                 </tr>
                 <tr>
-                  <td>Download Service</td>
+                  <td>Download </td>
                   <td>OGC:WFS, Web Feature Service of OGC:WCS, Web Coverage Service of OGC:SOS, Sensor Observation Service of INSPIRE Atom,Atom Service Feed </td>
                 </tr>
                 <tr>
-                  <td>Transformation Service</td>
+                  <td>Transformation </td>
                   <td>OGC:WCTS, Web Coordinate Transformation Service</td>
                 </tr>
                 <tr>
-                  <td>Other Service</td>
+                  <td>Other </td>
                   <td>Alle spatial data services die geen INSPIRE netwerk service zijn</td> 
                 </tr>
               </tbody>
