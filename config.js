@@ -44,5 +44,12 @@ var respecConfig = {
       "date": "26 oktober 2007",
       "publisher": "European Commission Joint Research Centre",
     },
+    "csw-iso-api": {
+      "href": "http://portal.opengeospatial.org/files/?artifact_id=21460",
+      "title": "OpenGIS® Catalogue Services Specification 2.0.2 - ISO Metadata Application Profile",
+      "authors": ["Dr. Uwe Voges, Kristian Senkler"],
+      "date": "19 july 2007",
+      "publisher": "OGC",
+    }
   },
 };
