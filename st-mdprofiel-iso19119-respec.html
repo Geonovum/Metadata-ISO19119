@@ -4620,19 +4620,22 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </tbody>
         </table>
       </section>
-      <section class="appendix page-break landscape" id="appendix-b">
+    </section>
+      <section class="appendix page-break landscape" id="appendix-iso19119">
         <h2>UML klasse diagram ISO 19119:2005 FDAM 1</h2>
         <figure id="image004"><a href="images/iso19119.png"><img src="images/iso19119.png"
               alt="image004"></a> <figcaption>UML klasse diagram ISO 19119:2005
             FDAM 1</figcaption> </figure>
       </section>
-      <section class="appendix" id="appendix-g">
+      <section class="appendix" id="appendix-koppeling">
         <h2>Koppeling vanuit metadata met data en service</h2>
         <figure id="image005"><a href="st-mdprofiel-iso19115/image005.svg"><img
-              src="images/image005.svg" alt="image005"></a> <figcaption>Koppeling
-            vanuit metadata met data en service. </figcaption> </figure>
+              src="images/image005.svg" alt="image005"></a> 
+          <figcaption>Koppeling
+            vanuit metadata met data en service. </figcaption> 
+        </figure>
       </section>
-      <section class="appendix" id="appendif-f">
+      <section class="appendix" id="appendix-uitwerkingen">
         <h2>XML Uitwerkingen</h2>
         <h3>Temporele dekking</h3>
         <p>Er zijn verschillende methoden, waarmee de temporele dekking in XML
@@ -4683,8 +4686,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </code></pre>
         </aside>
         <h3>Open data licentie</h3>
-        <p>In het geval van een INSPIRE dataset dient twee maal het element
-          gebruikt te worden.</p>
+        <p>In het geval van een INSPIRE dataset dient twee maal het
+          otherConstraints element gebruikt te worden.</p>
         <aside class="example" title="XML notatie open data licentie met INSPIRE">
           <pre><code>&lt;resourceConstraints&gt;
   &lt;MD_LegalConstraints&gt;
@@ -4710,9 +4713,39 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
 &lt;/resourceConstraints&gt;  
         </code></pre>
         </aside>
+        
+        <h3>Distributie in een Invocable SDS</h3>
+        <p>Een distributie in de beschrijving van een invocable service op een  INSPIRE dataset kan er als volgt uit zien.</p>
+        <aside class="example" title="XML notatie van een distributie in een invocable service">
+          <pre><code>
+&lt;gmd:onLine&gt;
+  &lt;gmd:CI_OnlineResource&gt;
+   &lt;gmd:linkage&gt;
+      &lt;gmd:URL&gt;
+        https://data.pdok.nl/bag/api/v1/
+      &lt;/gmd:URL&gt;
+      &lt;/gmd:linkage&gt;
+      &lt;gmd:protocol&gt;
+      &lt;gmx:Anchor
+          xlink:href="https://www.w3.org/TR/vocab-dcat/#Property:dataset_landingpage"&gt;
+          landingPage
+      &lt;/gmx:Anchor&gt;
+      &lt;/gmd:protocol&gt;
+      &lt;gmd:description&gt;
+        &lt;gmx:Anchor
+          xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint"&gt;
+          accessPoint
+        &lt;/gmx:Anchor&gt;
+      &lt;/gmd:description&gt;
+      &lt;gmd:function&gt;
+      &lt;gmd:CI_OnLineFunctionCode codeListValue="information" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_OnLineFunctionCode"/&gt;
+    &lt;/gmd:function&gt;
+  &lt;/gmd:CI_OnlineResource&gt;
+&lt;/gmd:onLine&gt;
+        </code></pre>
+        </aside>
+        
       </section>
-    </section>
     <script class="remove" src="script/localscript.js"></script>
-    
   </body>
 </html>
