@@ -530,7 +530,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         volgende metadataprofielen worden ondersteund en gebruikt:">
 </head>
 
-<body aria-busy="false" class="h-entry" id="respecDocument">
+<body aria-busy="false" class="h-entry toc-inline" id="respecDocument">
     <div class="head" role="contentinfo" id="respecHeader">
         <p><a class="logo" href="http://www.geonovum.nl/"><img width="132" height="67" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" alt="GNVM"></a></p>
         <p></p>
@@ -787,11 +787,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                     <li class="tocline"><a href="#codelist-datalicenties" class="tocxref"><span class="secno">A.29 </span>Codelijst data licenties</a></li>
                 </ol>
             </li>
-            <li class="tocline"><a href="#appendix-iso19119" class="tocxref"><span class="secno">B. </span>UML klasse diagram ISO 19119:2005 FDAM 1</a></li>
-            <li class="tocline"><a href="#appendix-koppeling" class="tocxref"><span class="secno">C. </span>Koppeling vanuit metadata met data en service</a></li>
-            <li class="tocline"><a href="#references" class="tocxref"><span class="secno">D. </span>Referenties</a>
+            <li class="tocline"><a href="#appendix-verantwoording" class="tocxref"><span class="secno">B. </span>Verantwoording metadata elementen</a></li>
+            <li class="tocline"><a href="#appendix-iso19119" class="tocxref"><span class="secno">C. </span>UML klasse diagram ISO 19119:2005 FDAM 1</a></li>
+            <li class="tocline"><a href="#appendix-koppeling" class="tocxref"><span class="secno">D. </span>Koppeling vanuit metadata met data en service</a></li>
+            <li class="tocline"><a href="#references" class="tocxref"><span class="secno">E. </span>Referenties</a>
                 <ol class="toc">
-                    <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">D.1 </span>Informatieve referenties</a></li>
+                    <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">E.1 </span>Informatieve referenties</a></li>
                 </ol>
             </li>
         </ol>
@@ -4612,15 +4613,13 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                     <tr>
                         <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint</td>
                         <td>accessPoint</td>
-                        <td>
-                            <meta charset="utf-8"> Een internetadres dat een gedetailleerde beschrijving van een dienst met betrekking tot ruimtelijke gegevens bevat, met inbegrip van een lijst van eindpunten waarmee hij kan worden uitgevoerd
+                        <td> Een internetadres dat een gedetailleerde beschrijving van een dienst met betrekking tot ruimtelijke gegevens bevat, met inbegrip van een lijst van eindpunten waarmee hij kan worden uitgevoerd
                         </td>
                     </tr>
                     <tr>
                         <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint</td>
                         <td>endPoint</td>
-                        <td>
-                            <meta charset="utf-8"> Een internetadres dat wordt gebruikt om een door een dienst met betrekking tot ruimtelijke gegevens aangeboden operatie rechtstreeks aan te roepen</td>
+                        <td> Een internetadres dat wordt gebruikt om een door een dienst met betrekking tot ruimtelijke gegevens aangeboden operatie rechtstreeks aan te roepen</td>
                     </tr>
                 </tbody>
             </table>
@@ -5112,18 +5111,486 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </table>
         </section>
     </section>
+    <section class="appendix" id="appendix-verantwoording" typeof="bibo:Chapter" resource="#appendix-verantwoording" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="b.-verantwoording-metadata-elementen" resource="#b.-verantwoording-metadata-elementen"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Verantwoording metadata elementen</span>
+        </h2>
+        <p>In deze tabel is de relatie naar de INSPIRE elementen gelegd door de verwijzing naar de paragraaf waarin het element beschreven wordt. Ook is aangegeven welke elementen in deze en in de vorige versie van het Nederlandse profiel verplicht zijn.</p>
+        <table>
+            <colgroup>
+                <col style="width: 35%;">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Metadata element</th>
+                    <th>Optionaliteit NL profiel 1.2</th>
+                    <th>Optioneliteit NL profiel 2.0</th>
+                    <th>INSPIRE optionaliteit</th>
+                    <th>INSPIRE referentie</th>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Informatie over de bron</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#titel-van-de-bron">Titel van de bron</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.1</td>
+                </tr>
+                <tr>
+                    <td><a href="#datum-van-de-bron">Datum van de bron</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.4<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#datum-type-van-de-bron">Datumtype van de bron</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.4<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#samenvatting">Samenvatting</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.2 /4.1.2.1</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Verantwoordelijke organisatie
+                bron</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#verantwoordelijke-organisatie-bron">Organisatie</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.3/4.4.2.2</td>
+                </tr>
+                <tr>
+                    <td><a href="#verantwoordelijke-organisatie-bron-email">E-mail</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.3</td>
+                </tr>
+                <tr>
+                    <td><a href="#verantwoordelijke-organisatie-bron:-rol">Rol</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.3/4.4.2.2</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Trefwoorden</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#trefwoord">Trefwoord</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.5/4.1.2.2</td>
+                </tr>
+                <tr>
+                    <td>Thesaurus</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#thesaurus">Titel</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>2.3.5</td>
+                </tr>
+                <tr>
+                    <td><a href="#thesaurusdatum">Datum</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>2.3.5</td>
+                </tr>
+                <tr>
+                    <td><a href="#thesaurusdatum-type">Datum type</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>2.3.5</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><b>Beperkingen</b></td>
+                </tr>
+                <tr>
+                    <td><a href="#juridische-toegangsrestricties">Juridische
+                toegangsrestricties</a></td>
+                    <td colspan="1" rowspan="3">V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.6/2.3.7/4.4.2.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#overige-beperkingen">Overige beperkingen</a></td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>2.3.6/2.3.7</td>
+                </tr>
+                <tr>
+                    <td>Veiligheidsrestricties</td>
+                    <td>O</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#gebruiksbeperkingen">Gebruiksbeperkingen</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Ruimtelijke informatie bron</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#codereferentiesysteem">Ruimtelijk referentiesysteem</a></td>
+                    <td>O</td>
+                    <td>O</td>
+                    <td>C</td>
+                    <td>4.4.1.1</td>
+                </tr>
+                <tr>
+                    <td><a href="#Omgrenzende%20rechthoek">Omgrenzende rechthoek</a></td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.3.8</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Distributies</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#url">URL</a> </td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td> 4.1.3.1/4.3.2.1</td>
+                </tr>
+                <tr>
+                    <td><a href="#protocol">Protocol</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#description">Omschrijving</a></td>
+                    <td>O</td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>4.3.2.1<br>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Service informatie</strong></td>
+                </tr>
+                <tr>
+                    <td> <a href="#service-type">Service type</a> </td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V </td>
+                    <td> 4.1.2.3/4.2.1.1/4.3.1.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="#gekoppelde-bron">Gekoppelde bron</a> </td>
+                    <td>C </td>
+                    <td>C </td>
+                    <td>C</td>
+                    <td>4.1.2.4<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#koppel-type">Koppel type</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td><br>
+                    </td>
+                    <td> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#connectie-url">Connectie URL</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td> 4.1.3.1/4.5.1.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#operatie-naam">Operatie naam</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>4.5.1.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#DCP">DCP</a></td>
+                    <td>V </td>
+                    <td>V </td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#parameter-naam">Parameter naam</a></td>
+                    <td>O</td>
+                    <td>C</td>
+                    <td> C</td>
+                    <td>4.5.1.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#parameter-optionaliteit">Parameter optionaliteit</a></td>
+                    <td>O</td>
+                    <td>C</td>
+                    <td> C</td>
+                    <td> 4.5.1.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="#parameter-herhaalbaarheid">Parameter herhaalbaarheid</a>
+                    </td>
+                    <td>O</td>
+                    <td>C</td>
+                    <td> C</td>
+                    <td> 4.5.1.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Kwaliteits informatie </strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#niveau-kwaliteitsbeschrijving">Niveau
+                kwaliteitsbeschrijving</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>4.1.4.1</td>
+                </tr>
+                <tr>
+                    <td><a href="#niveau-kwaliteitsbeschrijving-naam">Niveau
+                kwaliteitsbeschrijving naam</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>4.1.4.1</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Conformiteit </strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#specificatie">Specificatie</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>2.4.1/4.2.2.1/4.3.3.1/4.3.3.2/4.3.3.3</td>
+                </tr>
+                <tr>
+                    <td> <a href="#specificatiedatum">Specificatiedatum</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>2.4.1/4.2.2.1/4.3.3.1/4.3.3.2/4.3.3.3</td>
+                </tr>
+                <tr>
+                    <td><a href="#specificatiedatum-type">Specificatiedatum type</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>2.4.1/4.2.2.1/4.3.3.1/4.3.3.2/4.3.3.3</td>
+                </tr>
+                <tr>
+                    <td><a href="#verklaring">Verklaring</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>2.4.1/4.2.2.1/4.3.3.1/4.3.3.2/4.3.3.3</td>
+                </tr>
+                <tr>
+                    <td> <a href="#conformiteit-indicatie-met-de-specificatie">Conformiteit
+                indicatie met een specificatie</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>2.4.1/4.2.2.1/4.3.3.1/4.3.3.2/4.3.3.3</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Service kwaliteit </strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#criteria">Criteria</a></td>
+                    <td>O</td>
+                    <td>O</td>
+                    <td>C</td>
+                    <td>4.4.3.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#criteria-beschrijving">Criteria beschrijving</a></td>
+                    <td>O</td>
+                    <td>O</td>
+                    <td>C</td>
+                    <td>4.4.3.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#criteria-type-waarde">Criteria type waarde</a></td>
+                    <td>O</td>
+                    <td>O</td>
+                    <td> C</td>
+                    <td>4.4.3.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#criteria-waarde">Criteria waarde</a></td>
+                    <td>O</td>
+                    <td>O</td>
+                    <td> C</td>
+                    <td>4.4.3.1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Informatie over de metadata</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#metadata-unieke-identifier">Metadata unieke identifier</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.2.1</td>
+                </tr>
+                <tr>
+                    <td><a href="#metadatadatum">Metadata datum</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.2.4</td>
+                </tr>
+                <tr>
+                    <td><a href="#taal-van-de-metadata">Taal van de metadata</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.2.2</td>
+                </tr>
+                <tr>
+                    <td><a href="#parent-unieke-identifier">Parent unieke identifier</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#hi%C3%ABrarchieniveau">Hiërarchieniveau</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>4.1.1.1</td>
+                </tr>
+                <tr>
+                    <td><a href="#hi%C3%ABrarchieniveaunaam">Hiërarchieniveau naam</a></td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>C</td>
+                    <td>4.1.1.1</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Verantwoordelijke organisatie
+                metadata</strong></td>
+                </tr>
+                <tr>
+                    <td> <a href="#verantwoordelijke-organisatie-metadata">Organisatie</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.2.3</td>
+                </tr>
+                <tr>
+                    <td><a href="#verantwoordelijke-organisatie-metadata:-e-mail">E-mail</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.2.3</td>
+                </tr>
+                <tr>
+                    <td><a href="#verantwoordelijke-organisatie-metadata:-rol">Rol</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>2.2.3</td>
+                </tr>
+                <tr>
+                    <td colspan="5" rowspan="1"><strong>Metadata standaard</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#metadata-standaard-naam">Naam</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#metadatastandaard-versie">Versie</a></td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     <section class="appendix page-break landscape" id="appendix-iso19119" typeof="bibo:Chapter" resource="#appendix-iso19119" property="bibo:hasPart">
         <!--OddPage-->
-        <h2 id="b.-uml-klasse-diagram-iso-19119:2005-fdam-1" resource="#b.-uml-klasse-diagram-iso-19119:2005-fdam-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>UML klasse diagram ISO 19119:2005 FDAM 1</span>
+        <h2 id="c.-uml-klasse-diagram-iso-19119:2005-fdam-1" resource="#c.-uml-klasse-diagram-iso-19119:2005-fdam-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>UML klasse diagram ISO 19119:2005 FDAM 1</span>
         </h2>
-        <figure id="image004"><a href="images/iso19119.gif"><img src="images/iso19119.gif" alt="image004"></a>
+        <figure id="image004"><a href="images/iso19119.png"><img src="images/iso19119.png" alt="image004"></a>
             <figcaption>Figuur <span class="figno">1</span> <span class="fig-title">UML klasse diagram ISO 19119:2005
           FDAM 1</span></figcaption>
         </figure>
     </section>
     <section class="appendix" id="appendix-koppeling" typeof="bibo:Chapter" resource="#appendix-koppeling" property="bibo:hasPart">
         <!--OddPage-->
-        <h2 id="c.-koppeling-vanuit-metadata-met-data-en-service" resource="#c.-koppeling-vanuit-metadata-met-data-en-service"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>Koppeling vanuit metadata met data en service</span>
+        <h2 id="d.-koppeling-vanuit-metadata-met-data-en-service" resource="#d.-koppeling-vanuit-metadata-met-data-en-service"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>Koppeling vanuit metadata met data en service</span>
         </h2>
         <figure id="image005"><a href="images/image005.svg"><img src="images/image005.svg" alt="image005"></a>
             <figcaption>Figuur <span class="figno">2</span> <span class="fig-title">Koppeling vanuit metadata met data
@@ -5135,10 +5602,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
 
     <section id="references" class="appendix" typeof="bibo:Chapter" resource="#references" property="bibo:hasPart">
         <!--OddPage-->
-        <h2 id="d.-referenties" resource="#d.-referenties"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>Referenties</span>
+        <h2 id="e.-referenties" resource="#e.-referenties"><span property="xhv:role" resource="xhv:heading"><span class="secno">E. </span>Referenties</span>
         </h2>
         <section id="informative-references" typeof="bibo:Chapter" resource="#informative-references" property="bibo:hasPart">
-            <h3 id="d.1-informatieve-referenties" resource="#d.1-informatieve-referenties"><span property="xhv:role" resource="xhv:heading"><span class="secno">D.1 </span>Informatieve referenties</span>
+            <h3 id="e.1-informatieve-referenties" resource="#e.1-informatieve-referenties"><span property="xhv:role" resource="xhv:heading"><span class="secno">E.1 </span>Informatieve referenties</span>
             </h3>
             <dl class="bibliography" resource=""><dt id="bib-ISO19101">[ISO19101]</dt>
                 <dd><a href="https://www.iso.org/standard/26002.html" property="dc:references"><cite>ISO 19101:2002 Geographic information -- Reference model</cite></a>. . International Organization for Standardization. Juli 2002. URL: <a href="https://www.iso.org/standard/26002.html"
