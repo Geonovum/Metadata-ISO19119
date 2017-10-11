@@ -149,7 +149,7 @@
         <p><a href="#image001">Figuur 1</a> plaatst het Nederlandse metadata
           profiel voor geografie in zijn internationale en sectorale context. De
           ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.</p>
-        <figure id="image001"><a href="st-mdprofiel-iso19115/context.png"><img src="st-mdprofiel-iso19115/context.png"
+        <figure id="image001"><a href="images/context.png"><img src="images/context.png"
               alt="image001"></a> <figcaption>Context profiel.</figcaption> </figure>
         <p>Het Nederlands profiel bevat nast de ISO kernset, de INSPIRE
           elementen plus een selectie van metadata-elementen uit ISO 19115. In
@@ -203,10 +203,11 @@
       <p></p>
       <p><b>[[!CSW2APISO]]</b>, OpenGIS Catalogue Services Specification 2.0.2 -
         ISO Metadata Application Profile</p>
-      <p><b>ISO 19108</b>, EN [!ISO19108]:2005, Geographic information –
+      <p><b>ISO 19108</b>, EN [[!ISO19108-2005]], Geographic information –
         Temporal Schema<br>
       </p>
-      <p><i>EN [[!ISO19108-2005]] is de adoptie door CEN van ISO 19108:2002</i></p>
+      <p><i>EN [ISO19108:2005] is de adoptie door CEN van ISO
+          19108:2002</i></p>
       <p></p>
       <p><b>[[!ISO8601-2004]]</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
@@ -573,20 +574,20 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurus">Titel</a></td>
               <td>C&nbsp;</td>
-              <td>Het is verplicht als een keyword uit een thesaurus afkomstig
+              <td>Het is verplicht als een trefwoord uit een thesaurus afkomstig
                 is.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurusdatum">Thesaurusdatum</a></td>
               <td>C</td>
-              <td>Het is verplicht als een keyword uit een thesaurus afkomstig
+              <td>Het is verplicht als een trefwoord uit een thesaurus afkomstig
                 is.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurusdatum-type">Thesaurusdatum
                   type</a></td>
               <td>C</td>
-              <td>Het is verplicht als een keyword uit een thesaurus afkomstig
+              <td>Het is verplicht als een trefwoord uit een thesaurus afkomstig
                 is.</td>
             </tr>
             <tr>
@@ -1112,7 +1113,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het element bevat in het algemeen gebruikte woorden of
             geformaliseerde zinnen om een dataset of datasetserie te
-            beschrijven. Voor INSPIRE services dient er op z’n minst één keyword
+            beschrijven. Voor INSPIRE services dient er op z’n minst één trefwoord
             de categorie of subcategorie te bevatten uit deel D.4 van de
             commissie regulation 1205/2008, zie codelijst <a href="#codelist-classificationcode">classificatie
               ruimtelijke data service<span style="color: black;">.</span></a> </p>
@@ -1139,7 +1140,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>Anchor</td>
                 <td>
                   <pre><code>&lt;gmx:Anchor
-  xlink:href="http://inspire.ec.europa.eu/theme/ps"&gt;
+  xlink:href="http://www.eionet.europa.eu/gemet/nl/inspire-theme/ps"&gt;
     Beschermde gebieden
 &lt;/gmx:Anchor&gt;</code>
  									</pre>
@@ -1173,7 +1174,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>Anchor</td>
                 <td>
                   <pre><code>&lt;gmx:Anchor 
-  xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes"&gt;
+  xlink:href="http://www.eionet.europa.eu/gemet/nl/inspire-themes/"&gt;
     GEMET - INSPIRE themes, version 1.0
 &lt;/gmx:Anchor&gt;</code></pre>
                 </td>
@@ -3959,7 +3960,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <tr>
               <td>
                 https://www.iana.org/assignments/media-types/application/ld+json</td>
-              <td> jsonld</td>
+              <td> json-ld</td>
               <td>RDF geencodeerd in JSON</td>
             </tr>
             <tr>
@@ -3970,7 +3971,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td> https://www.iana.org/assignments/media-types/application/xml</td>
-              <td> zml</td>
+              <td> xml</td>
               <td>Extensible Markup Language</td>
             </tr>
             <tr>
