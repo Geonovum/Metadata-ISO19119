@@ -63,7 +63,6 @@ var respecConfig = {
       date: "26 oktober 2007",
       publisher: "European Commission Joint Research Centre",
     },
-<<<<<<< HEAD
     "INSPIRE1312-2014":{
       "title":"Regulation on interoperability of spatial data services",
       "href":"http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.354.01.0008.01.ENG",
