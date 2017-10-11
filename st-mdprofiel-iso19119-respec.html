@@ -148,17 +148,18 @@
         <h3>Context</h3>
         <p><a href="#image001">Figuur 1</a> plaatst het Nederlandse metadata
           profiel voor geografie in zijn internationale en sectorale context. De
-          ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.</p>
+          ISO-kernset is de kleinste eenheid, een selectie uit ISO 19119.</p>
         <figure id="image001"><a href="images/context.png"><img src="images/context.png"
               alt="image001"></a> <figcaption>Context profiel.</figcaption> </figure>
-        <p>Het Nederlands profiel bevat nast de ISO kernset, de INSPIRE
-          elementen plus een selectie van metadata-elementen uit ISO 19115. In
-          dit profiel zijn de metadata elementen met hun oorsprong aangegeven in
-          <a href="#appendix-c">Appendix C</a>.</p>
-        <p>Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse
-          profiel ontwikkelen. Voorwaarde is dat de Nederlandse profiel metadata
-          onderdeel is van het sectorale metadata profiel. Deze sectorale
-          uitbreidingen dienen onderdeel te zijn van ISO 19115.</p>
+        <p>Het Nederlands profiel bevat naast de ISO kernset, de INSPIRE
+          elementen plus een selectie van metadata-elementen uit ISO 19119 en
+          ISO 19115. In dit profiel zijn de metadata elementen met hun oorsprong
+          aangegeven in <a href="#appendix-c">Appendix B</a>. </p>
+        <p> Sectoren in Nederland kunnen een eigen uitbreiding op het
+          Nederlandse profiel ontwikkelen. Voorwaarde is dat de Nederlandse
+          profiel metadata onderdeel is van het sectorale metadata profiel. Deze
+          sectorale uitbreidingen dienen onderdeel te zijn van ISO 19119 en ISO
+          19115. </p>
       </section>
       <section id="leeswijzer">
         <h3>Leeswijzer</h3>
@@ -170,11 +171,9 @@
           dataset serie zodat de uitwisseling tussen machines of mens en machine
           kan plaats vinden. Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
             wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
-          aanmaken van metadata beschreven zijn. In de wiki is tevens een
-          mapping tabel opgenomen van dit profiel naar OWMS 4, GeoDCAT-ap en
-          TMLO. <a href="#normatieve-verwijzing">Hoofdstuk 2</a> toont de
-          normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk 3</a>
-          bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
+          aanmaken van metadata beschreven zijn. <a href="#normatieve-verwijzing">Hoofdstuk
+            2</a> toont de normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk
+            3</a> bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
             4</a> de gehanteerde termen en definities worden beschreven. Het
           formele deel van het profiel waarin onder andere de verplichte
           elementen,&nbsp; worden beschreven die gelden voor metadata voor
@@ -203,11 +202,9 @@
       <p></p>
       <p><b>[[!CSW2APISO]]</b>, OpenGIS Catalogue Services Specification 2.0.2 -
         ISO Metadata Application Profile</p>
-      <p><b>ISO 19108</b>, EN [[!ISO19108-2005]], Geographic information –
-        Temporal Schema<br>
+      <p><b>[[!ISO19108-2005]]</b>, Geographic information – Temporal Schema<br>
       </p>
-      <p><i>EN [ISO19108:2005] is de adoptie door CEN van ISO
-          19108:2002</i></p>
+      <p><i>EN [ISO19108:2005] is de adoptie door CEN van ISO 19108:2002</i></p>
       <p></p>
       <p><b>[[!ISO8601-2004]]</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
@@ -217,11 +214,11 @@
         languages - Part 2: Alpha-3 code</p>
       <p><b>[[!ISOTC46]]</b>, 2009, Dublin Core Metadata Element Set, ook
         gepubliceerd als ISO 15836:2009</p>
-      <p>[[!INSPIRE-2008]], Implementing Rules for Metadata</p>
-      <p>[[!INSPIRE-2010]], Implementing Rules for interoperability of spatial
-        data sets and services, met amendementen uit 2011, 2013 en 2014.</p>
-      <p>[[!INSPIRE-2017]], Technical Guidance for the implementation of INSPIRE
-        dataset and service metadata based on ISO/TS 19139:2007</p>
+      <p><b>[[!INSPIRE-2008]]</b>, Implementing Rules for Metadata</p>
+      <p><b>[[!INSPIRE-2010]]</b>, Implementing Rules for interoperability of
+        spatial data sets and services, met amendementen uit 2011, 2013 en 2014.</p>
+      <p><b>[[!INSPIRE-2017]]</b>, Technical Guidance for the implementation of
+        INSPIRE dataset and service metadata based on ISO/TS 19139:2007</p>
     </section>
     <section id="Structuur en schema's ">
       <h2>Structuur en schema's</h2>
@@ -374,10 +371,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
     &lt;/gmx:anchor&gt;
 &lt;/gmd:keyword&gt;</code></pre>
         </aside>
-        <p>Meertaligheid in het metadata document wordt ondersteund door
-          meerdere keren opnemen van het string element in verschillende talen,
-          met extra informatie over de taal. Dit is uitgewerkt in <a href="#meertaligheid-metadata">Hoofdstuk
-            7</a>.</p>
       </section>
     </section>
     <section id="termen-en-definities">
@@ -405,7 +398,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           andere server [[!ISO19128]]. </dd>
         <dt>Codelijst</dt>
         <dd>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk
-          toepasbaar attribuut [[!ISO19136-2007"]]. </dd>
+          toepasbaar attribuut [[!ISO19136-2007]]. </dd>
         <dt>Conditioneel element</dt>
         <dd>Metadata element moet gevuld worden met een waarde, indien de
           conditie van toepassing is. </dd>
@@ -426,7 +419,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <dd>Metadata element met een standaardwaarde.</dd>
         <dt>Interface</dt>
         <dd>Benoemde set van operaties die het gedrag van een entiteit
-          karakteriseren [[!ISO 19119]]. </dd>
+          karakteriseren [[!ISO19119]]. </dd>
         <dt>EndPoint</dt>
         <dd>het internetadres dat wordt gebruikt om een door een dienst met
           betrekking tot ruimtelijke gegevens aangeboden operatie rechtstreeks
@@ -436,7 +429,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           daarom handmatig moet worden opgevoerd. </dd>
         <dt>Feature</dt>
         <dd>Abstractie van een verschijnsel in de werkelijke wereld
-          [[!ISO19101:2002]. Voorbeeld het verschijnsel ‘Eifel Toren’ kan met
+          [[!ISO19101-2002]. Voorbeeld het verschijnsel ‘Eifel Toren’ kan met
           andere soortgelijke verschijnselen geclassificeerd worden in een
           featuretype ‘toren’. </dd>
         <dt>Gerelateerde datasets</dt>
@@ -496,12 +489,13 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       <section id="metadata-elementen-overzicht">
         <h2>Metadata elementen overzicht</h2>
         <p>In de volgende tabel staan de verplichte of bij conditie verplichte
-          metadata elementen. Bij de door conditie verplichte elementen is de
-          conditie benoemd. De in de derde kolom genoemde paragraaf komt uit</p>
-        <p>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN
-          ISO 19115 and EN ISO 19119 versie 1.2. Hiermee is de relatie gelegd
-          tussen dit document en INSPIRE.</p>
-        <p>Tabel 2: Metadata elementen</p>
+          elementen. Bij elk conditioneel element is de conditie benoemd. De in
+          <a href="#appendix-b">Appendix B</a> opgenomen tabel “verantwoording
+          metadata elementen” is gebaseerd op INSPIRE, 2017, Technical Guidance
+          for the implementation of INSPIRE dataset and service metadata based
+          on ISO/TS 19139:2007. Hiermee is de relatie gelegd tussen dit document
+          en INSPIRE.</p>
+        <p>Metadata elementen</p>
         <table>
           <colgroup><col style="width: 30%;"><col style="width: 20%;"> <col style="width: 50%;"></colgroup>
           <tbody>
@@ -618,13 +612,13 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><a href="#codereferentiesysteem">Ruimtelijk referentiesysteem</a></td>
-              <td>V</td>
+              <td>C</td>
               <td>Het is verplicht als de service een interoperabele INSPIRE
                 service is.</td>
             </tr>
             <tr>
               <td><a href="#Omgrenzende%20rechthoek">Omgrenzende rechthoek</a></td>
-              <td>V</td>
+              <td>C</td>
               <td>Het is verplicht als data aan de service is gekoppeld</td>
             </tr>
             <tr>
@@ -765,10 +759,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <td> <a href="#niveau-kwaliteitsbeschrijving-naam">Niveau
                   kwaliteitsbeschrijving naam</a> </td>
               <td>
-                <p>C</p>
+                <p>V</p>
               </td>
-              <td>Het is verplicht als het niveau van kwaliteitsbeschrijving
-                service is <br>
+              <td><br>
               </td>
             </tr>
             <tr>
@@ -881,8 +874,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><a href="#hi%C3%ABrarchieniveaunaam">Hiërarchieniveau naam</a></td>
-              <td>C</td>
-              <td>Het is verplicht als het hierarchieniveau service is</td>
+              <td>V</td>
+              <td>&nbsp;</td>
             </tr>
             <tr>
               <td colspan="3" rowspan="1"><strong>Verantwoordelijke organisatie
@@ -992,7 +985,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: DateTypeCode</td>
+                <td>Domein: DateTypeCode</td>
                 <td>creation</td>
               </tr>
             </tbody>
@@ -1101,7 +1094,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: RoleCode</td>
+                <td>Domein: RoleCode</td>
                 <td>pointOfContact</td>
               </tr>
             </tbody>
@@ -1113,9 +1106,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het element bevat in het algemeen gebruikte woorden of
             geformaliseerde zinnen om een dataset of datasetserie te
-            beschrijven. Voor INSPIRE services dient er op z’n minst één trefwoord
-            de categorie of subcategorie te bevatten uit deel D.4 van de
-            commissie regulation 1205/2008, zie codelijst <a href="#codelist-classificationcode">classificatie
+            beschrijven. Voor INSPIRE services dient er op z’n minst één
+            trefwoord de categorie of subcategorie te bevatten uit deel D.4 van
+            de commissie regulation 1205/2008, zie codelijst <a href="#codelist-classificationcode">classificatie
               ruimtelijke data service<span style="color: black;">.</span></a> </p>
           <p>Voor INSPIRE services dient daarnaast voor het beschrijven van de
             relevante thema’s tenminste één trefwoord uit de relevante thesaurus
@@ -1217,8 +1210,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat het type gebeurtenis waar de datum betrekking op
             heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
-              DateTypeCode</a> uit ISO 19115. Mogelijke gebeurtenissen zijn:
-            creatie-, publicatie-, of revisiedatum.</p>
+              DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+            publicatie-, of revisiedatum.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1227,7 +1220,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: DateTypeCode</td>
+                <td>Domein: DateTypeCode</td>
                 <td>publication</td>
               </tr>
             </tbody>
@@ -1252,7 +1245,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             of intellectueel eigendom gewaarborgd zijn en elke andere speciale
             beperkingen voor het verkrijgen van de metadata of data. De waardes
             komen uit <a href="#codelist-restrictioncode">codelijst
-              RestrictionCode</a> uit ISO 19115.</p>
+              RestrictionCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1507,11 +1500,14 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h3>Omgrenzende rechthoek</h3>
           <p style="text-align:left"><em>identificationInfo[1]/*/extent/*/geographicElement/*/</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Dit element bevat de meest westelijke, oostelijke, noordelijke en
-            zuidelijke coördinaat uit de horizontale dekking van de service
+          <p>Dit element is conditioneel, het is verplicht als er een ruimtelijke 
+            dataset aan de service is gekoppeld.
+            Dit element bevat de meest westelijke, oostelijke, noordelijke en
+            zuidelijke coördinaat uit de horizontale dekking van de ontsloten data in de service
             weergegeven in lattitude en longitude in decimale graden (noord en
             oost als positieve waarden). De coördinaten dienen te worden
-            weergegeven volgens referentiesysteem WGS 84.</p>
+            weergegeven volgens referentiesysteem WGS 84, zoals beschreven in
+            iso19139.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1620,7 +1616,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h3>Omschrijving</h3>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/description</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is voor services verplicht.</p>
           <p>Het bevat een verwijzing naar een waarde uit de <a href="#Codelist-INSPIRE-OnLineDescriptionCode">codelijst
               OnLineDescriptionCode</a> die het type URL beschrijft. </p>
           <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in
@@ -1690,8 +1685,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </section>
         <section id="service-type">
           <h3>Service type</h3>
-          <p><span><i>identificationInfo[1]/*/serviceType</i> [CSW ISO Metadata
-              AP]</span></p>
+          <p><i>identificationInfo[1]/*/serviceType</i> <span style="float:right">[<a
+                data-cite="CSW2APISO">CSW ISO Metadata AP</a>]</span></p>
           <p>Dit element bevat het type van de service.</p>
           <p>De implementing rules van INSPIRE verplichten het gebruik van de
             waardes uit Annex B.3. Deze zijn in <a href="#codelijst-sv-servicetype">codelijst
@@ -1712,7 +1707,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
               <tr>
                 <td>
-                  <p>String, domein: SV_ServiceType</p>
+                  <p>Domein: SV_ServiceType</p>
                 </td>
                 <td>
                   <p>view</p>
@@ -1723,8 +1718,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </section>
         <section id="gekoppelde-bron">
           <h3>Gekoppelde bron</h3>
-          <p><span><i>identificationInfo[1]/*/operatesOn</i></span> <span style="float:right">[CSW
-              ISO Metadata AP]</span></p>
+          <p><span><i>identificationInfo[1]/*/operatesOn</i></span> <span style="float:right">[<a
+                data-cite="CSW2APISO">CSW ISO Metadata AP</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als er links naar de
             datasets waarop de service opereert beschikbaar zijn. Voor
             dataservices is het dus verplicht. Dit element geeft informatie
@@ -1752,15 +1747,23 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Verwijzing naar ontsloten dataset">
+          <aside class="example" title="Verwijzing naar ontsloten dataset als URI">
             <pre><code>&lt;srv:operatesOn 
   xlink:href="https://www.nationaalgeoregister.nl/geonetwork/srv
     /metadata/a7fb2234-f7b4-4a03-b282-f10947f42fb1#MD_DataIdentification"/&gt;
           </code></pre>
           </aside>
+          <aside class="example" title="Verwijzing naar ontsloten dataset als CSW request">
+            <pre><code>&lt;srv:operatesOn 
+  xlink:href="http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;
+  REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;
+  OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full
+  #MD_DataIdentification"/&gt;
+          </code></pre>
+          </aside>
         </section>
         <section id="koppel-type">
-          <h3> Koppel Type</h3>
+          <h3>Koppel Type</h3>
           <p><span><i>identificationInfo[1]/*/couplingType</i></span> <span style="float:right">[<a
                 data-cite="CSW2APISO">CSW ISO Metadata AP</a>]</span></p>
           <p>Dit element is verplicht volgens het amendement op ISO 19119.
@@ -1780,7 +1783,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
               <tr>
                 <td>
-                  <p>String, domein: SV_CouplingType</p>
+                  <p>Domein: SV_CouplingType</p>
                 </td>
                 <td>
                   <p>Loose</p>
@@ -1792,8 +1795,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <section id="connectie-url">
           <h3>Connectie URL</h3>
           <p><span><i>identificationInfo[1]/*/containsOperations/*/connectPoint/*/linkage</i></span>
-            <span style="float:right"><i>[<a data-cite="CSW2APISO">CSW ISO
-                  Metadata AP</a>]</i></span></p>
+            <span style="float:right">[<a data-cite="CSW2APISO">CSW ISO Metadata
+                AP</a>]</span></p>
           <p>Dit element beschrijft het netwerkadres van de service instance via
             het verplichte element linkage, uit de klasse <i></i>CI_OnlineResource.</p>
           <p>Dit element heeft hetzelfde doel als <a href="#url">URL</a>.
@@ -1884,7 +1887,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
               <tr>
                 <td>
-                  <p>String, domein: DCPlist</p>
+                  <p>Domein: DCPlist</p>
                 </td>
                 <td>
                   <p>WebServices</p>
@@ -2001,7 +2004,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: ScopeCode</td>
+                <td>Domein: ScopeCode</td>
                 <td>service</td>
               </tr>
             </tbody>
@@ -2011,9 +2014,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h3>Niveau kwaliteitsbeschrijving naam</h3>
           <p style="text-align:left"><em>dataQualityInfo/*/levelDescription/*/other</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is conditioneel. Het is verplicht als het niveau van
-            kwaliteitsbeschrijving service is. Het bevat de naam van het
-            kwaliteitsbeschrijving waarvoor de metadata is beschreven. </p>
+          <p>Dit element bevat de naam van het niveau waarop de kwaliteitsinformatie
+            betrekking heeft. </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -2030,7 +2032,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </section>
         <section id="specificatie">
           <h3>Specificatie</h3>
-          <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/title</em><span
+          <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_DomainConsistency/result/DQ_ConformanceResult/specification/*/title</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht als de
             service een INSPIRE bron is. Het bevat de titel van de specificatie
@@ -2102,7 +2104,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </section>
         <section id="specificatiedatum">
           <h3>Specificatiedatum</h3>
-          <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/date</em><span
+          <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_DomainConsistency/result/DQ_ConformanceResult/specification/*/date/*/date</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht als de
             service een INSPIRE bron is. Het bevat de datum van de specificatie
@@ -2124,7 +2126,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </section>
         <section id="specificatiedatum-type">
           <h3>Specificatiedatum type</h3>
-          <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType</em><span
+          <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_DomainConsistency/result/DQ_ConformanceResult/specification/*/date/*/dateType</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht als de
             service een INSPIRE bron is. Type gebeurtenis wordt gekozen uit <a
@@ -2139,7 +2141,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: DateTypeCode</td>
+                <td>Domein: DateTypeCode</td>
                 <td>publication</td>
               </tr>
             </tbody>
@@ -2147,7 +2149,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </section>
         <section id="verklaring">
           <h3>Verklaring</h3>
-          <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/explanation</em><span
+          <p style="text-align:left"><em>dataQualityInfo/*/report/DQ_DomainConsistency/result/DQ_ConformanceResult/explanation</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht als de
             service een INSPIRE bron is. Het bevat de verklaring van de
@@ -2222,7 +2224,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>Anchor; domein Quality Of Service</td>
+                <td>Anchor; domein QualityOfServiceCriteriaCode</td>
                 <td>
                   <pre><code>&lt;gmx:Anchor
   xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
@@ -2303,6 +2305,33 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
             </tbody>
           </table>
+          <aside class="example" title="XML notatie identifier gebied">
+            <pre><code>&lt;gmd:report&gt;
+  &lt;gmd:DQ_ConceptualConsistency&gt; 
+    &lt;gmd:nameOfMeasure&gt;
+      &lt;gmx:Anchor 
+        xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
+          QualityOfServiceCriteriaCode/performance"&gt;
+          performance&lt;/gmx:Anchor&gt; 
+    &lt;/gmd:nameOfMeasure&gt; 
+    &lt;gmd:measureDescription&gt; 
+      &lt;gco:CharacterString&gt;
+        Maximale tijd waarin een typisch request aan een ruimtelijke data service uitgevoerd kan worden buiten piek uren
+      &lt;/gco:CharacterString&gt; 
+    &lt;/gmd:measureDescription&gt; 
+    &lt;gmd:result&gt; 
+      &lt;gmd:DQ_QuantitativeResult&gt;
+        &lt;gmd:valueUnit 
+          xlink:href="http://www.opengis.net/def/uom/SI/second"/&gt; 
+        &lt;gmd:value&gt; 
+          &lt;gco:Record xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+            xsi:type="xs:double"&gt;1.56&lt;/gco:Record&gt;
+        &lt;/gmd:value&gt;
+      &lt;/gmd:DQ_QuantitativeResult&gt;
+    &lt;/gmd:result&gt;
+  &lt;/gmd:DQ_ConceptualConsistency&gt; 
+&lt;/gmd:report&gt;</code></pre>
+          </aside>
         </section>
         <section id="criteria-waarde">
           <h3>Criteria waarde</h3>
@@ -2387,7 +2416,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: ISO 639-2</td>
+                <td>Domein: ISO 639-2</td>
                 <td>dut</td>
               </tr>
             </tbody>
@@ -2408,7 +2437,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: ScopeCode</td>
+                <td>Domein: ScopeCode</td>
                 <td>service</td>
               </tr>
             </tbody>
@@ -2485,7 +2514,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domein: RoleCode</td>
+                <td>Domein: RoleCode</td>
                 <td>pointOfContact</td>
               </tr>
             </tbody>
@@ -2558,12 +2587,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
     <section id="optionele-elementen">
       <h1>Optionele elementen</h1>
       <p>Naast de verplichte elementen heeft dit metadata profiel tevens een
-        optionele set. Deze set komt overeen met de optionele set uit het
-        dataset profiel en daarnaast enkele specifieke elementen. Het betreft
-        niet de volledige ISO 19119 set. Als men meer metadata wil vastleggen
-        dan mogelijk met de verplichte elementen, dan dient men bij voorkeur de
-        benodigde elementen uit deze optionele set te kiezen. Hierdoor blijft
-        interoperabiliteit beter behouden.</p>
+        optionele set. Het betreft niet de volledige ISO 19119 set. Als men meer
+        metadata wil vastleggen dan mogelijk met de verplichte elementen, dan
+        dient men bij voorkeur de benodigde elementen uit deze optionele set te
+        kiezen. Hierdoor blijft interoperabiliteit beter behouden. Naast
+        onderstaande specifieke service elementen kan de optionele set uit het
+        dataset profiel worden gebruikt</p>
       <table>
         <colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 50%"></colgroup>
         <thead>
@@ -2575,7 +2604,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </thead>
         <tbody>
           <tr>
-            <td>coupledResource</td>
+            <td><b>coupledResource</b></td>
             <td><br>
             </td>
             <td><br>
@@ -2597,7 +2626,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>De laag nam of featuretype naam</td>
           </tr>
           <tr>
-            <td>distribution</td>
+            <td><b>distribution</b></td>
             <td><br>
             </td>
             <td><br>
@@ -2610,7 +2639,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </td>
           </tr>
           <tr>
-            <td>parameter</td>
+            <td><b>parameter</b></td>
             <td><br>
             </td>
             <td><br>
@@ -2628,27 +2657,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </tr>
         </tbody>
       </table>
-      <br>
-      <code> </code>
-      <aside class="example" title="XML notatie identifier gebied">
-        <pre><code>        </code></pre>
-      </aside>
-    </section>
-    <section id="encoding-metadata">
-      <h1>Encoding van de metadata elementen</h1>
-      <p>De metadata van services wordt uitgewisseld in de encoding (XML)
-        conform:</p>
-      <p><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">
-          http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</a> (ISO
-        19119 metadata elementen)</p>
-      <p>Deze encoding die tevens gebruik maakt van: <a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
-          http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a> (ISO
-        19115 metadata elementen) is geschikt om tussen catalogi via CSW te
-        kunnen uitwisselen. In hoofdstuk 5 staat onder elke paragraaf het pad
-        met daarachter tussen [ ] uit welke standaard het komt.</p>
-      <p>Een andere manier om service metadata uit te wisselen is door in het
-        capabilities document, dat verplicht bij elke OGC service aanwezig moet
-        zijn, een deel van de metadata elementen uit hoofdstuk 5 op te nemen. </p>
     </section>
     <section class="appendix" id="appendix-a">
       <h2>Codelijsten</h2>
@@ -2712,43 +2720,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 service als geografische dataset te beschrijven (door middel van
                 ISO 19115).<br>
               </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="codelijst-sv-servicetype">
-        <h4>Codelijst SV_ServiceType</h4>
-        <p>De service type codelijst is een ISO codelijst.</p>
-        <table>
-          <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
-          <tbody>
-            <tr>
-              <th>Waarde</th>
-              <th>Beschrijving</th>
-            </tr>
-            <tr>
-              <td>discovery </td>
-              <td>OGC:CSW; Web Catalog service</td>
-            </tr>
-            <tr>
-              <td>view </td>
-              <td>OGC:WMS;Web Map service of OGC:WMTS; Web Mapping Tiling
-                Service</td>
-            </tr>
-            <tr>
-              <td>download </td>
-              <td>OGC:WFS; Web Feature Service of OGC:WCS; Web Coverage Service
-                of OGC:SOS; Sensor Observation Service of INSPIRE Atom; Atom
-                Service Feed </td>
-            </tr>
-            <tr>
-              <td>transformation </td>
-              <td>OGC:WCTS; Web Coordinate Transformation Service</td>
-            </tr>
-            <tr>
-              <td>other </td>
-              <td>Alle spatial data services die geen INSPIRE netwerk service
-                zijn</td>
             </tr>
           </tbody>
         </table>
@@ -3023,15 +2994,64 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </tbody>
         </table>
       </section>
+      <section id="codelijst-sv-servicetype">
+        <h4>Codelijst INSPIRE SV_ServiceType</h4>
+        <p>De codelijst INSPIRE SV_ServiceType is gebaseerd op INSPIRE metadata
+          implementing rules</p>
+        <table>
+          <colgroup><col style="width: 50%;"><col style="width: 20%;"><col style="width: 30%;"></colgroup>
+          <tbody>
+            <tr>
+              <th>URI</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/<br>metadata-codelist/SpatialDataServiceType/discovery
+              </td>
+              <td>discovery </td>
+              <td>OGC:CSW; Web Catalog service</td>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/<br>metadata-codelist/SpatialDataServiceType/view
+              </td>
+              <td>view </td>
+              <td>OGC:WMS;Web Map service of OGC:WMTS; Web Mapping Tiling
+                Service</td>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/<br>metadata-codelist/SpatialDataServiceType/download
+              </td>
+              <td>download </td>
+              <td>OGC:WFS; Web Feature Service of OGC:WCS; Web Coverage Service
+                of OGC:SOS; Sensor Observation Service of INSPIRE Atom; Atom
+                Service Feed </td>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/<br>metadata-codelist/SpatialDataServiceType/transformation
+              </td>
+              <td>transformation </td>
+              <td>OGC:WCTS; Web Coordinate Transformation Service</td>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/<br>metadata-codelist/SpatialDataServiceType/other
+              </td>
+              <td>other </td>
+              <td>Alle spatial data services die geen INSPIRE netwerk service
+                zijn</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
       <section id="codelijst-sv-couplingtype">
         <h4>Codelijst INSPIRE classificatie van ruimtelijke data services </h4>
         <p>De INSPIRE classificatie van ruimtelijke data services is gebaseerd
           op INSPIRE metadata implementing rules</p>
         <table>
-          <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+          <colgroup><col style="width: 30%;"><col style="width: 70%;"></colgroup>
           <thead>
             <tr>
-              <th>Waarde</th>
+              <th>URI</th>
               <th>Beschrijving</th>
             </tr>
           </thead>
@@ -3497,23 +3517,27 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <p>De INSPIRE serviceCategorie lijst is gebaseerd op INSPIRE Abstract
           Test Suite SDS</p>
         <table>
-          <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+          <colgroup><col style="width: 50%;"><col style="width: 20%;"><col style="width: 30%;"></colgroup>
           <tbody>
             <tr>
+              <th>URI</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/id/ats/metadata/2.0/sds-invocable</td>
               <td>invocable</td>
+              <td>Aanroepbare datadienst</td>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/id/ats/metadata/2.0/sds-interoperable</td>
               <td>interoperable</td>
+              <td>Interoperabele datadienst</td>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/id/ats/metadata/2.0/sds-harmonised</td>
               <td>harmonised</td>
+              <td>Geharmoniseerde datadienst</td>
             </tr>
           </tbody>
         </table>
@@ -3523,27 +3547,30 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <p>De INSPIRE QualiyOfServiceCriteria lijst is gebaseerd op INSPIRE
           metadata implementing rules</p>
         <table>
-          <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+          <colgroup><col style="width: 35%;"><col style="width: 15%;"><col style="width: 50%;"></colgroup>
           <tbody>
-            <tr>
+            <tr><th>URI</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/metadata-codelist/<br>
                 QualityOfServiceCriteria/availability</td>
+              <td>availability</td>
               <td>Het beschrijft het percentage tijd dat de dienst beschikbaar
                 is.</td>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/metadata-codelist/<br>
                 QualityOfServiceCriteria/performance</td>
+              <td>performance</td>
               <td>Het beschrijft hoe snel een aanvraag naar de ruimtelijke
                 datadienst kan worden afgerond.</td>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/metadata-codelist/<br>
                 QualityOfServiceCriteria/capacity</td>
+              <td>capacity</td>
               <td>Het beschrijft het maximale aantal gelijktijdige verzoeken die
                 met de aangegeven prestatie kunnen worden afgerond.</td>
             </tr>
@@ -3564,7 +3591,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint</td>
+              <td>http://inspire.ec.europa.eu/metadata-codelist/<br>OnLineDescriptionCode/accessPoint</td>
               <td>accessPoint</td>
               <td> Een internetadres dat een gedetailleerde beschrijving van een
                 dienst met betrekking tot ruimtelijke gegevens bevat, met
@@ -3572,7 +3599,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 uitgevoerd</td>
             </tr>
             <tr>
-              <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint</td>
+              <td>http://inspire.ec.europa.eu/metadata-codelist/<br>OnLineDescriptionCode/endPoint</td>
               <td>endPoint</td>
               <td> Een internetadres dat wordt gebruikt om een door een dienst
                 met betrekking tot ruimtelijke gegevens aangeboden operatie
@@ -4197,7 +4224,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </tr>
           <tr>
             <td>Veiligheidsrestricties</td>
-            <td>C</td>
+            <td>O</td>
             <td><br>
             </td>
           </tr>
@@ -4220,7 +4247,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <tr>
             <td><a href="#Omgrenzende%20rechthoek">Omgrenzende rechthoek</a></td>
             <td>C</td>
-            <td>V</td>
+            <td>C</td>
             <td>2.3.8</td>
           </tr>
           <tr>
@@ -4332,7 +4359,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <tr>
             <td><a href="#niveau-kwaliteitsbeschrijving-naam">Niveau
                 kwaliteitsbeschrijving naam</a></td>
-            <td>V</td>
+            <td>-</td>
             <td>V</td>
             <td>4.1.4.1</td>
           </tr>
@@ -4441,8 +4468,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </tr>
           <tr>
             <td><a href="#hi%C3%ABrarchieniveaunaam">Hiërarchieniveau naam</a></td>
-            <td>C</td>
-            <td>C</td>
+            <td>-</td>
+            <td>V</td>
             <td>4.1.1.1</td>
           </tr>
           <tr>
