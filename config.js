@@ -6,6 +6,7 @@ var respecConfig = {
     name: "Geonovum",
     url: "http://www.geonovum.nl/",
   }],
+  previousPublishDate: "2017-11-01",
   shortName: "mdprofiel-iso19119",
   github: "https://github.com/Geonovum/Metadata-ISO19119/",
   localBiblio: {
