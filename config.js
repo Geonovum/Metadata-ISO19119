@@ -1,6 +1,6 @@
 var respecConfig = {
   specStatus: "GN-DEF",
-  pubDomain:"md",  
+  pubDomain:"md",
   specType: "ST",
   editors: [{
     name: "Geonovum",
@@ -9,7 +9,6 @@ var respecConfig = {
   publishDate: "2017-09-11",
   previousPublishDate: "2017-11-01",
   previousMaturity: "GN-VV",
-  pubDomain: "md",
   shortName: "mdprofiel-iso19119",
   github: "https://github.com/Geonovum/Metadata-ISO19119/",
   localBiblio: {
