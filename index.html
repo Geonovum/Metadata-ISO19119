@@ -1751,7 +1751,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             dataservices is het dus verplicht. Dit element geeft informatie
             (metadata) over de data die in de service beschikbaar wordt gesteld.
             Het attribuut xlink:href moet een URI bevatten naar het
-            MD_DataIdentification deel van het metadata record van de dataset.</p>
+            MD_DataIdentification deel in de XML van het metadata record van de dataset.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1768,17 +1768,14 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                   <p>URI</p>
                 </td>
                 <td>
-                  <p>https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/a7fb2234-f7b4-4a03-b282-f10947f42fb1#MD_DataIdentification</p>
+                  <p>http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;
+  REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;
+  OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full
+  #MD_DataIdentification</p>
                 </td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Verwijzing naar ontsloten dataset als URI">
-            <pre><code>&lt;srv:operatesOn
-  xlink:href="https://www.nationaalgeoregister.nl/geonetwork/srv
-    /metadata/a7fb2234-f7b4-4a03-b282-f10947f42fb1#MD_DataIdentification"/&gt;
-          </code></pre>
-          </aside>
           <aside class="example" title="Verwijzing naar ontsloten dataset als CSW request">
             <pre><code>&lt;srv:operatesOn
   xlink:href="http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;
@@ -2344,7 +2341,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>xsi:double</td>
                 <td>http://www.opengis.net/def/uom/SI/second</td>
               </tr>
-               <tr>
+              <tr>
                 <th><br>
                 </th>
                 <th>Voorbeeld Capaciteit</th>
@@ -4582,5 +4579,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           en service. </figcaption> </figure>
     </section>
     <script class="remove" src="media/script/localscript.js"></script>
+    
   </body>
 </html>
