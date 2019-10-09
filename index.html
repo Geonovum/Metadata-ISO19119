@@ -315,13 +315,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           het onderstaande schema:<br>
           http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</p>
         <p> Dit schema bevat:
-          
-          http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd en 
-          importeert http://schemas.opengis.net/iso/19139/20070417/srv/1.0/srv.xsd en 
+          http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd
+          en importeert
+          http://schemas.opengis.net/iso/19139/20070417/srv/1.0/srv.xsd en
           http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd
-          
-         <br>
-          <br>
+          <br> <br>
           De namespace http://www.isotc211.org/2005/gmd wordt hiervoor gebruikt.
         </p>
         <aside class="example" title="Schema verwijzingen in metadata">
@@ -342,11 +340,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <h3>Structuur</h3>
         <p> De metadata voor een INSPIRE data set, data set series of service
           wordt ge-encoded met exact een gmd:MD_Metadata element.<br>
-          Als er meer dan één srv:SV_ServiceIdentification element wordt opgenomen,
-          zal deze&nbsp; een unieke identifier moeten bevatten van het element
-          zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan worden. Deze identifier is een
-          waarde van de attribuut id van het&nbsp; srv:SV_ServiceIdentification
-          element.<br>
+          Als er meer dan één srv:SV_ServiceIdentification element wordt
+          opgenomen, zal deze&nbsp; een unieke identifier moeten bevatten van
+          het element zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan
+          worden. Deze identifier is een waarde van de attribuut id van
+          het&nbsp; srv:SV_ServiceIdentification element.<br>
           <br>
         </p>
       </section>
@@ -734,7 +732,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#parameter-naam">Parameter naam</a></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#parameter-naam">Parameter
+                    naam</a></p>
               </td>
               <td>
                 <p>C</p>
@@ -746,7 +745,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#parameter-optionaliteit">Parameter optionaliteit</a></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#parameter-optionaliteit">Parameter
+                    optionaliteit</a></p>
               </td>
               <td>
                 <p>C</p>
@@ -838,7 +838,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td>
-                <p>&nbsp;&nbsp;&nbsp;<a href="#criteria-beschrijving">Criteria beschrijving</a></p>
+                <p>&nbsp;&nbsp;&nbsp;<a href="#criteria-beschrijving">Criteria
+                    beschrijving</a></p>
               </td>
               <td>
                 <p>C</p>
@@ -850,7 +851,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td>
-                <p>&nbsp;&nbsp;&nbsp;<a href="#criteria-type-waarde">Criteria type waarde</a></p>
+                <p>&nbsp;&nbsp;&nbsp;<a href="#criteria-type-waarde">Criteria
+                    type waarde</a></p>
               </td>
               <td>
                 <p>C</p>
@@ -1256,19 +1258,21 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is
-            verplicht een waarde op te nemen voor voorwaarden voor toegang en gebruik in één gmd:resourceConstraints/gmd:MD_LegalConstraints
+            verplicht een waarde op te nemen voor voorwaarden voor toegang en
+            gebruik in één gmd:resourceConstraints/gmd:MD_LegalConstraints
             element. </p>
-          <p>Daarnaast is het voor INSPIRE verplicht voorwaarden voor beperkingen op publieke
-            toegang op te nemen in één ander
+          <p>Daarnaast is het voor INSPIRE verplicht voorwaarden voor
+            beperkingen op publieke toegang op te nemen in één ander
             gmd:resourceConstraints/gmd:MD_LegalConstraints element. </p>
           <p>Voor INSPIRE datasets, bevat dit element de waarde
             "otherRestrictions". Voor organisaties die zich conformeren aan
             afspraken in het GI-beraad, bevat dit element ook de waarde
-            "otherRestrictions". Het element <a href="#overige-beperkingen">Overige beperkingen</a> bevat dan de voorwaarden en restricties. </p>
-          <p>In de andere gevallen bevat dit element toegangseisen die er zorg voor dragen dat privacy
-            of intellectueel eigendom gewaarborgd zijn en elke andere speciale
-            beperkingen voor het verkrijgen van de metadata of data. De waardes
-            komen uit <a href="#codelist-restrictioncode">codelijst
+            "otherRestrictions". Het element <a href="#overige-beperkingen">Overige
+              beperkingen</a> bevat dan de voorwaarden en restricties. </p>
+          <p>In de andere gevallen bevat dit element toegangseisen die er zorg
+            voor dragen dat privacy of intellectueel eigendom gewaarborgd zijn
+            en elke andere speciale beperkingen voor het verkrijgen van de
+            metadata of data. De waardes komen uit <a href="#codelist-restrictioncode">codelijst
               RestrictionCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -1306,7 +1310,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             overheid om de bestaande gebruiksvoorwaarden voor geo-informatie te
             stroomlijnen. Zie ook <a href="http://www.geonovum.nl/onderwerpen/gebruiksvoorwaarden/algemeen-gebruiksvoorwaarden"
               target="_blank"> algemeen gebruiksvoorwaarden</a></p>
-          
         </section>
         <section id="overige-beperkingen">
           <h4>Overige beperkingen</h4>
@@ -1329,11 +1332,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             toepassing ook prijsinformatie voor het gebruik van de
             dataset.&nbsp; </p>
           <p>Daarnaast wordt voor INSPIRE in een tweede
-            gmd:resourceConstraints/gmd:MD_LegalConstraints element, voor de beperkingen op publieke toegang een waarde opgenomen
-            uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
+            gmd:resourceConstraints/gmd:MD_LegalConstraints element, voor de
+            beperkingen op publieke toegang een waarde opgenomen uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
               LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient
-            men dat ook aan te geven, met de waarde "noLimitations". Voor
-            INSPIRE is het gebruik van een Anchor verplicht.<br>
+            men dat ook aan te geven, met de waarde "noLimitations".
+            Voor INSPIRE is het gebruik van een Anchor verplicht.<br>
           </p>
           <table>
             <colgroup> <col style="width: 30%"> <col style="width: 70%"> </colgroup>
@@ -1359,7 +1362,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
  &lt;gmx:Anchor
     xlink:href="http://inspire.ec.europa.eu/metadata-codelist
       /ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
-      Geen voorwaarden
+      Geen condities voor toegang en gebruik
   &lt;/gmx:Anchor&gt;
 &lt;/otherConstraints&gt;</code></pre>
                 </td>
@@ -1371,7 +1374,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
   &lt;gmx:Anchor
     xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
       LimitationsOnPublicAccess/noLimitations"&gt;
-      Geen beperkingen
+      Geen beperkingen op publieke toegang
   &lt;/gmx:Anchor&gt;
 &lt;/otherConstraints&gt;</code></pre>
                 </td>
@@ -1431,7 +1434,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       &lt;gmx:Anchor
         xlink:href="http://inspire.ec.europa.eu/metadata-codelist
           /ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
-          Geen voorwaarden
+          Geen condities voor toegang en gebruik
       &lt;/gmx:Anchor&gt;
     &lt;/otherConstraints&gt;
   &lt;/MD_LegalConstraints&gt;
@@ -1448,7 +1451,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       &lt;gmx:Anchor
         xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
           LimitationsOnPublicAccess/noLimitations"&gt;
-          Geen beperkingen
+          Geen beperkingen op publieke toegang
       &lt;/gmx:Anchor&gt;
     &lt;/otherConstraints&gt;
   &lt;/MD_LegalConstraints&gt;
@@ -1748,7 +1751,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             dataservices is het dus verplicht. Dit element geeft informatie
             (metadata) over de data die in de service beschikbaar wordt gesteld.
             Het attribuut xlink:href moet een URI bevatten naar het
-            MD_DataIdentification deel in de XML van het metadata record van de dataset.</p>
+            MD_DataIdentification deel in de XML van het metadata record van de
+            dataset.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1766,9 +1770,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 </td>
                 <td>
                   <p>http://example.com/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;
-  REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;
-  OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full
-  #MD_DataIdentification</p>
+                    REQUEST=GetRecordById&amp;ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&amp;
+                    OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&amp;ELEMENTSETNAME=full
+                    #MD_DataIdentification</p>
                 </td>
               </tr>
             </tbody>
@@ -3101,10 +3105,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
+          </tbody>
           <tbody>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanInteractionService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -3178,7 +3184,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoManagementService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -3254,7 +3261,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/taskManagementService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -3279,7 +3287,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/spatialProcessingService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -3382,7 +3391,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/spatialFeatureGeneralizationService</td>
-               <td>spatialFeatureGeneralizationService</td>
+              <td>spatialFeatureGeneralizationService</td>
               <td> Dienst om de ruimtelijke variatie in een objectverzameling te
                 beperken om de communicatie efficiënter te maken door de
                 ongewenste gevolgen van gegevensreductie tegen te gaan. </td>
@@ -3413,7 +3422,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/thematicProcessingService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -3528,7 +3538,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/temporalProcessingService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -3561,7 +3572,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/metadataProcessingService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -3579,7 +3591,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><strong>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/comService</strong></td>
-              <td> <br></td>
+              <td> <br>
+              </td>
               <td> <br>
               </td>
             </tr>
@@ -4335,7 +4348,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </td>
           </tr>
           <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#overige-beperkingen">Overige beperkingen</a></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#overige-beperkingen">Overige
+                beperkingen</a></td>
             <td>C</td>
             <td>2.3.6/2.3.7</td>
           </tr>
@@ -4644,6 +4658,5 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           en service. </figcaption> </figure>
     </section>
     <script class="remove" src="media/script/localscript.js"></script>
-    
   </body>
 </html>
