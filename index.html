@@ -83,7 +83,7 @@
             <td>1.2.1</td>
             <td>Nederlands profiel, aangepast op:
               <ul>
-                <li>INSPIRE INSPIRE codelijst SV_ServiceType uitgebreid met
+                <li>INSPIRE INSPIRE codelijst ServiceType uitgebreid met
                   INSPIRE Atom</li>
               </ul>
             </td>
@@ -1004,7 +1004,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het type gebeurtenis waar de datum betrekking op
             heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
-              CI_DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+            DateType</a>. Mogelijke gebeurtenissen zijn: creatie-,
             publicatie-, of revisiedatum. INSPIRE vereist bovendien dat het
             datum type uniek is per set aan datums van de bron.</p>
           <table>
@@ -1113,7 +1113,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element geeft de rol van de verantwoordelijke organisatie van
             de bron weer. Voor de rol van de organisatie wordt een codelijst
             gehanteerd, zie zie <a href="#codelist-rolecode">Codelijst B.5.5
-              CI_RoleCode</a>. Voor <a href="http://wiki.geonovum.nl/index.php?title=Wat_is_een_Spatial_Data_Service"
+              Role</a>. Voor <a href="http://wiki.geonovum.nl/index.php?title=Wat_is_een_Spatial_Data_Service"
               target="_blank">INSPIRE interoperabele services</a> dient het in
             ieder geval de rol van beheerder te bevatten. </p>
           <table>
@@ -1240,7 +1240,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat het type gebeurtenis waar de datum betrekking op
             heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
-              DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+              DateType</a>. Mogelijke gebeurtenissen zijn: creatie-,
             publicatie-, of revisiedatum.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -1276,7 +1276,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             voor dragen dat privacy of intellectueel eigendom gewaarborgd zijn
             en elke andere speciale beperkingen voor het verkrijgen van de
             metadata of data. De waardes komen uit <a href="#codelist-restrictioncode">codelijst
-              RestrictionCode</a>.</p>
+              Restriction</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1646,7 +1646,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/description</em><span
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het bevat een verwijzing naar een waarde uit de <a href="#Codelist-INSPIRE-OnLineDescriptionCode">codelijst
-              OnLineDescriptionCode</a> die het type URL beschrijft. </p>
+              OnLineDescription</a> die het type URL beschrijft. </p>
           <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in
             een specifiek mediatype oplevert dient de waarde endPoint gebruikt
             te worden. In andere gevallen de waarde accessPoint. De accessPoint
@@ -1719,7 +1719,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element bevat het type van de service.</p>
           <p>De implementing rules van INSPIRE verplichten het gebruik van de
             waardes uit Annex B.3. Deze zijn in <a href="#codelijst-sv-servicetype">codelijst
-              SV_ServiceType</a> opgenomen. Voor <a href="http://wiki.geonovum.nl/index.php?title=Wat_is_een_Spatial_Data_Service"
+              ServiceType</a> opgenomen. Voor <a href="http://wiki.geonovum.nl/index.php?title=Wat_is_een_Spatial_Data_Service"
               target="_blank">INSPIRE spatial data services</a> dient de waarde
             "other" gekozen te worden.</p>
           <p></p>
@@ -1796,7 +1796,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element is verplicht volgens het amendement op ISO 19119.
             CouplingType definieert het type “koppeling” tussen een service
             instance en een dataset. De mogelijke waarden zijn vastgelegd in de
-            codelist <a href="#codelijst-sv-couplingtype">SV_CouplingType</a></p>
+            codelist <a href="#codelijst-sv-couplingtype">CouplingType</a></p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -2026,7 +2026,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie
             betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelist-scopecode">codelijst
-              ScopeCode</a>. Mogelijke niveau is: service </p>
+              Scope</a>. Mogelijke niveau is: service </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -2091,7 +2091,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <li>De technische specificatie</li>
           </ul>
           <p>Gebruik voor de conformiteit van de categorie de waardes uit <a href="#codelijst-INSPIRE-serviceCategorie">codelijst
-              INSPIRE service categorie</a> hiervoor dient gebruik gemaakt te
+             service categorie</a> hiervoor dient gebruik gemaakt te
             worden van een anchor. </p>
           <p>Daarnaast wordt hier voor INSPIRE spatial data services, aangegeven
             aan welke technische specificatie deze service voldoet, anders dan
@@ -2161,7 +2161,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht als de
             service een INSPIRE bron is. Type gebeurtenis wordt gekozen uit <a
-              href="#codelist-datetypecode">codelijst DateTypeCode</a>.
+              href="#codelist-datetypecode">codelijst DateType</a>.
             Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of
             revisiedatum.</p>
           <table>
@@ -2246,7 +2246,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </ul>
           <p>Het element criteria, wordt opgenomen met een anchor, met waardes
             uit <a href="#codelijst-INSPIRE-QualityOfServiceCriteriaCode">codelijst
-              INSPIRE QualityOfServiceCriteriaCode</a> </p>
+              QualityOfServiceCriteria</a> </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -2479,7 +2479,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het element geeft aan waarop de metadata betrekking heeft, in dit
             geval service. Dit niveau wordt gekozen uit <a href="#codelist-scopecode">codelijst
-              ScopeCode</a>. Mogelijke niveau is: service </p>
+              Scope</a>. Mogelijke niveau is: service </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -2556,7 +2556,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element bevat de rol van de organisatie verantwoordelijk voor
             de metadata. INSPIRE vereist pointOfContact. Voor de rol van de
             organisatie wordt <a href="#codelist-rolecode">Codelijst
-              CI_RoleCode</a> gehanteerd.</p>
+              Role</a> gehanteerd.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -2736,8 +2736,9 @@ wordt gebruikt.</p>
       </aside>
       <br>
       <section id="codelijst-sv-couplingtype">
-        <h4>Codelijst SV_CouplingType</h4>
-        <p>De coupling type codelijst is een ISO codelijst.</p>
+        <h4>Codelijst CouplingType</h4>
+        <p style="text-align:left"><em>SV_CouplingType</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup><col style="width: 30%;"><col style="width: 70%;"></colgroup>
           <thead>
@@ -2779,7 +2780,8 @@ wordt gebruikt.</p>
       </section>
       <section id="codelijst-sv-dcplist">
         <h4>Codelijst DCP</h4>
-        <p>De DCP codelijst is een ISO codelijst</p>
+        <p style="text-align:left"><em>SV_DCPlist</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
           <thead>
@@ -2821,8 +2823,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-datetypecode">
-        <h4>Codelijst CI_DateTypeCode</h4>
-        <p>De DateType codelijst is een ISO codelijst</p>
+        <h4>Codelijst DateType</h4>
+       <p style="text-align:left"><em>CI_DateTypeCode</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
@@ -2848,8 +2851,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-onlinefunctioncode">
-        <h4>Codelijst CI_OnLineFunctionCode</h4>
-        <p>De OnlineFunction codelijst is een ISO codelijst</p>
+        <h4>Codelijst OnLineFunction</h4>
+         <p style="text-align:left"><em>CI_OnLineFunctionCode</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
@@ -2884,8 +2888,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-rolecode">
-        <h4>Codelijst CI_RoleCode</h4>
-        <p>De Role codelijst is een ISO codelijst</p>
+       <h4>Codelijst Role</h4>
+         <p style="text-align:left"><em>CI_RoleCode</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
@@ -2943,8 +2948,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-classificationcode">
-        <h4>Codelijst MD_ClassificationCode</h4>
-        <p>De Classification codelijst is een ISO codelijst</p>
+        <h4>Codelijst Classification</h4>
+        <p style="text-align:left"><em>MD_ClassificationCode</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
@@ -2976,8 +2982,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-restrictioncode">
-        <h4>Codelijst MD_RestrictionCode</h4>
-        <p>De Restriction codelijst is een ISO codelijst</p>
+        <h4>Codelijst Restriction</h4>
+        <p style="text-align:left"><em>MD_RestrictionCode</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
@@ -3031,8 +3038,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-scopecode">
-        <h4>Codelijst MD_ScopeCode</h4>
-        <p>De Scope codelijst is een subset van een ISO codelijst</p>
+        <h4>Codelijst Scope</h4>
+        <p style="text-align:left"><em>MD_ScopeCode</em><span style="float:right">[<a
+                data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
         <table>
           <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
@@ -3048,9 +3056,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelijst-sv-servicetype">
-        <h4>Codelijst INSPIRE SV_ServiceType</h4>
-        <p>De codelijst INSPIRE SV_ServiceType is gebaseerd op INSPIRE metadata
-          implementing rules</p>
+        <h4>Codelijst SpatialDataServiceType</h4>
+        <p style="text-align:left"><em>SpatialDataServiceType</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup><col style="width: 50%;"><col style="width: 20%;"><col style="width: 30%;"></colgroup>
           <tbody>
@@ -3097,9 +3105,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="classificatie-services">
-        <h4>Codelijst INSPIRE classificatie van ruimtelijke data services </h4>
-        <p>De INSPIRE classificatie van ruimtelijke data services is gebaseerd
-          op INSPIRE metadata implementing rules</p>
+        <h4>Codelijst classificatie van ruimtelijke data services</h4>
+        <p style="text-align:left"><em>SpatialDataServiceType</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup><col style="width: 30%;"><col style="width: 20%;"><col style="width: 50%;"></colgroup>
           <tbody>
@@ -3641,9 +3649,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelijst-INSPIRE-serviceCategorie">
-        <h4>Codelijst INSPIRE serviceCategorie</h4>
-        <p>De INSPIRE serviceCategorie lijst is gebaseerd op INSPIRE Abstract
-          Test Suite SDS</p>
+        <h4>Codelijst serviceCategorie</h4>
+        <p style="text-align:left"><em>serviceCategorie</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup><col style="width: 50%;"><col style="width: 20%;"><col style="width: 30%;"></colgroup>
           <tbody>
@@ -3671,9 +3679,10 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelijst-INSPIRE-QualityOfServiceCriteriaCode">
-        <h4>Codelijst INSPIRE QualityOfServiceCriteriaCode</h4>
-        <p>De INSPIRE QualiyOfServiceCriteria lijst is gebaseerd op INSPIRE
-          metadata implementing rules</p>
+  
+        <h4>Codelijst QualityOfServiceCriteria</h4>
+        <p style="text-align:left"><em>QualityOfServiceCriteria</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup><col style="width: 35%;"><col style="width: 15%;"><col style="width: 50%;"></colgroup>
           <tbody>
@@ -3707,9 +3716,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="Codelist-INSPIRE-OnLineDescriptionCode">
-        <h4>Codelijst INSPIRE OnLineDescriptionCode</h4>
-        <p>De OnlineDescription codelijst is gebaseerd op de Techniscal
-          Guidelines Metadata</p>
+         <h4>Codelijst OnLineDescription</h4>
+        <p style="text-align:left"><em>OnLineDescriptionCode</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
               style="width: 50%;"> </colgroup>
@@ -3740,9 +3749,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">
-        <h4>Codelijst INSPIRE ConditionsApplyingToAccessAndUse</h4>
-        <p>De INSPIRE classificatie van condities voor toegang en gebruik is
-          gebaseerd op INSPIRE metadata implementing rules</p>
+        <h4>Codelijst ConditionsApplyingToAccessAndUse</h4>
+        <p style="text-align:left"><em>ConditionsApplyingToAccessAndUse</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
               style="width: 50%;"> </colgroup>
@@ -3768,9 +3777,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="Codelijst-INSPIRE-LimitationsOnPublicAccess">
-        <h4>Codelijst INSPIRE LimitationsOnPublicAccess</h4>
-        <p>De INSPIRE classificatie van limitaties op pubieke toegang is
-          gebaseerd op INSPIRE metadata implementing rules</p>
+       <h4>Codelijst LimitationsOnPublicAccess</h4>
+        <p style="text-align:left"><em>LimitationsOnPublicAccess</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
               style="width: 50%;"> </colgroup>
@@ -3861,7 +3870,8 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-iso639-2">
-        <h4>Codelijst Talen (ISO 639-2)</h4>
+        <p style="text-align:left"><em>ISO639-2/B</em><span style="float:right">[<a
+                data-cite="!ISO639-2">ISO 639-2</a>]</span></p>
         <p>Gebruik hiervoor alleen de drie letter codes van ISO639-2/B, zoals
           gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/" target="_blank">http://www.loc.gov/standards/iso639-2/</a>.
           De codes voor de 23 officiële EU talen zijn:</p>
@@ -3920,8 +3930,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-protocol">
-        <h4>Codelijst Protocol</h4>
-        <p></p>
+         <h4>Codelijst Protocol</h4>
+         <p style="text-align:left"><em>INSPIRE Protocol values</em><span style="float:right">[<a
+                data-cite="!INSPIRE_codelijstregister">INSPIRE metadata codelijst register</a>]</span></p>
         <table>
           <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
               style="width: 50%;"> </colgroup>
@@ -4075,7 +4086,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-mediatypes">
-        <h4>Codelijst media types</h4>
+        <h4>Codelijst MediaType</h4>
+        <p style="text-align:left"><em>Media Types</em><span style="float:right">[<a
+                data-cite="!IANA_MediaTypes">IANA</a>]</span></p>
         <p>De codelijst is een subset van geregistreerde media types bij
           www.iana.org en INSPIRE</p>
         <table>
@@ -4172,7 +4185,9 @@ wordt gebruikt.</p>
         </table>
       </section>
       <section id="codelist-datalicenties">
-        <h4>Codelijst data licenties</h4>
+        <h4>Codelijst DataLicentie</h4>
+        <p style="text-align:left"><em>CC licenses</em><span style="float:right">[<a
+                data-cite="!Creative_Commons">Creative Commons</a>]</span></p>
         <table>
           <colgroup> <col style="width: 40%"> <col style="width: 25%"> <col style="width: 35%">
           </colgroup>
