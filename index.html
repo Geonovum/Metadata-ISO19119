@@ -19,10 +19,10 @@
       <ul>
         <li>datasets: <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/"
             target="_blank">Nederlands metadata profiel op ISO 19115 voor
-            geografie v2.0.0</a></li>
+            geografie versie 2.0.0</a></li>
         <li>services: <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19119/"
             target="_blank">Nederlands metadata profiel op ISO 19119 voor
-            services v2.0.0</a></li>
+            services versie 2.0.0</a></li>
       </ul>
       <p>Ten behoeve van de Europese INSPIRE regelgeving is ook een metadata
         profiel opgesteld. De vereisten uit het INSPIRE profiel zijn opgenomen
@@ -144,14 +144,14 @@
           kenmerken die services op bronnen van geo-data beschrijven. Dit
           profiel richt zich op een model voor het beschrijving van services op
           ruimtelijke datasets en dataset series.</p>
-        <p>Het Nederlandse profiel op ISO 19119 voor services versie 2.0 richt
-          zich op de beschrijving van ruimtelijke dataservices. Als er services
+        <p>Het Nederlands metadata profiel op ISO 19119 voor
+            services versie 2.1.0 richt zich op de beschrijving van ruimtelijke dataservices. Als er services
           beschikbaar zijn dienen volgens deze profielen zowel de service als de
           daarin ontsloten datasets van metadata te worden voorzien. De relatie
           tussen metadata van data, metadata van services en de data en services
           is opgenomen in <a href="#appendix-d">Appendix D</a>. </p>
-        <p>Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata"
-            target="_blank">metadata wiki</a> waarin voorbeelden zijn opgenomen
+       <p>Geonovum beheert tevens een <a href="https://docs.geostandaarden.nl/md/Metadata-handreiking"
+            target="_blank">metadata handreiking</a> waarin voorbeelden zijn opgenomen
           en alle aspecten van het aanmaken van metadata beschreven zijn.</p>
       </section>
       <section id="scope">
@@ -195,8 +195,8 @@
           service op een dataset of dataset serie. Dit metadata profiel
           beschrijft tevens de encoding van de metadata van een dataset of
           dataset serie zodat de uitwisseling tussen machines of mens en machine
-          kan plaats vinden. Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
-            wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
+          kan plaats vinden. Geonovum beheert tevens een <a href="https://docs.geostandaarden.nl/md/Metadata-handreiking"
+            target="_blank">metadata handreiking</a>  waarin voorbeelden zijn opgenomen en alle aspecten van het
           aanmaken van metadata beschreven zijn. <a href="#normatieve-verwijzing">Hoofdstuk
             2</a> toont de normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk
             3</a> bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
@@ -246,8 +246,8 @@
       <p><b>[[!INSPIRE-2017]]</b>, Technical Guidance for the implementation of
         INSPIRE dataset and service metadata based on ISO/TS 19139:2007</p>
       <p><strong>[[!INSPIRE-register]]</strong>, INSPIRE metadata code list register</p>
-      <p><strong>[[!IANA_MediaTypes]]</strong>, IANA mediatypes register</p>
-      <p><strong>[[!Creative_Commons]</strong>, Creative Commons</p>
+      <p><strong>[[!IANA-MediaTypes]]</strong>, IANA mediatypes register</p>
+      <p><strong>[[!Creative-Commons]</strong>, Creative Commons</p>
     </section>
     <section id="Structuur en schema's ">
       <h2>Structuur en schema's</h2>
@@ -376,7 +376,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           gebruik van gmx:Anchor element vereist, waarin dan een URI wordt opgenomen. Deze URI's worden 
           steeds vaker door de beherende organisaties ook in HTTPS variant beschikbaar gemaakt. Voor 
           dit profiel kan de waarde zowel met HTTP als met HTTPS worden opgenomen, mits natuurlijk deze 
-          URI ook daadwerkelijk aanwezig is. </p>
+          URI ook daadwerkelijk aanwezig is en dezelfde betekenis heeft. </p>
         <aside class="example" title="Verwijzing naar codelijst">
           <pre><code>&lt;ci_datetypecode
   codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
@@ -396,7 +396,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           vinden is. Daarvoor wordt het xlink:href attribuut gebruikt, dat een
           valide URL dient te bevatten. Als tekst waarde van het Anchor element
           kan een willekeurige voor de mens leesbaar label gekozen worden,
-          bijvoorbeeld een Nederlandse vertaling.</p>
+          bijvoorbeeld een Nederlandse vertaling. Om de interoperabiliteit met 
+          eerdere versies van dit profiel te behouden, wordt aanbevolen om in dit 
+          label de waarde op te nemen die bij gebruik van gco:CharacterString in dat 
+          element opgenomen zou worden.</p>
         <aside class="example" title="Trefwoord verwijzing met Anchor">
           <pre><code>&lt;gmd:keyword&gt;
   &lt;gmx:Anchor xlink:href="http://www.eionet.europa.eu/gemet/nl/inspire-theme/mf"&gt;
@@ -462,7 +465,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           daarom handmatig moet worden opgevoerd. </dd>
         <dt>Feature</dt>
         <dd>Abstractie van een verschijnsel in de werkelijke wereld
-          [[!ISO19101-2002]. Voorbeeld het verschijnsel ‘Eifel Toren’ kan met
+          [[!ISO19101-2002]]. Voorbeeld het verschijnsel ‘Eifel Toren’ kan met
           andere soortgelijke verschijnselen geclassificeerd worden in een
           featuretype ‘toren’. </dd>
         <dt>Gerelateerde datasets</dt>
@@ -490,7 +493,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <dd>Set van één of meerdere basisstandaarden en indien van toepassing de
           identificatie van hoofdstukken, paragrafen, opties en parameters van
           deze basisstandaarden die noodzakelijk zijn voor het volbrengen van
-          een specifieke functie [!ISOIEC21 1998, ISO34 2002]. Een
+          een specifieke functie [ISO IEC21 1998, ISO34 2002]. Een
           basisstandaard is één van de standaarden uit de serie ISO 19100 of
           andere ICT-standaard die gebruikt kan worden als bron voor componenten
           voor een profiel of productspecificatie. </dd>
@@ -515,28 +518,24 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           software-architectuur. UUID wordt weergegeven in 32 hexadecimale
           cijfers. Deze cijfers zijn ingedeeld in vijf groepen, in ongelijk
           aantal en gescheiden door koppeltekens.</dd>
-        <dd> <br>
-        </dd>
         <dt>Verplicht element</dt>
         <dd>Element wat gevuld moet zijn met een waarde.</dd>
       </dl>
     </section>
     <section id="metadata-elementen">
       <h1>Verplichte en conditionele metadata elementen</h1>
-      <p>Dit hoofdstuk geeft de verplichte of bij conditie verplichte elementen
-        weer inclusief uitleg in de vorm van voorbeelden of default
-        waarden.lementen weer inclusief uitleg in de vorm van beknopte
-        voorbeelden of default waarden. Meer informatie en voorbeelden zijn te
-        vinden op de <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
-          wiki</a>.</p>
+     <p>Dit hoofdstuk geeft de verplichte of bij conditie verplichte elementen
+        weer inclusief uitleg in de vorm van beknopte voorbeelden of default
+        waarden. Meer informatie en voorbeelden zijn te vinden in de <a href="https://docs.geostandaarden.nl/md/Metadata-handreiking"
+            target="_blank">metadata handreiking</a>.</p>
       <section id="metadata-elementen-overzicht">
         <h2>Metadata elementen overzicht</h2>
         <p>In de volgende tabel staan de verplichte of bij conditie verplichte
           elementen. Bij elk conditioneel element is de conditie benoemd. De in
           <a href="#appendix-b">Appendix B</a> opgenomen tabel “verantwoording
-          metadata elementen” is gebaseerd op INSPIRE, 2017, Technical Guidance
-          for the implementation of INSPIRE dataset and service metadata based
-          on ISO/TS 19139:2007. Hiermee is de relatie gelegd tussen dit document
+          metadata elementen” is gebaseerd op <a data-cite="!INSPIRE-19115-19119"><em>INSPIRE,
+              2017, Technical Guidance for the implementation of INSPIRE dataset
+              and service metadata based on ISO/TS 19139:2007</em></a>. Hiermee is de relatie gelegd tussen dit document
           en INSPIRE.</p>
         <p>Metadata elementen</p>
         <table>
@@ -4120,7 +4119,7 @@ wordt gebruikt.</p>
       <section id="codelist-mediatypes">
         <h4>Codelijst MediaType</h4>
         <p style="text-align:left"><em>Media Types</em><span style="float:right">[<a
-                data-cite="!IANA_MediaTypes">IANA</a>]</span></p>
+                data-cite="!IANA-MediaTypes">IANA</a>]</span></p>
         <p>De codelijst is een subset van geregistreerde media types bij
           www.iana.org en INSPIRE</p>
         <table>
@@ -4219,7 +4218,7 @@ wordt gebruikt.</p>
       <section id="codelist-datalicenties">
         <h4>Codelijst DataLicentie</h4>
         <p style="text-align:left"><em>CC licenses</em><span style="float:right">[<a
-                data-cite="!Creative_Commons">Creative Commons</a>]</span></p>
+                data-cite="!Creative-Commons">Creative Commons</a>]</span></p>
         <table>
           <colgroup> <col style="width: 40%"> <col style="width: 25%"> <col style="width: 35%">
           </colgroup>
