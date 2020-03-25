@@ -127,6 +127,20 @@ var respecConfig = {
       "href":"https://www.iso.org/standard/4767.html",
       "date":"1998-10",
       "publisher": "International Organization for Standardization"
+      },
+     "INSPIRE-register": {
+      "title":"INSPIRE metadata codelijst register",
+      "href":"http://inspire.ec.europa.eu/metadata-codelist",
+      "publisher": "European Commission Joint Research Centre",
+    },
+     "IANA_MediaTypes": {
+      "title":"IANA mediatypes register",
+      "href":"https://www.iana.org/assignments/media-types/",
+      "publisher": "IANA",
+    }, "Creative_Commons": {
+      "title":"Creative_Commons",
+      "href":"https://creativecommons.org/use-remix/cc-licenses/",
+      "publisher": "Creative Commons",
     },
 
   },
