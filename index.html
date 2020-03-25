@@ -247,7 +247,7 @@
         INSPIRE dataset and service metadata based on ISO/TS 19139:2007</p>
       <p><strong>[[!INSPIRE-register]]</strong>, INSPIRE metadata code list register</p>
       <p><strong>[[!IANA-MediaTypes]]</strong>, IANA mediatypes register</p>
-      <p><strong>[[!Creative-Commons]</strong>, Creative Commons</p>
+      <p><strong>[[!Creative-Commons]]</strong>, Creative Commons</p>
     </section>
     <section id="Structuur en schema's ">
       <h2>Structuur en schema's</h2>
@@ -1128,8 +1128,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element geeft de rol van de verantwoordelijke organisatie van
             de bron weer. Voor de rol van de organisatie wordt een codelijst
-            gehanteerd, zie zie <a href="#codelist-rolecode">Codelijst B.5.5
-              Role</a>. Voor <a href="http://wiki.geonovum.nl/index.php?title=Wat_is_een_Spatial_Data_Service"
+            gehanteerd, zie zie <a href="#codelist-rolecode">Codelijst Role</a>. Voor <a href="http://wiki.geonovum.nl/index.php?title=Wat_is_een_Spatial_Data_Service"
               target="_blank">INSPIRE interoperabele services</a> dient het in
             ieder geval de rol van beheerder te bevatten. </p>
           <table>
@@ -1276,22 +1275,26 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h4>Juridische toegangsrestricties</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is
-            verplicht een waarde op te nemen voor voorwaarden voor toegang en
-            gebruik in één gmd:resourceConstraints/gmd:MD_LegalConstraints
+           <p>Het is verplicht juridische toegangsrestricties op te nemen. Juridische toegangsrestricties en Overige beperkingen zijn
+            subelementen van het gmd:resourceConstraints/gmd:MD_LegalConstraints
+            element. </p>
+            Het is verplicht voorwaarden voor toegang en
+            gebruik op te nemen in de subelementen van één gmd:resourceConstraints/gmd:MD_LegalConstraints
             element. </p>
           <p>Daarnaast is het voor INSPIRE verplicht voorwaarden voor
-            beperkingen op publieke toegang op te nemen in één ander
+            beperkingen op publieke toegang op te nemen in de subelementen van één ander
             gmd:resourceConstraints/gmd:MD_LegalConstraints element. </p>
-          <p>Voor INSPIRE datasets, bevat dit element de waarde
+          <p>In het geval van een INSPIRE dataset dient dus twee maal het element
+            MD_LegalConstraints met de subelementen Juridische toegangsrestricties en Overige beperkingen gebruikt te worden.</p>
+          <p>Voor INSPIRE datasets, bevat het element Juridische toegangsrestrictie de waarde
             "otherRestrictions". Voor organisaties die zich conformeren aan
             afspraken in het GI-beraad, bevat dit element ook de waarde
             "otherRestrictions". Het element <a href="#overige-beperkingen">Overige
-              beperkingen</a> bevat dan de voorwaarden en restricties. </p>
-          <p>In de andere gevallen bevat dit element toegangseisen die er zorg
-            voor dragen dat privacy of intellectueel eigendom gewaarborgd zijn
-            en elke andere speciale beperkingen voor het verkrijgen van de
-            metadata of data. De waardes komen uit <a href="#codelist-restrictioncode">codelijst
+              beperkingen</a> kan hierdoor gebruikt worden en bevat dan de voorwaarden en restricties.</p>
+          <p>In andere gevallen bevat dit element toegangseisen die er zorg voor
+            dragen dat privacy of intellectueel eigendom gewaarborgd zijn en
+            elke andere speciale beperkingen voor het verkrijgen van de metadata
+            of data. De waardes komen uit <a href="#codelist-restrictioncode">codelijst
               Restriction</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -1337,8 +1340,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element is conditioneel, als het element juridische
             toegangsrestricties de waarde otherRestrictions bevat dient het te
             worden opgenomen. Hierin wordt&nbsp;in één
-            gmd:resourceConstraints/gmd:MD_LegalConstraints element voor de
-            voorwaarden voor toegang en gebruik een link naar de licentie en de
+            gmd:resourceConstraints/gmd:MD_LegalConstraints element de
+            voorwaarden voor toegang en gebruik via een link naar de licentie en de
             bijbehorende beschrijving opgenomen. In <a href="#codelist-datalicenties">codelijst DataLicenties</a>
             zijn de beschrijvingen en de bijbehorende link naar de licentie
             opgenomen. </p>
@@ -1353,7 +1356,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Daarnaast wordt voor INSPIRE in een tweede
             gmd:resourceConstraints/gmd:MD_LegalConstraints element, voor de
             beperkingen op publieke toegang een waarde opgenomen uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
-              LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient
+              LimitationsOnPublicAccess</a>. Als er geen beperkingen zijn dient
             men dat ook aan te geven, met de waarde "noLimitations".
             Voor INSPIRE is het gebruik van een Anchor verplicht.<br>
           </p>
@@ -1692,22 +1695,20 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
             </tbody>
           </table>
-          <h3>Distributie in een Invocable SDS</h3>
-          <p>Een distributie in de beschrijving van een invocable service op een
-            INSPIRE dataset kan er als volgt uit zien.</p>
-          <aside class="example" title="XML notatie van een distributie in een invocable service">
+         
+          <aside class="example" title="XML notatie van een distributie in een WFS">
             <pre><code>
 &lt;gmd:onLine&gt;
   &lt;gmd:CI_OnlineResource&gt;
    &lt;gmd:linkage&gt;
       &lt;gmd:URL&gt;
-        https://data.pdok.nl/bag/api/v1/
+        https://geodata.nationaalgeoregister.nl/schelpdierenpercelen/wfs?request=GetCapabilities
       &lt;/gmd:URL&gt;
       &lt;/gmd:linkage&gt;
       &lt;gmd:protocol&gt;
       &lt;gmx:Anchor
-          xlink:href="http://www.w3.org/ns/dcat#landingPage"&gt;
-          landingPage
+          xlink:href="http://www.opengis.net/def/serviceType/ogc/wfs"&gt;
+          OGC:WFS
       &lt;/gmx:Anchor&gt;
       &lt;/gmd:protocol&gt;
       &lt;gmd:description&gt;
