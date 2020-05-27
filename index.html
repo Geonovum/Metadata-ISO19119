@@ -3,7 +3,7 @@
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/media/logos/Geonovum.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
     <link rel="stylesheet" type="text/css" href="media/style/localstyle.css">
     <title>Nederlands metadata profiel op ISO 19119 voor services versie 2.1.0</title>
     <script class="remove" src="https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js"></script>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <section id="abstract">
-      <p>Geonovum ontwikkelt en <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
+      <p>Geonovum ontwikkelt en <a href="https://www.geonovum.nl/themas/standaardisatie#Beheer">beheert</a>
         de Nederlandse metadata profielen. Deze profielen zijn een
         verbijzondering van de internationale metadatastandaarden van ISO en
         zijn bedoeld om de interoperabiliteit binnen Nederland te bevorderen. De
@@ -153,7 +153,7 @@
           beschikbaar zijn dienen volgens deze profielen zowel de service als de
           daarin ontsloten datasets van metadata te worden voorzien. De relatie
           tussen metadata van data, metadata van services en de data en services
-          is opgenomen in <a href="#appendix-d">Appendix D</a>. </p>
+          is opgenomen in <a href="#appendix-koppeling">Appendix D</a>. </p>
        <p>Geonovum beheert tevens een <a href="https://geonovum.github.io/Metadata-handreiking/"
             target="_blank">metadata handreiking</a> waarin voorbeelden zijn opgenomen
           en alle aspecten van het aanmaken van metadata beschreven zijn.</p>
@@ -184,7 +184,7 @@
         <p>Het Nederlands profiel bevat naast de ISO kernset, de INSPIRE
           elementen plus een selectie van metadata-elementen uit ISO 19119 en
           ISO 19115. In dit profiel zijn de metadata elementen met hun oorsprong
-          aangegeven in <a href="#appendix-c">Appendix B</a>. </p>
+          aangegeven in <a href="#appendix-verantwoording">Appendix B</a>. </p>
         <p> Sectoren in Nederland kunnen een eigen uitbreiding op het
           Nederlandse profiel ontwikkelen. Voorwaarde is dat de Nederlandse
           profiel metadata onderdeel is van het sectorale metadata profiel. Deze
@@ -208,7 +208,7 @@
           formele deel van het profiel waarin onder andere de verplichte
           elementen,&nbsp; worden beschreven die gelden voor metadata voor
           geografie staan in <a href="#metadata-elementen">hoofdstuk 5</a>. In
-          <a href="#optionele-set-metadata">hoofdstuk 6</a> staan de optionele
+          <a href="#optionele-elementen">hoofdstuk 6</a> staan de optionele
           elementen. De volgende hoofdstukken geven op specifieke onderdelen van
           het profiel uitleg. De bijlagen dienen ter ondersteuning van de
           hoofdstukken.</p>
@@ -536,7 +536,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <h2>Metadata elementen overzicht</h2>
         <p>In de volgende tabel staan de verplichte of bij conditie verplichte
           elementen. Bij elk conditioneel element is de conditie benoemd. De in
-          <a href="#appendix-b">Appendix B</a> opgenomen tabel “verantwoording
+          <a href="#appendix-verantwoording">Appendix B</a> opgenomen tabel “verantwoording
           metadata elementen” is gebaseerd op <a data-cite="!INSPIRE-19115-19119"><em>INSPIRE,
               2017, Technical Guidance for the implementation of INSPIRE dataset
               and service metadata based on ISO/TS 19139:2007</em></a>. Hiermee is de relatie gelegd tussen dit document
@@ -685,7 +685,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <td>Het is verplicht als er een URL is opgegeven.</td>
             </tr>
             <tr>
-              <td>&nbsp; &nbsp; <a href="#description">Omschrijving</a></td>
+              <td>&nbsp; &nbsp; <a href="#omschrijving">Omschrijving</a></td>
               <td>V</td>
               <td><br>
               </td>
@@ -1333,7 +1333,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             geo-informatie op een eenvoudige, heldere en gestandaardiseerde
             manier kenbaar te maken. Het is ontstaan uit de behoefte van de
             overheid om de bestaande gebruiksvoorwaarden voor geo-informatie te
-            stroomlijnen. Zie ook <a href="http://www.geonovum.nl/onderwerpen/gebruiksvoorwaarden/algemeen-gebruiksvoorwaarden"
+            stroomlijnen. Zie ook <a href="https://www.geonovum.nl/geo-standaarden/gebruiksvoorwaarden/geo-gedeeld"
               target="_blank"> algemeen gebruiksvoorwaarden</a></p>
         </section>
         <section id="overige-beperkingen">
@@ -1349,7 +1349,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             zijn de beschrijvingen en de bijbehorende link naar de licentie
             opgenomen. </p>
           <p>Daarnaast wordt er, als het een INSPIRE service is en er geen
-            beperkingen zijn of deze niet bekend zijn, een waarde uit <a href="#Codelist-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
+            beperkingen zijn of deze niet bekend zijn, een waarde uit <a href="#Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
               ConditionsApplyingToAccessAndUse</a> opgenomen in een tweede
             otherConstraints element binnen hetzelfde&nbsp;
             md:resourceConstraints/gmd:MD_LegalConstraints element. Voor INSPIRE
@@ -4628,14 +4628,7 @@ wordt gebruikt.</p>
             <td>V</td>
             <td>V</td>
             <td>2.2.2</td>
-          </tr>
-          <tr>
-            <td><a href="#parent-unieke-identifier">Parent unieke identifier</a></td>
-            <td>C</td>
-            <td>C</td>
-            <td><br>
-            </td>
-          </tr>
+		</tr>
           <tr>
             <td><a href="#hi%C3%ABrarchieniveau">Hiërarchieniveau</a></td>
             <td>V</td>
