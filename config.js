@@ -1,11 +1,15 @@
 var respecConfig = {
-  specStatus: "GN-WV",
+  specStatus: "GN-VV",
+  pubDomain:"md",
   specType: "ST",
   pubDomain: "md",
   editors: [{
     name: "Geonovum",
     url: "http://www.geonovum.nl/",
   }],
+  publishDate: "2020-06-02",
+  previousPublishDate: "2020-04-02",
+  previousMaturity: "GN-CV",
   shortName: "mdprofiel-iso19119",
   github: "https://github.com/Geonovum/Metadata-ISO19119/",
   localBiblio: {
@@ -41,7 +45,7 @@ var respecConfig = {
     },
     "CSW2APISO": {
       "title":"OpenGIS Catalogue Services Specification 2.0.2 - ISO Metadata Application Profile",
-      "href":"portal.opengeospatial.org/files/?artifact_id=21460",
+      "href":"https://portal.opengeospatial.org/files/?artifact_id=21460",
       "publisher": "Open Geospatial Consortium",
     },
     "ISO19139-2007": {
@@ -61,6 +65,24 @@ var respecConfig = {
       ],
       date: "26 oktober 2007",
       publisher: "European Commission Joint Research Centre",
+    },
+    "INSPIRE1312-2014":{
+      "title":"Regulation on interoperability of spatial data services",
+      "href":"http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.354.01.0008.01.ENG",
+      "date":"10 december 2014",
+      "publisher": "European commission"
+    },
+    "INSPIRE-2017": {
+      "href": "http://inspire.ec.europa.eu/id/document/tg/metadata-iso19139/2.0.1",
+      "title": "Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007",
+      "date": "2017-03-02",
+      "publisher": "European Commission Joint Research Centre",
+    },
+    "INSPIRE-2008": {
+      "href": "http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32008R1205",
+      "title": "Implementing Rules for Metadata",
+      "date": "3 December 2008",
+      "publisher": "European Commission Joint Research Centre",
     },
     "INSPIRE1312-2014":{
       "title":"Regulation on interoperability of spatial data services",
@@ -128,6 +150,21 @@ var respecConfig = {
       "href":"https://www.iso.org/standard/4767.html",
       "date":"1998-10",
       "publisher": "International Organization for Standardization"
+      },
+     "INSPIRE-register": {
+      "title":"INSPIRE metadata codelijst register",
+      "href":"http://inspire.ec.europa.eu/metadata-codelist",
+      "publisher": "European Commission Joint Research Centre",
     },
+     "IANA-MediaTypes": {
+      "title":"IANA mediatypes register",
+      "href":"https://www.iana.org/assignments/media-types/",
+      "publisher": "IANA",
+    }, "Creative-Commons": {
+      "title":"Creative_Commons",
+      "href":"https://creativecommons.org/use-remix/cc-licenses/",
+      "publisher": "Creative Commons",
+    },
+
   },
 };
